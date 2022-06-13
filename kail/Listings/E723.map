@@ -474,7 +474,7 @@ Section Cross References
     app_gprscmd.o(i.ToggleConfirmationHandshake) refers to app_gpsuart0.o(i.GpsSend_Data_Uart) for GpsSend_Data_Uart
     app_gprscmd.o(i.ToggleConfirmationHandshake) refers to bsp_uart.o(i.Uart0_init) for Uart0_init
     app_gprscmd.o(i.ToggleConfirmationHandshake) refers to app_cmd.o(.data) for Toggle
-    app_gprscmd.o(i.ToggleConfirmationHandshake) refers to app_gprscmd.o(.data) for GpTogshakeTime
+    app_gprscmd.o(i.ToggleConfirmationHandshake) refers to app_gprscmd.o(.data) for CoutShake
     main.o(i.Bsp_Init) refers to bsp_uart.o(i.Uart0_init) for Uart0_init
     main.o(i.Bsp_Init) refers to bsp_gpio.o(i.Led_init) for Led_init
     main.o(i.Bsp_Init) refers to bsp_gpio.o(i.Buzz_init) for Buzz_init

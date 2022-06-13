@@ -277,21 +277,21 @@ void ToggleConfirmationHandshake(void)
 		static uint8_t CoutShake=0;
 		if(Toggle==1)
 		{
-
 				GprsCmd_Task();
 				GpsSend_Data_Uart();
-				if(GpTogshakeTime>=100)
-				{
-					ToggleAN=1;
-					GpTogshakeTime=0;
-					CoutShake++;
-				}
-				if(CoutShake==150)
+
+				if(CoutShake==15)
 				{
 					Uart0_init(DEFAULTBOUD);
 					Toggle=0;
 					GpTogshakeTime=0;
 					CoutShake=0;
+				}
+				if(GpTogshakeTime>=100)
+				{
+					ToggleAN=1;
+					GpTogshakeTime=0;
+					CoutShake++;
 				}
 			 
 		}
