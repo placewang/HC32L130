@@ -280,7 +280,7 @@ void ToggleConfirmationHandshake(void)
 				GprsCmd_Task();
 				GpsSend_Data_Uart();
 
-				if(CoutShake==15)
+				if(CoutShake==60)
 				{
 					Uart0_init(DEFAULTBOUD);
 					Toggle=0;

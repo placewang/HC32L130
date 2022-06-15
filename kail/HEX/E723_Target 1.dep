@@ -123,7 +123,7 @@ I (..\driver\inc\lpuart.h)(0x5D1200FA)
 I (..\driver\inc\lpm.h)(0x5D11FE44)
 I (..\driver\inc\gpio.h)(0x5D11EFDC)
 I (..\user\In\queue.h)(0x6294201F)
-F (..\user\bsp_flash.c)(0x628F34B9)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\bsp_flash.o --omf_browse .\hex\bsp_flash.crf --depend .\hex\bsp_flash.d)
+F (..\user\bsp_flash.c)(0x62A9638E)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\bsp_flash.o --omf_browse .\hex\bsp_flash.crf --depend .\hex\bsp_flash.d)
 I (..\user\In\bsp_flash.h)(0x628E037F)
 I (..\driver\inc\flash.h)(0x5D142E9E)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
@@ -452,7 +452,7 @@ I (..\driver\inc\spi.h)(0x5D12C540)
 I (..\user\In\bsp_uart.h)(0x62A1DA54)
 I (..\driver\inc\lpuart.h)(0x5D1200FA)
 I (..\driver\inc\lpm.h)(0x5D11FE44)
-F (..\user\app.lpuart.c)(0x62A69CBE)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app.lpuart.o --omf_browse .\hex\app.lpuart.crf --depend .\hex\app.lpuart.d)
+F (..\user\app.lpuart.c)(0x62A6DF9D)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app.lpuart.o --omf_browse .\hex\app.lpuart.crf --depend .\hex\app.lpuart.d)
 I (..\user\In\app.lpuart.h)(0x62986A77)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)
@@ -509,7 +509,7 @@ I (..\user\In\app_Cmd.h)(0x62A091D1)
 I (..\user\In\bsp_flash.h)(0x628E037F)
 I (..\driver\inc\flash.h)(0x5D142E9E)
 I (..\driver\inc\lpuart.h)(0x5D1200FA)
-F (..\user\app_gprsCmd.c)(0x62A69EF6)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app_gprscmd.o --omf_browse .\hex\app_gprscmd.crf --depend .\hex\app_gprscmd.d)
+F (..\user\app_gprsCmd.c)(0x62A84B9E)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app_gprscmd.o --omf_browse .\hex\app_gprscmd.crf --depend .\hex\app_gprscmd.d)
 I (..\user\In\app_gpsuart0.h)(0x62985207)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)

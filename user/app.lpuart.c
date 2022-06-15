@@ -31,22 +31,23 @@ void Clearpackbit(void)
 uint8_t Get_Data_HTL(ElemType * htl)
 {
 	
-	if(*htl==0xAA&&Head_bit==0)
+	if(*htl==0x55&&Head_bit==0)
 	{
 			Head_bit=1;
 	}
-	else if(*htl==0x55&&Head_bit==1)
+	else if(*htl==0xAA&&Head_bit==1)
 	{
 			Head_bit=2;
 	}
 	else if(Head_bit==2&&GPRSDatabit==0)
 	{
-			GPRSDataLen|=*htl<<8;
+			GPRSDataLen|=(uint16_t)*htl;
 			GPRSDatabit=1;
 	}
 	else if(Head_bit==2&&GPRSDatabit==1)
 	{
-			GPRSDataLen|=*htl;
+			
+			GPRSDataLen|=((uint16_t)*htl<<8);
 			GPRSDatabit=2;
 	}
 	else if(GPRSDataLen<4&&GPRSDatabit==2)
@@ -112,9 +113,9 @@ void SendpackHead(void)
 		{
 						Uart_SendDataPoll(M0P_UART0,0x5A);
 						Uart_SendDataPoll(M0P_UART0,0x03);
-						Uart_SendDataPoll(M0P_UART0,0xAA);
 						Uart_SendDataPoll(M0P_UART0,0x55);
-						prsdata=(GPRSDataLen>>8);
+						Uart_SendDataPoll(M0P_UART0,0xAA);
+						prsdata=(GPRSDataLen&0xff);
 						if(Data_escape(&prsdata ,&val1,&val2))
 						{
 									Uart_SendDataPoll(M0P_UART0,val1);
@@ -124,7 +125,7 @@ void SendpackHead(void)
 						{
 							Uart_SendDataPoll(M0P_UART0,prsdata);
 						}
-						prsdata=(GPRSDataLen&0xff);
+						prsdata=(GPRSDataLen>>8);
 						if(Data_escape(&prsdata ,&val1,&val2))
 						{
 									Uart_SendDataPoll(M0P_UART0,val1);
@@ -207,7 +208,6 @@ uint8_t GPRSRev_data(void)
 		}	
 	return 0;	
 }	
-
 
 
 

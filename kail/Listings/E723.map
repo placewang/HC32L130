@@ -1161,181 +1161,181 @@ Image Symbol Table
     i.Flash_w                                0x00003eac   Section        0  app_cmd.o(i.Flash_w)
     Flash_w                                  0x00003ead   Thumb Code   110  app_cmd.o(i.Flash_w)
     i.Flash_writeBy                          0x00003f30   Section        0  bsp_flash.o(i.Flash_writeBy)
-    i.GPIO_Key_init                          0x00003f4e   Section        0  bsp_gpio.o(i.GPIO_Key_init)
-    i.GPRSRev_data                           0x0000400c   Section        0  app.lpuart.o(i.GPRSRev_data)
-    i.GPSendKeyInfo                          0x00004100   Section        0  app_key.o(i.GPSendKeyInfo)
-    i.GPclearData                            0x00004180   Section        0  app_gprscmd.o(i.GPclearData)
-    i.GPdataTranslate                        0x000041b4   Section        0  app_gprscmd.o(i.GPdataTranslate)
-    i.GetBit                                 0x00004258   Section        0  ddl.o(i.GetBit)
-    i.GetBuffCmd                             0x00004264   Section        0  app_cmd.o(i.GetBuffCmd)
-    GetBuffCmd                               0x00004265   Thumb Code    70  app_cmd.o(i.GetBuffCmd)
-    i.GetGpsPack                             0x000042b0   Section        0  app_gprscmd.o(i.GetGpsPack)
-    i.GetKeyScanCode                         0x0000433c   Section        0  app_key.o(i.GetKeyScanCode)
-    GetKeyScanCode                           0x0000433d   Thumb Code    30  app_key.o(i.GetKeyScanCode)
-    i.GetLcdType                             0x00004368   Section        0  bsp_gpio.o(i.GetLcdType)
-    i.GetSelectCol                           0x000043c4   Section        0  app_key.o(i.GetSelectCol)
-    GetSelectCol                             0x000043c5   Thumb Code    46  app_key.o(i.GetSelectCol)
-    i.Get_Data_HTL                           0x000043fc   Section        0  app.lpuart.o(i.Get_Data_HTL)
-    i.Getpackheadlen                         0x0000449c   Section        0  app.lpuart.o(i.Getpackheadlen)
-    i.GpCmd_char                             0x00004518   Section        0  app_gprscmd.o(i.GpCmd_char)
-    i.GpFlashW                               0x000045b4   Section        0  app_gprscmd.o(i.GpFlashW)
-    i.GpFlash_r                              0x0000461c   Section        0  app_gprscmd.o(i.GpFlash_r)
-    i.GpRsacketProcessing                    0x00004664   Section        0  app_gprscmd.o(i.GpRsacketProcessing)
-    i.GpSendInformation                      0x000046f0   Section        0  app_version.o(i.GpSendInformation)
-    i.GpSend_Flash_rD                        0x0000475c   Section        0  app_gpsuart0.o(i.GpSend_Flash_rD)
-    GpSend_Flash_rD                          0x0000475d   Thumb Code   134  app_gpsuart0.o(i.GpSend_Flash_rD)
-    i.GpSend_Uart0                           0x000047f8   Section        0  app_gpsuart0.o(i.GpSend_Uart0)
-    i.GpSend_XY                              0x00004818   Section        0  app_gpsuart0.o(i.GpSend_XY)
-    i.Gpio_ClearIrq                          0x000048ac   Section        0  gpio.o(i.Gpio_ClearIrq)
-    i.Gpio_ClrIO                             0x000048c8   Section        0  gpio.o(i.Gpio_ClrIO)
-    i.Gpio_GetInputIO                        0x000048e4   Section        0  gpio.o(i.Gpio_GetInputIO)
-    i.Gpio_GetIrqStatus                      0x000048fc   Section        0  gpio.o(i.Gpio_GetIrqStatus)
-    i.Gpio_Init                              0x00004914   Section        0  gpio.o(i.Gpio_Init)
-    i.Gpio_SetAfMode                         0x000049a4   Section        0  gpio.o(i.Gpio_SetAfMode)
-    i.Gpio_SetIO                             0x000049b8   Section        0  gpio.o(i.Gpio_SetIO)
-    i.GprsCmd_Task                           0x000049d4   Section        0  app_gprscmd.o(i.GprsCmd_Task)
-    i.GpsSend_Data_Uart                      0x00004ab0   Section        0  app_gpsuart0.o(i.GpsSend_Data_Uart)
-    i.HardFault_Handler                      0x00004c3c   Section        0  interrupts_hc32l13x.o(i.HardFault_Handler)
-    i.I2C0_IRQHandler                        0x00004c4c   Section        0  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
-    i.I2C1_IRQHandler                        0x00004c54   Section        0  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
-    i.InitQueue                              0x00004c5c   Section        0  queue.o(i.InitQueue)
-    i.KeyInit                                0x00004c68   Section        0  app_key.o(i.KeyInit)
-    i.KeyScanTask                            0x00004c8c   Section        0  app_key.o(i.KeyScanTask)
-    i.LCD_IRQHandler                         0x00004ec8   Section        0  interrupts_hc32l13x.o(i.LCD_IRQHandler)
-    i.LPTIM_IRQHandler                       0x00004ed0   Section        0  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
-    i.LPUART0_IRQHandler                     0x00004ed8   Section        0  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
-    i.LPUART1_IRQHandler                     0x00004ee0   Section        0  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
-    i.LPUart_ClrStatus                       0x00004ee8   Section        0  lpuart.o(i.LPUart_ClrStatus)
-    i.LPUart_DisableIrq                      0x00004efe   Section        0  lpuart.o(i.LPUart_DisableIrq)
-    i.LPUart_EnableFunc                      0x00004f12   Section        0  lpuart.o(i.LPUart_EnableFunc)
-    i.LPUart_EnableIrq                       0x00004f26   Section        0  lpuart.o(i.LPUart_EnableIrq)
-    i.LPUart_GetStatus                       0x00004f3a   Section        0  lpuart.o(i.LPUart_GetStatus)
-    i.LPUart_Init                            0x00004f54   Section        0  lpuart.o(i.LPUart_Init)
-    i.LPUart_ReceiveData                     0x00004fec   Section        0  lpuart.o(i.LPUart_ReceiveData)
-    i.LPUart_SendData                        0x00004ff4   Section        0  lpuart.o(i.LPUart_SendData)
-    i.LVD_IRQHandler                         0x0000502e   Section        0  interrupts_hc32l13x.o(i.LVD_IRQHandler)
-    i.Led_init                               0x00005036   Section        0  bsp_gpio.o(i.Led_init)
-    i.LpUart0_IRQHandler                     0x00005064   Section        0  bsp_uart.o(i.LpUart0_IRQHandler)
-    i.Lpuart_init                            0x000050c4   Section        0  bsp_uart.o(i.Lpuart_init)
-    i.PCA_IRQHandler                         0x00005188   Section        0  interrupts_hc32l13x.o(i.PCA_IRQHandler)
-    i.PCNT_IRQHandler                        0x00005190   Section        0  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
-    i.PORTA_IRQHandler                       0x00005198   Section        0  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
-    i.PORTB_IRQHandler                       0x000051a0   Section        0  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
-    i.PORTC_IRQHandler                       0x000051a8   Section        0  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
-    i.PORTD_IRQHandler                       0x000051b0   Section        0  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
-    i.Pack_Classification                    0x000051b8   Section        0  app_gprscmd.o(i.Pack_Classification)
-    i.PortA_IRQHandler                       0x000051e4   Section        0  bsp_touch.o(i.PortA_IRQHandler)
-    i.QueueEmpty                             0x000051fc   Section        0  queue.o(i.QueueEmpty)
-    i.QueueFull                              0x0000520e   Section        0  queue.o(i.QueueFull)
-    i.RTC_IRQHandler                         0x0000522a   Section        0  interrupts_hc32l13x.o(i.RTC_IRQHandler)
-    i.Rev_Touch_XY                           0x00005234   Section        0  bsp_touch.o(i.Rev_Touch_XY)
-    i.SPI0_IRQHandler                        0x000052c0   Section        0  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
-    i.SPI1_IRQHandler                        0x000052c8   Section        0  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
-    i.ScanInteractiveState                   0x000052d0   Section        0  app_gpsuart0.o(i.ScanInteractiveState)
-    i.Screen_init                            0x00005360   Section        0  bsp_gpio.o(i.Screen_init)
-    i.SelectRow                              0x000053a0   Section        0  app_key.o(i.SelectRow)
-    SelectRow                                0x000053a1   Thumb Code    62  app_key.o(i.SelectRow)
-    i.SendData_escape                        0x000053e8   Section        0  app_gpsuart0.o(i.SendData_escape)
-    i.SendInformation                        0x00005450   Section        0  app_version.o(i.SendInformation)
-    i.SendKeyInfo                            0x000054a0   Section        0  app_key.o(i.SendKeyInfo)
-    i.Send_Data_Uart                         0x00005508   Section        0  app_uart0.o(i.Send_Data_Uart)
-    i.Send_Flash_rD                          0x000055cc   Section        0  app_uart0.o(i.Send_Flash_rD)
-    Send_Flash_rD                            0x000055cd   Thumb Code    76  app_uart0.o(i.Send_Flash_rD)
-    i.Send_LPUart0                           0x00005628   Section        0  app_gpsuart0.o(i.Send_LPUart0)
-    i.Send_Uart0                             0x00005648   Section        0  app_uart0.o(i.Send_Uart0)
-    i.Send_XY                                0x00005668   Section        0  app_uart0.o(i.Send_XY)
-    i.Sendby                                 0x000056cc   Section        0  app.lpuart.o(i.Sendby)
-    i.SendpackHead                           0x00005704   Section        0  app.lpuart.o(i.SendpackHead)
-    i.SetBit                                 0x000057c8   Section        0  ddl.o(i.SetBit)
-    i.SysTick_Handler                        0x000057e6   Section        0  interrupts_hc32l13x.o(i.SysTick_Handler)
-    i.Sysctrl_ClkInit                        0x000057ee   Section        0  sysctrl.o(i.Sysctrl_ClkInit)
-    i.Sysctrl_ClkSourceEnable                0x00005858   Section        0  sysctrl.o(i.Sysctrl_ClkSourceEnable)
-    i.Sysctrl_GetHClkFreq                    0x000059c4   Section        0  sysctrl.o(i.Sysctrl_GetHClkFreq)
-    i.Sysctrl_GetPClkFreq                    0x00005b38   Section        0  sysctrl.o(i.Sysctrl_GetPClkFreq)
-    i.Sysctrl_SetHCLKDiv                     0x00005b58   Section        0  sysctrl.o(i.Sysctrl_SetHCLKDiv)
-    i.Sysctrl_SetPCLKDiv                     0x00005b80   Section        0  sysctrl.o(i.Sysctrl_SetPCLKDiv)
-    i.Sysctrl_SetPLLFreq                     0x00005ba8   Section        0  sysctrl.o(i.Sysctrl_SetPLLFreq)
-    i.Sysctrl_SetPLLStableTime               0x00005cbc   Section        0  sysctrl.o(i.Sysctrl_SetPLLStableTime)
-    i.Sysctrl_SetPeripheralGate              0x00005ce0   Section        0  sysctrl.o(i.Sysctrl_SetPeripheralGate)
-    i.Sysctrl_SetRCLStableTime               0x00005cf8   Section        0  sysctrl.o(i.Sysctrl_SetRCLStableTime)
-    i.Sysctrl_SetXTHFreq                     0x00005d1c   Section        0  sysctrl.o(i.Sysctrl_SetXTHFreq)
-    i.Sysctrl_SetXTHStableTime               0x00005d3c   Section        0  sysctrl.o(i.Sysctrl_SetXTHStableTime)
-    i.Sysctrl_SetXTLStableTime               0x00005d5c   Section        0  sysctrl.o(i.Sysctrl_SetXTLStableTime)
-    i.Sysctrl_SysClkSwitch                   0x00005d7c   Section        0  sysctrl.o(i.Sysctrl_SysClkSwitch)
-    i.Sysctrl_XTHDriverCfg                   0x00005da8   Section        0  sysctrl.o(i.Sysctrl_XTHDriverCfg)
-    i.Sysctrl_XTLDriverCfg                   0x00005dc4   Section        0  sysctrl.o(i.Sysctrl_XTLDriverCfg)
-    i.SystemCoreClockUpdate                  0x00005df8   Section        0  system_hc32l13x.o(i.SystemCoreClockUpdate)
-    i.SystemInit                             0x00005e08   Section        0  system_hc32l13x.o(i.SystemInit)
-    i.Systimeclk                             0x00005e48   Section        0  bsp_clk.o(i.Systimeclk)
-    i.Systme_led                             0x00005ed0   Section        0  bsp_time.o(i.Systme_led)
-    i.TIM0_IRQHandler                        0x00005f04   Section        0  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
-    i.TIM1_IRQHandler                        0x00005f0c   Section        0  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
-    i.TIM2_IRQHandler                        0x00005f14   Section        0  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
-    i.TIM3_IRQHandler                        0x00005f1c   Section        0  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
-    i.TIM4_IRQHandler                        0x00005f24   Section        0  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
-    i.TIM5_IRQHandler                        0x00005f2c   Section        0  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
-    i.TIM6_IRQHandler                        0x00005f34   Section        0  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
-    i.TSC2046_Init                           0x00005f3c   Section        0  bsp_touch.o(i.TSC2046_Init)
-    i.TSC2046_ReadAdc                        0x00005fc8   Section        0  bsp_touch.o(i.TSC2046_ReadAdc)
-    TSC2046_ReadAdc                          0x00005fc9   Thumb Code    48  bsp_touch.o(i.TSC2046_ReadAdc)
-    i.TSC2046_ReadAdc_XY                     0x00005ff8   Section        0  bsp_touch.o(i.TSC2046_ReadAdc_XY)
-    i.TSC2046_ReadCMD                        0x00006014   Section        0  bsp_touch.o(i.TSC2046_ReadCMD)
-    TSC2046_ReadCMD                          0x00006015   Thumb Code   144  bsp_touch.o(i.TSC2046_ReadCMD)
-    i.TSC2046_WriteCMD                       0x000060a4   Section        0  bsp_touch.o(i.TSC2046_WriteCMD)
-    TSC2046_WriteCMD                         0x000060a5   Thumb Code   102  bsp_touch.o(i.TSC2046_WriteCMD)
-    i.Tim0_IRQHandler                        0x0000610c   Section        0  bsp_time.o(i.Tim0_IRQHandler)
-    i.Time_init                              0x000061d4   Section        0  bsp_time.o(i.Time_init)
-    i.ToggleConfirmationHandshake            0x0000624c   Section        0  app_gprscmd.o(i.ToggleConfirmationHandshake)
-    i.UART0_H                                0x000062b0   Section        0  bsp_uart.o(i.UART0_H)
-    i.UART0_IRQHandler                       0x00006316   Section        0  interrupts_hc32l13x.o(i.UART0_IRQHandler)
-    i.UART1_IRQHandler                       0x0000631e   Section        0  interrupts_hc32l13x.o(i.UART1_IRQHandler)
-    i.Uart0_IRQHandler                       0x00006328   Section        0  bsp_uart.o(i.Uart0_IRQHandler)
-    i.Uart0_init                             0x000063a0   Section        0  bsp_uart.o(i.Uart0_init)
-    i.Uart_ClrStatus                         0x00006470   Section        0  uart.o(i.Uart_ClrStatus)
-    i.Uart_EnableFunc                        0x00006486   Section        0  uart.o(i.Uart_EnableFunc)
-    i.Uart_EnableIrq                         0x0000649a   Section        0  uart.o(i.Uart_EnableIrq)
-    i.Uart_GetStatus                         0x000064ae   Section        0  uart.o(i.Uart_GetStatus)
-    i.Uart_Init                              0x000064c8   Section        0  uart.o(i.Uart_Init)
-    i.Uart_ReceiveData                       0x0000655c   Section        0  uart.o(i.Uart_ReceiveData)
-    i.Uart_SendDataPoll                      0x00006564   Section        0  uart.o(i.Uart_SendDataPoll)
-    i.VC0_IRQHandler                         0x0000659e   Section        0  interrupts_hc32l13x.o(i.VC0_IRQHandler)
-    i.VC1_IRQHandler                         0x000065a6   Section        0  interrupts_hc32l13x.o(i.VC1_IRQHandler)
-    i.WDT_IRQHandler                         0x000065ae   Section        0  interrupts_hc32l13x.o(i.WDT_IRQHandler)
-    i.Wdt_Feed                               0x000065b8   Section        0  wdt.o(i.Wdt_Feed)
-    i.Wdt_Init                               0x000065c8   Section        0  wdt.o(i.Wdt_Init)
-    i.Wdt_Start                              0x000065f4   Section        0  wdt.o(i.Wdt_Start)
-    i.Wdt_WriteWdtLoad                       0x00006604   Section        0  wdt.o(i.Wdt_WriteWdtLoad)
-    i._HidePinInit                           0x0000661c   Section        0  system_hc32l13x.o(i._HidePinInit)
-    _HidePinInit                             0x0000661d   Thumb Code   110  system_hc32l13x.o(i._HidePinInit)
-    i._SysctrlUnlock                         0x0000669c   Section        0  sysctrl.o(i._SysctrlUnlock)
-    _SysctrlUnlock                           0x0000669d   Thumb Code    12  sysctrl.o(i._SysctrlUnlock)
-    i.__ARM_common_switch8                   0x000066b4   Section        0  sysctrl.o(i.__ARM_common_switch8)
-    i.__NVIC_SetPriority                     0x000066d0   Section        0  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x000066d1   Thumb Code   110  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
-    i._sys_exit                              0x00006748   Section        0  ddl.o(i._sys_exit)
-    i._ttywrch                               0x0000674c   Section        0  ddl.o(i._ttywrch)
-    i.ddl_memclr                             0x0000674e   Section        0  ddl.o(i.ddl_memclr)
-    i.delay10us                              0x00006770   Section        0  ddl.o(i.delay10us)
-    i.delay1ms                               0x000067cc   Section        0  ddl.o(i.delay1ms)
-    i.key_is_change                          0x00006824   Section        0  app_key.o(i.key_is_change)
-    key_is_change                            0x00006825   Thumb Code    58  app_key.o(i.key_is_change)
-    i.key_is_down                            0x0000685e   Section        0  app_key.o(i.key_is_down)
-    key_is_down                              0x0000685f   Thumb Code    24  app_key.o(i.key_is_down)
-    i.key_scan_row                           0x00006876   Section        0  app_key.o(i.key_scan_row)
-    key_scan_row                             0x00006877   Thumb Code    98  app_key.o(i.key_scan_row)
-    i.main                                   0x000068d8   Section        0  main.o(i.main)
-    x$fpl$fadd                               0x0000694c   Section      140  faddsub.o(x$fpl$fadd)
-    _fadd1                                   0x00006959   Thumb Code     0  faddsub.o(x$fpl$fadd)
-    x$fpl$fsub                               0x000069d8   Section      208  faddsub.o(x$fpl$fsub)
-    _fsub1                                   0x000069e5   Thumb Code     0  faddsub.o(x$fpl$fsub)
-    .constdata                               0x00006aa8   Section       24  sysctrl.o(.constdata)
-    x$fpl$usenofp                            0x00006aa8   Section        0  usenofp.o(x$fpl$usenofp)
-    .constdata                               0x00006ac0   Section       32  flash.o(.constdata)
-    .constdata                               0x00006ae0   Section        8  uart.o(.constdata)
-    .constdata                               0x00006ae8   Section       12  lpuart.o(.constdata)
-    .constdata                               0x00006af4   Section       60  app_key.o(.constdata)
-    .constdata                               0x00006b30   Section       64  fdiv.o(.constdata)
-    fdiv_tab                                 0x00006b30   Data          64  fdiv.o(.constdata)
+    i.GPIO_Key_init                          0x00003f56   Section        0  bsp_gpio.o(i.GPIO_Key_init)
+    i.GPRSRev_data                           0x00004014   Section        0  app.lpuart.o(i.GPRSRev_data)
+    i.GPSendKeyInfo                          0x00004108   Section        0  app_key.o(i.GPSendKeyInfo)
+    i.GPclearData                            0x00004188   Section        0  app_gprscmd.o(i.GPclearData)
+    i.GPdataTranslate                        0x000041bc   Section        0  app_gprscmd.o(i.GPdataTranslate)
+    i.GetBit                                 0x00004260   Section        0  ddl.o(i.GetBit)
+    i.GetBuffCmd                             0x0000426c   Section        0  app_cmd.o(i.GetBuffCmd)
+    GetBuffCmd                               0x0000426d   Thumb Code    70  app_cmd.o(i.GetBuffCmd)
+    i.GetGpsPack                             0x000042b8   Section        0  app_gprscmd.o(i.GetGpsPack)
+    i.GetKeyScanCode                         0x00004344   Section        0  app_key.o(i.GetKeyScanCode)
+    GetKeyScanCode                           0x00004345   Thumb Code    30  app_key.o(i.GetKeyScanCode)
+    i.GetLcdType                             0x00004370   Section        0  bsp_gpio.o(i.GetLcdType)
+    i.GetSelectCol                           0x000043cc   Section        0  app_key.o(i.GetSelectCol)
+    GetSelectCol                             0x000043cd   Thumb Code    46  app_key.o(i.GetSelectCol)
+    i.Get_Data_HTL                           0x00004404   Section        0  app.lpuart.o(i.Get_Data_HTL)
+    i.Getpackheadlen                         0x000044a4   Section        0  app.lpuart.o(i.Getpackheadlen)
+    i.GpCmd_char                             0x00004520   Section        0  app_gprscmd.o(i.GpCmd_char)
+    i.GpFlashW                               0x000045bc   Section        0  app_gprscmd.o(i.GpFlashW)
+    i.GpFlash_r                              0x00004624   Section        0  app_gprscmd.o(i.GpFlash_r)
+    i.GpRsacketProcessing                    0x0000466c   Section        0  app_gprscmd.o(i.GpRsacketProcessing)
+    i.GpSendInformation                      0x000046f8   Section        0  app_version.o(i.GpSendInformation)
+    i.GpSend_Flash_rD                        0x00004764   Section        0  app_gpsuart0.o(i.GpSend_Flash_rD)
+    GpSend_Flash_rD                          0x00004765   Thumb Code   134  app_gpsuart0.o(i.GpSend_Flash_rD)
+    i.GpSend_Uart0                           0x00004800   Section        0  app_gpsuart0.o(i.GpSend_Uart0)
+    i.GpSend_XY                              0x00004820   Section        0  app_gpsuart0.o(i.GpSend_XY)
+    i.Gpio_ClearIrq                          0x000048b4   Section        0  gpio.o(i.Gpio_ClearIrq)
+    i.Gpio_ClrIO                             0x000048d0   Section        0  gpio.o(i.Gpio_ClrIO)
+    i.Gpio_GetInputIO                        0x000048ec   Section        0  gpio.o(i.Gpio_GetInputIO)
+    i.Gpio_GetIrqStatus                      0x00004904   Section        0  gpio.o(i.Gpio_GetIrqStatus)
+    i.Gpio_Init                              0x0000491c   Section        0  gpio.o(i.Gpio_Init)
+    i.Gpio_SetAfMode                         0x000049ac   Section        0  gpio.o(i.Gpio_SetAfMode)
+    i.Gpio_SetIO                             0x000049c0   Section        0  gpio.o(i.Gpio_SetIO)
+    i.GprsCmd_Task                           0x000049dc   Section        0  app_gprscmd.o(i.GprsCmd_Task)
+    i.GpsSend_Data_Uart                      0x00004ab8   Section        0  app_gpsuart0.o(i.GpsSend_Data_Uart)
+    i.HardFault_Handler                      0x00004c44   Section        0  interrupts_hc32l13x.o(i.HardFault_Handler)
+    i.I2C0_IRQHandler                        0x00004c54   Section        0  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
+    i.I2C1_IRQHandler                        0x00004c5c   Section        0  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
+    i.InitQueue                              0x00004c64   Section        0  queue.o(i.InitQueue)
+    i.KeyInit                                0x00004c70   Section        0  app_key.o(i.KeyInit)
+    i.KeyScanTask                            0x00004c94   Section        0  app_key.o(i.KeyScanTask)
+    i.LCD_IRQHandler                         0x00004ed0   Section        0  interrupts_hc32l13x.o(i.LCD_IRQHandler)
+    i.LPTIM_IRQHandler                       0x00004ed8   Section        0  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
+    i.LPUART0_IRQHandler                     0x00004ee0   Section        0  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
+    i.LPUART1_IRQHandler                     0x00004ee8   Section        0  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
+    i.LPUart_ClrStatus                       0x00004ef0   Section        0  lpuart.o(i.LPUart_ClrStatus)
+    i.LPUart_DisableIrq                      0x00004f06   Section        0  lpuart.o(i.LPUart_DisableIrq)
+    i.LPUart_EnableFunc                      0x00004f1a   Section        0  lpuart.o(i.LPUart_EnableFunc)
+    i.LPUart_EnableIrq                       0x00004f2e   Section        0  lpuart.o(i.LPUart_EnableIrq)
+    i.LPUart_GetStatus                       0x00004f42   Section        0  lpuart.o(i.LPUart_GetStatus)
+    i.LPUart_Init                            0x00004f5c   Section        0  lpuart.o(i.LPUart_Init)
+    i.LPUart_ReceiveData                     0x00004ff4   Section        0  lpuart.o(i.LPUart_ReceiveData)
+    i.LPUart_SendData                        0x00004ffc   Section        0  lpuart.o(i.LPUart_SendData)
+    i.LVD_IRQHandler                         0x00005036   Section        0  interrupts_hc32l13x.o(i.LVD_IRQHandler)
+    i.Led_init                               0x0000503e   Section        0  bsp_gpio.o(i.Led_init)
+    i.LpUart0_IRQHandler                     0x0000506c   Section        0  bsp_uart.o(i.LpUart0_IRQHandler)
+    i.Lpuart_init                            0x000050cc   Section        0  bsp_uart.o(i.Lpuart_init)
+    i.PCA_IRQHandler                         0x00005190   Section        0  interrupts_hc32l13x.o(i.PCA_IRQHandler)
+    i.PCNT_IRQHandler                        0x00005198   Section        0  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
+    i.PORTA_IRQHandler                       0x000051a0   Section        0  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
+    i.PORTB_IRQHandler                       0x000051a8   Section        0  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
+    i.PORTC_IRQHandler                       0x000051b0   Section        0  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
+    i.PORTD_IRQHandler                       0x000051b8   Section        0  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
+    i.Pack_Classification                    0x000051c0   Section        0  app_gprscmd.o(i.Pack_Classification)
+    i.PortA_IRQHandler                       0x000051ec   Section        0  bsp_touch.o(i.PortA_IRQHandler)
+    i.QueueEmpty                             0x00005204   Section        0  queue.o(i.QueueEmpty)
+    i.QueueFull                              0x00005216   Section        0  queue.o(i.QueueFull)
+    i.RTC_IRQHandler                         0x00005232   Section        0  interrupts_hc32l13x.o(i.RTC_IRQHandler)
+    i.Rev_Touch_XY                           0x0000523c   Section        0  bsp_touch.o(i.Rev_Touch_XY)
+    i.SPI0_IRQHandler                        0x000052c8   Section        0  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
+    i.SPI1_IRQHandler                        0x000052d0   Section        0  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
+    i.ScanInteractiveState                   0x000052d8   Section        0  app_gpsuart0.o(i.ScanInteractiveState)
+    i.Screen_init                            0x00005368   Section        0  bsp_gpio.o(i.Screen_init)
+    i.SelectRow                              0x000053a8   Section        0  app_key.o(i.SelectRow)
+    SelectRow                                0x000053a9   Thumb Code    62  app_key.o(i.SelectRow)
+    i.SendData_escape                        0x000053f0   Section        0  app_gpsuart0.o(i.SendData_escape)
+    i.SendInformation                        0x00005458   Section        0  app_version.o(i.SendInformation)
+    i.SendKeyInfo                            0x000054a8   Section        0  app_key.o(i.SendKeyInfo)
+    i.Send_Data_Uart                         0x00005510   Section        0  app_uart0.o(i.Send_Data_Uart)
+    i.Send_Flash_rD                          0x000055d4   Section        0  app_uart0.o(i.Send_Flash_rD)
+    Send_Flash_rD                            0x000055d5   Thumb Code    76  app_uart0.o(i.Send_Flash_rD)
+    i.Send_LPUart0                           0x00005630   Section        0  app_gpsuart0.o(i.Send_LPUart0)
+    i.Send_Uart0                             0x00005650   Section        0  app_uart0.o(i.Send_Uart0)
+    i.Send_XY                                0x00005670   Section        0  app_uart0.o(i.Send_XY)
+    i.Sendby                                 0x000056d4   Section        0  app.lpuart.o(i.Sendby)
+    i.SendpackHead                           0x0000570c   Section        0  app.lpuart.o(i.SendpackHead)
+    i.SetBit                                 0x000057d0   Section        0  ddl.o(i.SetBit)
+    i.SysTick_Handler                        0x000057ee   Section        0  interrupts_hc32l13x.o(i.SysTick_Handler)
+    i.Sysctrl_ClkInit                        0x000057f6   Section        0  sysctrl.o(i.Sysctrl_ClkInit)
+    i.Sysctrl_ClkSourceEnable                0x00005860   Section        0  sysctrl.o(i.Sysctrl_ClkSourceEnable)
+    i.Sysctrl_GetHClkFreq                    0x000059cc   Section        0  sysctrl.o(i.Sysctrl_GetHClkFreq)
+    i.Sysctrl_GetPClkFreq                    0x00005b40   Section        0  sysctrl.o(i.Sysctrl_GetPClkFreq)
+    i.Sysctrl_SetHCLKDiv                     0x00005b60   Section        0  sysctrl.o(i.Sysctrl_SetHCLKDiv)
+    i.Sysctrl_SetPCLKDiv                     0x00005b88   Section        0  sysctrl.o(i.Sysctrl_SetPCLKDiv)
+    i.Sysctrl_SetPLLFreq                     0x00005bb0   Section        0  sysctrl.o(i.Sysctrl_SetPLLFreq)
+    i.Sysctrl_SetPLLStableTime               0x00005cc4   Section        0  sysctrl.o(i.Sysctrl_SetPLLStableTime)
+    i.Sysctrl_SetPeripheralGate              0x00005ce8   Section        0  sysctrl.o(i.Sysctrl_SetPeripheralGate)
+    i.Sysctrl_SetRCLStableTime               0x00005d00   Section        0  sysctrl.o(i.Sysctrl_SetRCLStableTime)
+    i.Sysctrl_SetXTHFreq                     0x00005d24   Section        0  sysctrl.o(i.Sysctrl_SetXTHFreq)
+    i.Sysctrl_SetXTHStableTime               0x00005d44   Section        0  sysctrl.o(i.Sysctrl_SetXTHStableTime)
+    i.Sysctrl_SetXTLStableTime               0x00005d64   Section        0  sysctrl.o(i.Sysctrl_SetXTLStableTime)
+    i.Sysctrl_SysClkSwitch                   0x00005d84   Section        0  sysctrl.o(i.Sysctrl_SysClkSwitch)
+    i.Sysctrl_XTHDriverCfg                   0x00005db0   Section        0  sysctrl.o(i.Sysctrl_XTHDriverCfg)
+    i.Sysctrl_XTLDriverCfg                   0x00005dcc   Section        0  sysctrl.o(i.Sysctrl_XTLDriverCfg)
+    i.SystemCoreClockUpdate                  0x00005e00   Section        0  system_hc32l13x.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x00005e10   Section        0  system_hc32l13x.o(i.SystemInit)
+    i.Systimeclk                             0x00005e50   Section        0  bsp_clk.o(i.Systimeclk)
+    i.Systme_led                             0x00005ed8   Section        0  bsp_time.o(i.Systme_led)
+    i.TIM0_IRQHandler                        0x00005f0c   Section        0  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
+    i.TIM1_IRQHandler                        0x00005f14   Section        0  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
+    i.TIM2_IRQHandler                        0x00005f1c   Section        0  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x00005f24   Section        0  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x00005f2c   Section        0  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
+    i.TIM5_IRQHandler                        0x00005f34   Section        0  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
+    i.TIM6_IRQHandler                        0x00005f3c   Section        0  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
+    i.TSC2046_Init                           0x00005f44   Section        0  bsp_touch.o(i.TSC2046_Init)
+    i.TSC2046_ReadAdc                        0x00005fd0   Section        0  bsp_touch.o(i.TSC2046_ReadAdc)
+    TSC2046_ReadAdc                          0x00005fd1   Thumb Code    48  bsp_touch.o(i.TSC2046_ReadAdc)
+    i.TSC2046_ReadAdc_XY                     0x00006000   Section        0  bsp_touch.o(i.TSC2046_ReadAdc_XY)
+    i.TSC2046_ReadCMD                        0x0000601c   Section        0  bsp_touch.o(i.TSC2046_ReadCMD)
+    TSC2046_ReadCMD                          0x0000601d   Thumb Code   144  bsp_touch.o(i.TSC2046_ReadCMD)
+    i.TSC2046_WriteCMD                       0x000060ac   Section        0  bsp_touch.o(i.TSC2046_WriteCMD)
+    TSC2046_WriteCMD                         0x000060ad   Thumb Code   102  bsp_touch.o(i.TSC2046_WriteCMD)
+    i.Tim0_IRQHandler                        0x00006114   Section        0  bsp_time.o(i.Tim0_IRQHandler)
+    i.Time_init                              0x000061dc   Section        0  bsp_time.o(i.Time_init)
+    i.ToggleConfirmationHandshake            0x00006254   Section        0  app_gprscmd.o(i.ToggleConfirmationHandshake)
+    i.UART0_H                                0x000062b8   Section        0  bsp_uart.o(i.UART0_H)
+    i.UART0_IRQHandler                       0x0000631e   Section        0  interrupts_hc32l13x.o(i.UART0_IRQHandler)
+    i.UART1_IRQHandler                       0x00006326   Section        0  interrupts_hc32l13x.o(i.UART1_IRQHandler)
+    i.Uart0_IRQHandler                       0x00006330   Section        0  bsp_uart.o(i.Uart0_IRQHandler)
+    i.Uart0_init                             0x000063a8   Section        0  bsp_uart.o(i.Uart0_init)
+    i.Uart_ClrStatus                         0x00006478   Section        0  uart.o(i.Uart_ClrStatus)
+    i.Uart_EnableFunc                        0x0000648e   Section        0  uart.o(i.Uart_EnableFunc)
+    i.Uart_EnableIrq                         0x000064a2   Section        0  uart.o(i.Uart_EnableIrq)
+    i.Uart_GetStatus                         0x000064b6   Section        0  uart.o(i.Uart_GetStatus)
+    i.Uart_Init                              0x000064d0   Section        0  uart.o(i.Uart_Init)
+    i.Uart_ReceiveData                       0x00006564   Section        0  uart.o(i.Uart_ReceiveData)
+    i.Uart_SendDataPoll                      0x0000656c   Section        0  uart.o(i.Uart_SendDataPoll)
+    i.VC0_IRQHandler                         0x000065a6   Section        0  interrupts_hc32l13x.o(i.VC0_IRQHandler)
+    i.VC1_IRQHandler                         0x000065ae   Section        0  interrupts_hc32l13x.o(i.VC1_IRQHandler)
+    i.WDT_IRQHandler                         0x000065b6   Section        0  interrupts_hc32l13x.o(i.WDT_IRQHandler)
+    i.Wdt_Feed                               0x000065c0   Section        0  wdt.o(i.Wdt_Feed)
+    i.Wdt_Init                               0x000065d0   Section        0  wdt.o(i.Wdt_Init)
+    i.Wdt_Start                              0x000065fc   Section        0  wdt.o(i.Wdt_Start)
+    i.Wdt_WriteWdtLoad                       0x0000660c   Section        0  wdt.o(i.Wdt_WriteWdtLoad)
+    i._HidePinInit                           0x00006624   Section        0  system_hc32l13x.o(i._HidePinInit)
+    _HidePinInit                             0x00006625   Thumb Code   110  system_hc32l13x.o(i._HidePinInit)
+    i._SysctrlUnlock                         0x000066a4   Section        0  sysctrl.o(i._SysctrlUnlock)
+    _SysctrlUnlock                           0x000066a5   Thumb Code    12  sysctrl.o(i._SysctrlUnlock)
+    i.__ARM_common_switch8                   0x000066bc   Section        0  sysctrl.o(i.__ARM_common_switch8)
+    i.__NVIC_SetPriority                     0x000066d8   Section        0  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x000066d9   Thumb Code   110  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
+    i._sys_exit                              0x00006750   Section        0  ddl.o(i._sys_exit)
+    i._ttywrch                               0x00006754   Section        0  ddl.o(i._ttywrch)
+    i.ddl_memclr                             0x00006756   Section        0  ddl.o(i.ddl_memclr)
+    i.delay10us                              0x00006778   Section        0  ddl.o(i.delay10us)
+    i.delay1ms                               0x000067d4   Section        0  ddl.o(i.delay1ms)
+    i.key_is_change                          0x0000682c   Section        0  app_key.o(i.key_is_change)
+    key_is_change                            0x0000682d   Thumb Code    58  app_key.o(i.key_is_change)
+    i.key_is_down                            0x00006866   Section        0  app_key.o(i.key_is_down)
+    key_is_down                              0x00006867   Thumb Code    24  app_key.o(i.key_is_down)
+    i.key_scan_row                           0x0000687e   Section        0  app_key.o(i.key_scan_row)
+    key_scan_row                             0x0000687f   Thumb Code    98  app_key.o(i.key_scan_row)
+    i.main                                   0x000068e0   Section        0  main.o(i.main)
+    x$fpl$fadd                               0x00006954   Section      140  faddsub.o(x$fpl$fadd)
+    _fadd1                                   0x00006961   Thumb Code     0  faddsub.o(x$fpl$fadd)
+    x$fpl$fsub                               0x000069e0   Section      208  faddsub.o(x$fpl$fsub)
+    _fsub1                                   0x000069ed   Thumb Code     0  faddsub.o(x$fpl$fsub)
+    .constdata                               0x00006ab0   Section       24  sysctrl.o(.constdata)
+    x$fpl$usenofp                            0x00006ab0   Section        0  usenofp.o(x$fpl$usenofp)
+    .constdata                               0x00006ac8   Section       32  flash.o(.constdata)
+    .constdata                               0x00006ae8   Section        8  uart.o(.constdata)
+    .constdata                               0x00006af0   Section       12  lpuart.o(.constdata)
+    .constdata                               0x00006afc   Section       60  app_key.o(.constdata)
+    .constdata                               0x00006b38   Section       64  fdiv.o(.constdata)
+    fdiv_tab                                 0x00006b38   Data          64  fdiv.o(.constdata)
     .data                                    0x20000000   Section        4  system_hc32l13x.o(.data)
     .data                                    0x20000004   Section        2  bsp_time.o(.data)
     .data                                    0x20000006   Section        2  bsp_uart.o(.data)
@@ -1574,152 +1574,152 @@ Image Symbol Table
     Flash_WaitCycle                          0x00003d49   Thumb Code    38  flash.o(i.Flash_WaitCycle)
     Flash_WriteByte                          0x00003d7d   Thumb Code   158  flash.o(i.Flash_WriteByte)
     Flash_readBy                             0x00003ea5   Thumb Code     6  bsp_flash.o(i.Flash_readBy)
-    Flash_writeBy                            0x00003f31   Thumb Code    30  bsp_flash.o(i.Flash_writeBy)
-    GPIO_Key_init                            0x00003f4f   Thumb Code   188  bsp_gpio.o(i.GPIO_Key_init)
-    GPRSRev_data                             0x0000400d   Thumb Code   214  app.lpuart.o(i.GPRSRev_data)
-    GPSendKeyInfo                            0x00004101   Thumb Code   118  app_key.o(i.GPSendKeyInfo)
-    GPclearData                              0x00004181   Thumb Code    30  app_gprscmd.o(i.GPclearData)
-    GPdataTranslate                          0x000041b5   Thumb Code   154  app_gprscmd.o(i.GPdataTranslate)
-    GetBit                                   0x00004259   Thumb Code    12  ddl.o(i.GetBit)
-    GetGpsPack                               0x000042b1   Thumb Code   128  app_gprscmd.o(i.GetGpsPack)
-    GetLcdType                               0x00004369   Thumb Code    90  bsp_gpio.o(i.GetLcdType)
-    Get_Data_HTL                             0x000043fd   Thumb Code   146  app.lpuart.o(i.Get_Data_HTL)
-    Getpackheadlen                           0x0000449d   Thumb Code   104  app.lpuart.o(i.Getpackheadlen)
-    GpCmd_char                               0x00004519   Thumb Code   136  app_gprscmd.o(i.GpCmd_char)
-    GpFlashW                                 0x000045b5   Thumb Code    90  app_gprscmd.o(i.GpFlashW)
-    GpFlash_r                                0x0000461d   Thumb Code    64  app_gprscmd.o(i.GpFlash_r)
-    GpRsacketProcessing                      0x00004665   Thumb Code   116  app_gprscmd.o(i.GpRsacketProcessing)
-    GpSendInformation                        0x000046f1   Thumb Code   102  app_version.o(i.GpSendInformation)
-    GpSend_Uart0                             0x000047f9   Thumb Code    30  app_gpsuart0.o(i.GpSend_Uart0)
-    GpSend_XY                                0x00004819   Thumb Code   128  app_gpsuart0.o(i.GpSend_XY)
-    Gpio_ClearIrq                            0x000048ad   Thumb Code    22  gpio.o(i.Gpio_ClearIrq)
-    Gpio_ClrIO                               0x000048c9   Thumb Code    22  gpio.o(i.Gpio_ClrIO)
-    Gpio_GetInputIO                          0x000048e5   Thumb Code    18  gpio.o(i.Gpio_GetInputIO)
-    Gpio_GetIrqStatus                        0x000048fd   Thumb Code    18  gpio.o(i.Gpio_GetIrqStatus)
-    Gpio_Init                                0x00004915   Thumb Code   130  gpio.o(i.Gpio_Init)
-    Gpio_SetAfMode                           0x000049a5   Thumb Code    16  gpio.o(i.Gpio_SetAfMode)
-    Gpio_SetIO                               0x000049b9   Thumb Code    22  gpio.o(i.Gpio_SetIO)
-    GprsCmd_Task                             0x000049d5   Thumb Code   194  app_gprscmd.o(i.GprsCmd_Task)
-    GpsSend_Data_Uart                        0x00004ab1   Thumb Code   324  app_gpsuart0.o(i.GpsSend_Data_Uart)
-    HardFault_Handler                        0x00004c3d   Thumb Code    16  interrupts_hc32l13x.o(i.HardFault_Handler)
-    I2C0_IRQHandler                          0x00004c4d   Thumb Code     8  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
-    I2C1_IRQHandler                          0x00004c55   Thumb Code     8  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
-    InitQueue                                0x00004c5d   Thumb Code    12  queue.o(i.InitQueue)
-    KeyInit                                  0x00004c69   Thumb Code    30  app_key.o(i.KeyInit)
-    KeyScanTask                              0x00004c8d   Thumb Code   514  app_key.o(i.KeyScanTask)
-    LCD_IRQHandler                           0x00004ec9   Thumb Code     8  interrupts_hc32l13x.o(i.LCD_IRQHandler)
-    LPTIM_IRQHandler                         0x00004ed1   Thumb Code     8  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
-    LPUART0_IRQHandler                       0x00004ed9   Thumb Code     8  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
-    LPUART1_IRQHandler                       0x00004ee1   Thumb Code     8  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
-    LPUart_ClrStatus                         0x00004ee9   Thumb Code    22  lpuart.o(i.LPUart_ClrStatus)
-    LPUart_DisableIrq                        0x00004eff   Thumb Code    20  lpuart.o(i.LPUart_DisableIrq)
-    LPUart_EnableFunc                        0x00004f13   Thumb Code    20  lpuart.o(i.LPUart_EnableFunc)
-    LPUart_EnableIrq                         0x00004f27   Thumb Code    20  lpuart.o(i.LPUart_EnableIrq)
-    LPUart_GetStatus                         0x00004f3b   Thumb Code    24  lpuart.o(i.LPUart_GetStatus)
-    LPUart_Init                              0x00004f55   Thumb Code   148  lpuart.o(i.LPUart_Init)
-    LPUart_ReceiveData                       0x00004fed   Thumb Code     8  lpuart.o(i.LPUart_ReceiveData)
-    LPUart_SendData                          0x00004ff5   Thumb Code    58  lpuart.o(i.LPUart_SendData)
-    LVD_IRQHandler                           0x0000502f   Thumb Code     8  interrupts_hc32l13x.o(i.LVD_IRQHandler)
-    Led_init                                 0x00005037   Thumb Code    46  bsp_gpio.o(i.Led_init)
-    LpUart0_IRQHandler                       0x00005065   Thumb Code    84  bsp_uart.o(i.LpUart0_IRQHandler)
-    Lpuart_init                              0x000050c5   Thumb Code   182  bsp_uart.o(i.Lpuart_init)
-    PCA_IRQHandler                           0x00005189   Thumb Code     8  interrupts_hc32l13x.o(i.PCA_IRQHandler)
-    PCNT_IRQHandler                          0x00005191   Thumb Code     8  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
-    PORTA_IRQHandler                         0x00005199   Thumb Code     8  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
-    PORTB_IRQHandler                         0x000051a1   Thumb Code     8  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
-    PORTC_IRQHandler                         0x000051a9   Thumb Code     8  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
-    PORTD_IRQHandler                         0x000051b1   Thumb Code     8  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
-    Pack_Classification                      0x000051b9   Thumb Code    40  app_gprscmd.o(i.Pack_Classification)
-    PortA_IRQHandler                         0x000051e5   Thumb Code    24  bsp_touch.o(i.PortA_IRQHandler)
-    QueueEmpty                               0x000051fd   Thumb Code    18  queue.o(i.QueueEmpty)
-    QueueFull                                0x0000520f   Thumb Code    28  queue.o(i.QueueFull)
-    RTC_IRQHandler                           0x0000522b   Thumb Code     8  interrupts_hc32l13x.o(i.RTC_IRQHandler)
-    Rev_Touch_XY                             0x00005235   Thumb Code   108  bsp_touch.o(i.Rev_Touch_XY)
-    SPI0_IRQHandler                          0x000052c1   Thumb Code     8  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
-    SPI1_IRQHandler                          0x000052c9   Thumb Code     8  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
-    ScanInteractiveState                     0x000052d1   Thumb Code   106  app_gpsuart0.o(i.ScanInteractiveState)
-    Screen_init                              0x00005361   Thumb Code    64  bsp_gpio.o(i.Screen_init)
-    SendData_escape                          0x000053e9   Thumb Code   104  app_gpsuart0.o(i.SendData_escape)
-    SendInformation                          0x00005451   Thumb Code    74  app_version.o(i.SendInformation)
-    SendKeyInfo                              0x000054a1   Thumb Code    94  app_key.o(i.SendKeyInfo)
-    Send_Data_Uart                           0x00005509   Thumb Code   154  app_uart0.o(i.Send_Data_Uart)
-    Send_LPUart0                             0x00005629   Thumb Code    28  app_gpsuart0.o(i.Send_LPUart0)
-    Send_Uart0                               0x00005649   Thumb Code    30  app_uart0.o(i.Send_Uart0)
-    Send_XY                                  0x00005669   Thumb Code    82  app_uart0.o(i.Send_XY)
-    Sendby                                   0x000056cd   Thumb Code    56  app.lpuart.o(i.Sendby)
-    SendpackHead                             0x00005705   Thumb Code   182  app.lpuart.o(i.SendpackHead)
-    SetBit                                   0x000057c9   Thumb Code    30  ddl.o(i.SetBit)
-    SysTick_Handler                          0x000057e7   Thumb Code     8  interrupts_hc32l13x.o(i.SysTick_Handler)
-    Sysctrl_ClkInit                          0x000057ef   Thumb Code   106  sysctrl.o(i.Sysctrl_ClkInit)
-    Sysctrl_ClkSourceEnable                  0x00005859   Thumb Code   352  sysctrl.o(i.Sysctrl_ClkSourceEnable)
-    Sysctrl_GetHClkFreq                      0x000059c5   Thumb Code   354  sysctrl.o(i.Sysctrl_GetHClkFreq)
-    Sysctrl_GetPClkFreq                      0x00005b39   Thumb Code    28  sysctrl.o(i.Sysctrl_GetPClkFreq)
-    Sysctrl_SetHCLKDiv                       0x00005b59   Thumb Code    36  sysctrl.o(i.Sysctrl_SetHCLKDiv)
-    Sysctrl_SetPCLKDiv                       0x00005b81   Thumb Code    36  sysctrl.o(i.Sysctrl_SetPCLKDiv)
-    Sysctrl_SetPLLFreq                       0x00005ba9   Thumb Code   258  sysctrl.o(i.Sysctrl_SetPLLFreq)
-    Sysctrl_SetPLLStableTime                 0x00005cbd   Thumb Code    32  sysctrl.o(i.Sysctrl_SetPLLStableTime)
-    Sysctrl_SetPeripheralGate                0x00005ce1   Thumb Code    20  sysctrl.o(i.Sysctrl_SetPeripheralGate)
-    Sysctrl_SetRCLStableTime                 0x00005cf9   Thumb Code    32  sysctrl.o(i.Sysctrl_SetRCLStableTime)
-    Sysctrl_SetXTHFreq                       0x00005d1d   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTHFreq)
-    Sysctrl_SetXTHStableTime                 0x00005d3d   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTHStableTime)
-    Sysctrl_SetXTLStableTime                 0x00005d5d   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTLStableTime)
-    Sysctrl_SysClkSwitch                     0x00005d7d   Thumb Code    40  sysctrl.o(i.Sysctrl_SysClkSwitch)
-    Sysctrl_XTHDriverCfg                     0x00005da9   Thumb Code    24  sysctrl.o(i.Sysctrl_XTHDriverCfg)
-    Sysctrl_XTLDriverCfg                     0x00005dc5   Thumb Code    46  sysctrl.o(i.Sysctrl_XTLDriverCfg)
-    SystemCoreClockUpdate                    0x00005df9   Thumb Code    12  system_hc32l13x.o(i.SystemCoreClockUpdate)
-    SystemInit                               0x00005e09   Thumb Code    56  system_hc32l13x.o(i.SystemInit)
-    Systimeclk                               0x00005e49   Thumb Code   130  bsp_clk.o(i.Systimeclk)
-    Systme_led                               0x00005ed1   Thumb Code    48  bsp_time.o(i.Systme_led)
-    TIM0_IRQHandler                          0x00005f05   Thumb Code     8  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
-    TIM1_IRQHandler                          0x00005f0d   Thumb Code     8  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
-    TIM2_IRQHandler                          0x00005f15   Thumb Code     8  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
-    TIM3_IRQHandler                          0x00005f1d   Thumb Code     8  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x00005f25   Thumb Code     8  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
-    TIM5_IRQHandler                          0x00005f2d   Thumb Code     8  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
-    TIM6_IRQHandler                          0x00005f35   Thumb Code     8  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
-    TSC2046_Init                             0x00005f3d   Thumb Code   140  bsp_touch.o(i.TSC2046_Init)
-    TSC2046_ReadAdc_XY                       0x00005ff9   Thumb Code    28  bsp_touch.o(i.TSC2046_ReadAdc_XY)
-    Tim0_IRQHandler                          0x0000610d   Thumb Code   156  bsp_time.o(i.Tim0_IRQHandler)
-    Time_init                                0x000061d5   Thumb Code   120  bsp_time.o(i.Time_init)
-    ToggleConfirmationHandshake              0x0000624d   Thumb Code    78  app_gprscmd.o(i.ToggleConfirmationHandshake)
-    UART0_H                                  0x000062b1   Thumb Code   102  bsp_uart.o(i.UART0_H)
-    UART0_IRQHandler                         0x00006317   Thumb Code     8  interrupts_hc32l13x.o(i.UART0_IRQHandler)
-    UART1_IRQHandler                         0x0000631f   Thumb Code     8  interrupts_hc32l13x.o(i.UART1_IRQHandler)
-    Uart0_IRQHandler                         0x00006329   Thumb Code   110  bsp_uart.o(i.Uart0_IRQHandler)
-    Uart0_init                               0x000063a1   Thumb Code   200  bsp_uart.o(i.Uart0_init)
-    Uart_ClrStatus                           0x00006471   Thumb Code    22  uart.o(i.Uart_ClrStatus)
-    Uart_EnableFunc                          0x00006487   Thumb Code    20  uart.o(i.Uart_EnableFunc)
-    Uart_EnableIrq                           0x0000649b   Thumb Code    20  uart.o(i.Uart_EnableIrq)
-    Uart_GetStatus                           0x000064af   Thumb Code    24  uart.o(i.Uart_GetStatus)
-    Uart_Init                                0x000064c9   Thumb Code   144  uart.o(i.Uart_Init)
-    Uart_ReceiveData                         0x0000655d   Thumb Code     8  uart.o(i.Uart_ReceiveData)
-    Uart_SendDataPoll                        0x00006565   Thumb Code    58  uart.o(i.Uart_SendDataPoll)
-    VC0_IRQHandler                           0x0000659f   Thumb Code     8  interrupts_hc32l13x.o(i.VC0_IRQHandler)
-    VC1_IRQHandler                           0x000065a7   Thumb Code     8  interrupts_hc32l13x.o(i.VC1_IRQHandler)
-    WDT_IRQHandler                           0x000065af   Thumb Code     8  interrupts_hc32l13x.o(i.WDT_IRQHandler)
-    Wdt_Feed                                 0x000065b9   Thumb Code    12  wdt.o(i.Wdt_Feed)
-    Wdt_Init                                 0x000065c9   Thumb Code    40  wdt.o(i.Wdt_Init)
-    Wdt_Start                                0x000065f5   Thumb Code    12  wdt.o(i.Wdt_Start)
-    Wdt_WriteWdtLoad                         0x00006605   Thumb Code    20  wdt.o(i.Wdt_WriteWdtLoad)
-    __ARM_common_switch8                     0x000066b5   Thumb Code    28  sysctrl.o(i.__ARM_common_switch8)
-    _sys_exit                                0x00006749   Thumb Code     4  ddl.o(i._sys_exit)
-    _ttywrch                                 0x0000674d   Thumb Code     2  ddl.o(i._ttywrch)
-    ddl_memclr                               0x0000674f   Thumb Code    32  ddl.o(i.ddl_memclr)
-    delay10us                                0x00006771   Thumb Code    74  ddl.o(i.delay10us)
-    delay1ms                                 0x000067cd   Thumb Code    76  ddl.o(i.delay1ms)
-    $Super$$main                             0x000068d9   Thumb Code   108  main.o(i.main)
-    __aeabi_fadd                             0x0000694d   Thumb Code     0  faddsub.o(x$fpl$fadd)
-    _fadd                                    0x0000694d   Thumb Code   134  faddsub.o(x$fpl$fadd)
-    __aeabi_fsub                             0x000069d9   Thumb Code     0  faddsub.o(x$fpl$fsub)
-    _fsub                                    0x000069d9   Thumb Code   204  faddsub.o(x$fpl$fsub)
-    __I$use$fp                               0x00006aa8   Number         0  usenofp.o(x$fpl$usenofp)
-    pu32PcgTimer4M                           0x00006ac0   Data          32  flash.o(.constdata)
-    GPIO_COL_PROT                            0x00006af4   Data          16  app_key.o(.constdata)
-    GPIO_COL_PIN                             0x00006b04   Data          16  app_key.o(.constdata)
-    GPIO_ROW_PROT                            0x00006b14   Data          14  app_key.o(.constdata)
-    GPIO_ROW_PIN                             0x00006b22   Data          14  app_key.o(.constdata)
-    Region$$Table$$Base                      0x00006b70   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00006b90   Number         0  anon$$obj.o(Region$$Table)
+    Flash_writeBy                            0x00003f31   Thumb Code    38  bsp_flash.o(i.Flash_writeBy)
+    GPIO_Key_init                            0x00003f57   Thumb Code   188  bsp_gpio.o(i.GPIO_Key_init)
+    GPRSRev_data                             0x00004015   Thumb Code   214  app.lpuart.o(i.GPRSRev_data)
+    GPSendKeyInfo                            0x00004109   Thumb Code   118  app_key.o(i.GPSendKeyInfo)
+    GPclearData                              0x00004189   Thumb Code    30  app_gprscmd.o(i.GPclearData)
+    GPdataTranslate                          0x000041bd   Thumb Code   154  app_gprscmd.o(i.GPdataTranslate)
+    GetBit                                   0x00004261   Thumb Code    12  ddl.o(i.GetBit)
+    GetGpsPack                               0x000042b9   Thumb Code   128  app_gprscmd.o(i.GetGpsPack)
+    GetLcdType                               0x00004371   Thumb Code    90  bsp_gpio.o(i.GetLcdType)
+    Get_Data_HTL                             0x00004405   Thumb Code   146  app.lpuart.o(i.Get_Data_HTL)
+    Getpackheadlen                           0x000044a5   Thumb Code   104  app.lpuart.o(i.Getpackheadlen)
+    GpCmd_char                               0x00004521   Thumb Code   136  app_gprscmd.o(i.GpCmd_char)
+    GpFlashW                                 0x000045bd   Thumb Code    90  app_gprscmd.o(i.GpFlashW)
+    GpFlash_r                                0x00004625   Thumb Code    64  app_gprscmd.o(i.GpFlash_r)
+    GpRsacketProcessing                      0x0000466d   Thumb Code   116  app_gprscmd.o(i.GpRsacketProcessing)
+    GpSendInformation                        0x000046f9   Thumb Code   102  app_version.o(i.GpSendInformation)
+    GpSend_Uart0                             0x00004801   Thumb Code    30  app_gpsuart0.o(i.GpSend_Uart0)
+    GpSend_XY                                0x00004821   Thumb Code   128  app_gpsuart0.o(i.GpSend_XY)
+    Gpio_ClearIrq                            0x000048b5   Thumb Code    22  gpio.o(i.Gpio_ClearIrq)
+    Gpio_ClrIO                               0x000048d1   Thumb Code    22  gpio.o(i.Gpio_ClrIO)
+    Gpio_GetInputIO                          0x000048ed   Thumb Code    18  gpio.o(i.Gpio_GetInputIO)
+    Gpio_GetIrqStatus                        0x00004905   Thumb Code    18  gpio.o(i.Gpio_GetIrqStatus)
+    Gpio_Init                                0x0000491d   Thumb Code   130  gpio.o(i.Gpio_Init)
+    Gpio_SetAfMode                           0x000049ad   Thumb Code    16  gpio.o(i.Gpio_SetAfMode)
+    Gpio_SetIO                               0x000049c1   Thumb Code    22  gpio.o(i.Gpio_SetIO)
+    GprsCmd_Task                             0x000049dd   Thumb Code   194  app_gprscmd.o(i.GprsCmd_Task)
+    GpsSend_Data_Uart                        0x00004ab9   Thumb Code   324  app_gpsuart0.o(i.GpsSend_Data_Uart)
+    HardFault_Handler                        0x00004c45   Thumb Code    16  interrupts_hc32l13x.o(i.HardFault_Handler)
+    I2C0_IRQHandler                          0x00004c55   Thumb Code     8  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
+    I2C1_IRQHandler                          0x00004c5d   Thumb Code     8  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
+    InitQueue                                0x00004c65   Thumb Code    12  queue.o(i.InitQueue)
+    KeyInit                                  0x00004c71   Thumb Code    30  app_key.o(i.KeyInit)
+    KeyScanTask                              0x00004c95   Thumb Code   514  app_key.o(i.KeyScanTask)
+    LCD_IRQHandler                           0x00004ed1   Thumb Code     8  interrupts_hc32l13x.o(i.LCD_IRQHandler)
+    LPTIM_IRQHandler                         0x00004ed9   Thumb Code     8  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
+    LPUART0_IRQHandler                       0x00004ee1   Thumb Code     8  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
+    LPUART1_IRQHandler                       0x00004ee9   Thumb Code     8  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
+    LPUart_ClrStatus                         0x00004ef1   Thumb Code    22  lpuart.o(i.LPUart_ClrStatus)
+    LPUart_DisableIrq                        0x00004f07   Thumb Code    20  lpuart.o(i.LPUart_DisableIrq)
+    LPUart_EnableFunc                        0x00004f1b   Thumb Code    20  lpuart.o(i.LPUart_EnableFunc)
+    LPUart_EnableIrq                         0x00004f2f   Thumb Code    20  lpuart.o(i.LPUart_EnableIrq)
+    LPUart_GetStatus                         0x00004f43   Thumb Code    24  lpuart.o(i.LPUart_GetStatus)
+    LPUart_Init                              0x00004f5d   Thumb Code   148  lpuart.o(i.LPUart_Init)
+    LPUart_ReceiveData                       0x00004ff5   Thumb Code     8  lpuart.o(i.LPUart_ReceiveData)
+    LPUart_SendData                          0x00004ffd   Thumb Code    58  lpuart.o(i.LPUart_SendData)
+    LVD_IRQHandler                           0x00005037   Thumb Code     8  interrupts_hc32l13x.o(i.LVD_IRQHandler)
+    Led_init                                 0x0000503f   Thumb Code    46  bsp_gpio.o(i.Led_init)
+    LpUart0_IRQHandler                       0x0000506d   Thumb Code    84  bsp_uart.o(i.LpUart0_IRQHandler)
+    Lpuart_init                              0x000050cd   Thumb Code   182  bsp_uart.o(i.Lpuart_init)
+    PCA_IRQHandler                           0x00005191   Thumb Code     8  interrupts_hc32l13x.o(i.PCA_IRQHandler)
+    PCNT_IRQHandler                          0x00005199   Thumb Code     8  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
+    PORTA_IRQHandler                         0x000051a1   Thumb Code     8  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
+    PORTB_IRQHandler                         0x000051a9   Thumb Code     8  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
+    PORTC_IRQHandler                         0x000051b1   Thumb Code     8  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
+    PORTD_IRQHandler                         0x000051b9   Thumb Code     8  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
+    Pack_Classification                      0x000051c1   Thumb Code    40  app_gprscmd.o(i.Pack_Classification)
+    PortA_IRQHandler                         0x000051ed   Thumb Code    24  bsp_touch.o(i.PortA_IRQHandler)
+    QueueEmpty                               0x00005205   Thumb Code    18  queue.o(i.QueueEmpty)
+    QueueFull                                0x00005217   Thumb Code    28  queue.o(i.QueueFull)
+    RTC_IRQHandler                           0x00005233   Thumb Code     8  interrupts_hc32l13x.o(i.RTC_IRQHandler)
+    Rev_Touch_XY                             0x0000523d   Thumb Code   108  bsp_touch.o(i.Rev_Touch_XY)
+    SPI0_IRQHandler                          0x000052c9   Thumb Code     8  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
+    SPI1_IRQHandler                          0x000052d1   Thumb Code     8  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
+    ScanInteractiveState                     0x000052d9   Thumb Code   106  app_gpsuart0.o(i.ScanInteractiveState)
+    Screen_init                              0x00005369   Thumb Code    64  bsp_gpio.o(i.Screen_init)
+    SendData_escape                          0x000053f1   Thumb Code   104  app_gpsuart0.o(i.SendData_escape)
+    SendInformation                          0x00005459   Thumb Code    74  app_version.o(i.SendInformation)
+    SendKeyInfo                              0x000054a9   Thumb Code    94  app_key.o(i.SendKeyInfo)
+    Send_Data_Uart                           0x00005511   Thumb Code   154  app_uart0.o(i.Send_Data_Uart)
+    Send_LPUart0                             0x00005631   Thumb Code    28  app_gpsuart0.o(i.Send_LPUart0)
+    Send_Uart0                               0x00005651   Thumb Code    30  app_uart0.o(i.Send_Uart0)
+    Send_XY                                  0x00005671   Thumb Code    82  app_uart0.o(i.Send_XY)
+    Sendby                                   0x000056d5   Thumb Code    56  app.lpuart.o(i.Sendby)
+    SendpackHead                             0x0000570d   Thumb Code   182  app.lpuart.o(i.SendpackHead)
+    SetBit                                   0x000057d1   Thumb Code    30  ddl.o(i.SetBit)
+    SysTick_Handler                          0x000057ef   Thumb Code     8  interrupts_hc32l13x.o(i.SysTick_Handler)
+    Sysctrl_ClkInit                          0x000057f7   Thumb Code   106  sysctrl.o(i.Sysctrl_ClkInit)
+    Sysctrl_ClkSourceEnable                  0x00005861   Thumb Code   352  sysctrl.o(i.Sysctrl_ClkSourceEnable)
+    Sysctrl_GetHClkFreq                      0x000059cd   Thumb Code   354  sysctrl.o(i.Sysctrl_GetHClkFreq)
+    Sysctrl_GetPClkFreq                      0x00005b41   Thumb Code    28  sysctrl.o(i.Sysctrl_GetPClkFreq)
+    Sysctrl_SetHCLKDiv                       0x00005b61   Thumb Code    36  sysctrl.o(i.Sysctrl_SetHCLKDiv)
+    Sysctrl_SetPCLKDiv                       0x00005b89   Thumb Code    36  sysctrl.o(i.Sysctrl_SetPCLKDiv)
+    Sysctrl_SetPLLFreq                       0x00005bb1   Thumb Code   258  sysctrl.o(i.Sysctrl_SetPLLFreq)
+    Sysctrl_SetPLLStableTime                 0x00005cc5   Thumb Code    32  sysctrl.o(i.Sysctrl_SetPLLStableTime)
+    Sysctrl_SetPeripheralGate                0x00005ce9   Thumb Code    20  sysctrl.o(i.Sysctrl_SetPeripheralGate)
+    Sysctrl_SetRCLStableTime                 0x00005d01   Thumb Code    32  sysctrl.o(i.Sysctrl_SetRCLStableTime)
+    Sysctrl_SetXTHFreq                       0x00005d25   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTHFreq)
+    Sysctrl_SetXTHStableTime                 0x00005d45   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTHStableTime)
+    Sysctrl_SetXTLStableTime                 0x00005d65   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTLStableTime)
+    Sysctrl_SysClkSwitch                     0x00005d85   Thumb Code    40  sysctrl.o(i.Sysctrl_SysClkSwitch)
+    Sysctrl_XTHDriverCfg                     0x00005db1   Thumb Code    24  sysctrl.o(i.Sysctrl_XTHDriverCfg)
+    Sysctrl_XTLDriverCfg                     0x00005dcd   Thumb Code    46  sysctrl.o(i.Sysctrl_XTLDriverCfg)
+    SystemCoreClockUpdate                    0x00005e01   Thumb Code    12  system_hc32l13x.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x00005e11   Thumb Code    56  system_hc32l13x.o(i.SystemInit)
+    Systimeclk                               0x00005e51   Thumb Code   130  bsp_clk.o(i.Systimeclk)
+    Systme_led                               0x00005ed9   Thumb Code    48  bsp_time.o(i.Systme_led)
+    TIM0_IRQHandler                          0x00005f0d   Thumb Code     8  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
+    TIM1_IRQHandler                          0x00005f15   Thumb Code     8  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
+    TIM2_IRQHandler                          0x00005f1d   Thumb Code     8  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x00005f25   Thumb Code     8  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x00005f2d   Thumb Code     8  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
+    TIM5_IRQHandler                          0x00005f35   Thumb Code     8  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
+    TIM6_IRQHandler                          0x00005f3d   Thumb Code     8  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
+    TSC2046_Init                             0x00005f45   Thumb Code   140  bsp_touch.o(i.TSC2046_Init)
+    TSC2046_ReadAdc_XY                       0x00006001   Thumb Code    28  bsp_touch.o(i.TSC2046_ReadAdc_XY)
+    Tim0_IRQHandler                          0x00006115   Thumb Code   156  bsp_time.o(i.Tim0_IRQHandler)
+    Time_init                                0x000061dd   Thumb Code   120  bsp_time.o(i.Time_init)
+    ToggleConfirmationHandshake              0x00006255   Thumb Code    78  app_gprscmd.o(i.ToggleConfirmationHandshake)
+    UART0_H                                  0x000062b9   Thumb Code   102  bsp_uart.o(i.UART0_H)
+    UART0_IRQHandler                         0x0000631f   Thumb Code     8  interrupts_hc32l13x.o(i.UART0_IRQHandler)
+    UART1_IRQHandler                         0x00006327   Thumb Code     8  interrupts_hc32l13x.o(i.UART1_IRQHandler)
+    Uart0_IRQHandler                         0x00006331   Thumb Code   110  bsp_uart.o(i.Uart0_IRQHandler)
+    Uart0_init                               0x000063a9   Thumb Code   200  bsp_uart.o(i.Uart0_init)
+    Uart_ClrStatus                           0x00006479   Thumb Code    22  uart.o(i.Uart_ClrStatus)
+    Uart_EnableFunc                          0x0000648f   Thumb Code    20  uart.o(i.Uart_EnableFunc)
+    Uart_EnableIrq                           0x000064a3   Thumb Code    20  uart.o(i.Uart_EnableIrq)
+    Uart_GetStatus                           0x000064b7   Thumb Code    24  uart.o(i.Uart_GetStatus)
+    Uart_Init                                0x000064d1   Thumb Code   144  uart.o(i.Uart_Init)
+    Uart_ReceiveData                         0x00006565   Thumb Code     8  uart.o(i.Uart_ReceiveData)
+    Uart_SendDataPoll                        0x0000656d   Thumb Code    58  uart.o(i.Uart_SendDataPoll)
+    VC0_IRQHandler                           0x000065a7   Thumb Code     8  interrupts_hc32l13x.o(i.VC0_IRQHandler)
+    VC1_IRQHandler                           0x000065af   Thumb Code     8  interrupts_hc32l13x.o(i.VC1_IRQHandler)
+    WDT_IRQHandler                           0x000065b7   Thumb Code     8  interrupts_hc32l13x.o(i.WDT_IRQHandler)
+    Wdt_Feed                                 0x000065c1   Thumb Code    12  wdt.o(i.Wdt_Feed)
+    Wdt_Init                                 0x000065d1   Thumb Code    40  wdt.o(i.Wdt_Init)
+    Wdt_Start                                0x000065fd   Thumb Code    12  wdt.o(i.Wdt_Start)
+    Wdt_WriteWdtLoad                         0x0000660d   Thumb Code    20  wdt.o(i.Wdt_WriteWdtLoad)
+    __ARM_common_switch8                     0x000066bd   Thumb Code    28  sysctrl.o(i.__ARM_common_switch8)
+    _sys_exit                                0x00006751   Thumb Code     4  ddl.o(i._sys_exit)
+    _ttywrch                                 0x00006755   Thumb Code     2  ddl.o(i._ttywrch)
+    ddl_memclr                               0x00006757   Thumb Code    32  ddl.o(i.ddl_memclr)
+    delay10us                                0x00006779   Thumb Code    74  ddl.o(i.delay10us)
+    delay1ms                                 0x000067d5   Thumb Code    76  ddl.o(i.delay1ms)
+    $Super$$main                             0x000068e1   Thumb Code   108  main.o(i.main)
+    __aeabi_fadd                             0x00006955   Thumb Code     0  faddsub.o(x$fpl$fadd)
+    _fadd                                    0x00006955   Thumb Code   134  faddsub.o(x$fpl$fadd)
+    __aeabi_fsub                             0x000069e1   Thumb Code     0  faddsub.o(x$fpl$fsub)
+    _fsub                                    0x000069e1   Thumb Code   204  faddsub.o(x$fpl$fsub)
+    __I$use$fp                               0x00006ab0   Number         0  usenofp.o(x$fpl$usenofp)
+    pu32PcgTimer4M                           0x00006ac8   Data          32  flash.o(.constdata)
+    GPIO_COL_PROT                            0x00006afc   Data          16  app_key.o(.constdata)
+    GPIO_COL_PIN                             0x00006b0c   Data          16  app_key.o(.constdata)
+    GPIO_ROW_PROT                            0x00006b1c   Data          14  app_key.o(.constdata)
+    GPIO_ROW_PIN                             0x00006b2a   Data          14  app_key.o(.constdata)
+    Region$$Table$$Base                      0x00006b78   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00006b98   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_hc32l13x.o(.data)
     Led_timecount                            0x20000004   Data           2  bsp_time.o(.data)
     u8RxData                                 0x20000006   Data           1  bsp_uart.o(.data)
@@ -1804,9 +1804,9 @@ Memory Map of the image
 
   Image Entry point : 0x00002cc1
 
-  Load Region LR_IROM1 (Base: 0x00002c00, Size: 0x0000407c, Max: 0x00006000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00002c00, Size: 0x00004084, Max: 0x00006000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x00002c00, Size: 0x00003f90, Max: 0x00006000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00002c00, Size: 0x00003f98, Max: 0x00006000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1928,176 +1928,176 @@ Memory Map of the image
     0x00003ea4   0x00000006   Code   RO          567    i.Flash_readBy      bsp_flash.o
     0x00003eaa   0x00000002   PAD
     0x00003eac   0x00000084   Code   RO         2080    i.Flash_w           app_cmd.o
-    0x00003f30   0x0000001e   Code   RO          568    i.Flash_writeBy     bsp_flash.o
-    0x00003f4e   0x000000bc   Code   RO          340    i.GPIO_Key_init     bsp_gpio.o
-    0x0000400a   0x00000002   PAD
-    0x0000400c   0x000000f4   Code   RO         2196    i.GPRSRev_data      app.lpuart.o
-    0x00004100   0x00000080   Code   RO         1967    i.GPSendKeyInfo     app_key.o
-    0x00004180   0x00000034   Code   RO         2324    i.GPclearData       app_gprscmd.o
-    0x000041b4   0x000000a4   Code   RO         2325    i.GPdataTranslate   app_gprscmd.o
-    0x00004258   0x0000000c   Code   RO          875    i.GetBit            ddl.o
-    0x00004264   0x0000004c   Code   RO         2081    i.GetBuffCmd        app_cmd.o
-    0x000042b0   0x0000008c   Code   RO         2326    i.GetGpsPack        app_gprscmd.o
-    0x0000433c   0x0000002c   Code   RO         1968    i.GetKeyScanCode    app_key.o
-    0x00004368   0x0000005a   Code   RO          341    i.GetLcdType        bsp_gpio.o
-    0x000043c2   0x00000002   PAD
-    0x000043c4   0x00000038   Code   RO         1969    i.GetSelectCol      app_key.o
-    0x000043fc   0x000000a0   Code   RO         2197    i.Get_Data_HTL      app.lpuart.o
-    0x0000449c   0x0000007c   Code   RO         2198    i.Getpackheadlen    app.lpuart.o
-    0x00004518   0x0000009c   Code   RO         2327    i.GpCmd_char        app_gprscmd.o
-    0x000045b4   0x00000068   Code   RO         2328    i.GpFlashW          app_gprscmd.o
-    0x0000461c   0x00000048   Code   RO         2329    i.GpFlash_r         app_gprscmd.o
-    0x00004664   0x0000008c   Code   RO         2330    i.GpRsacketProcessing  app_gprscmd.o
-    0x000046f0   0x0000006c   Code   RO         2043    i.GpSendInformation  app_version.o
-    0x0000475c   0x0000009c   Code   RO         2256    i.GpSend_Flash_rD   app_gpsuart0.o
-    0x000047f8   0x0000001e   Code   RO         2257    i.GpSend_Uart0      app_gpsuart0.o
-    0x00004816   0x00000002   PAD
-    0x00004818   0x00000094   Code   RO         2258    i.GpSend_XY         app_gpsuart0.o
-    0x000048ac   0x0000001c   Code   RO          977    i.Gpio_ClearIrq     gpio.o
-    0x000048c8   0x0000001c   Code   RO          978    i.Gpio_ClrIO        gpio.o
-    0x000048e4   0x00000018   Code   RO          983    i.Gpio_GetInputIO   gpio.o
-    0x000048fc   0x00000018   Code   RO          984    i.Gpio_GetIrqStatus  gpio.o
-    0x00004914   0x00000090   Code   RO          985    i.Gpio_Init         gpio.o
-    0x000049a4   0x00000014   Code   RO          987    i.Gpio_SetAfMode    gpio.o
-    0x000049b8   0x0000001c   Code   RO          990    i.Gpio_SetIO        gpio.o
-    0x000049d4   0x000000dc   Code   RO         2331    i.GprsCmd_Task      app_gprscmd.o
-    0x00004ab0   0x0000018c   Code   RO         2259    i.GpsSend_Data_Uart  app_gpsuart0.o
-    0x00004c3c   0x00000010   Code   RO          100    i.HardFault_Handler  interrupts_hc32l13x.o
-    0x00004c4c   0x00000008   Code   RO          101    i.I2C0_IRQHandler   interrupts_hc32l13x.o
-    0x00004c54   0x00000008   Code   RO          102    i.I2C1_IRQHandler   interrupts_hc32l13x.o
-    0x00004c5c   0x0000000c   Code   RO          661    i.InitQueue         queue.o
-    0x00004c68   0x00000024   Code   RO         1970    i.KeyInit           app_key.o
-    0x00004c8c   0x0000023c   Code   RO         1971    i.KeyScanTask       app_key.o
-    0x00004ec8   0x00000008   Code   RO          103    i.LCD_IRQHandler    interrupts_hc32l13x.o
-    0x00004ed0   0x00000008   Code   RO          104    i.LPTIM_IRQHandler  interrupts_hc32l13x.o
-    0x00004ed8   0x00000008   Code   RO          105    i.LPUART0_IRQHandler  interrupts_hc32l13x.o
-    0x00004ee0   0x00000008   Code   RO          106    i.LPUART1_IRQHandler  interrupts_hc32l13x.o
-    0x00004ee8   0x00000016   Code   RO         1686    i.LPUart_ClrStatus  lpuart.o
-    0x00004efe   0x00000014   Code   RO         1688    i.LPUart_DisableIrq  lpuart.o
-    0x00004f12   0x00000014   Code   RO         1689    i.LPUart_EnableFunc  lpuart.o
-    0x00004f26   0x00000014   Code   RO         1690    i.LPUart_EnableIrq  lpuart.o
-    0x00004f3a   0x00000018   Code   RO         1693    i.LPUart_GetStatus  lpuart.o
-    0x00004f52   0x00000002   PAD
-    0x00004f54   0x00000098   Code   RO         1694    i.LPUart_Init       lpuart.o
-    0x00004fec   0x00000008   Code   RO         1695    i.LPUart_ReceiveData  lpuart.o
-    0x00004ff4   0x0000003a   Code   RO         1697    i.LPUart_SendData   lpuart.o
-    0x0000502e   0x00000008   Code   RO          107    i.LVD_IRQHandler    interrupts_hc32l13x.o
-    0x00005036   0x0000002e   Code   RO          342    i.Led_init          bsp_gpio.o
-    0x00005064   0x00000060   Code   RO          506    i.LpUart0_IRQHandler  bsp_uart.o
-    0x000050c4   0x000000c4   Code   RO          507    i.Lpuart_init       bsp_uart.o
-    0x00005188   0x00000008   Code   RO          108    i.PCA_IRQHandler    interrupts_hc32l13x.o
-    0x00005190   0x00000008   Code   RO          109    i.PCNT_IRQHandler   interrupts_hc32l13x.o
-    0x00005198   0x00000008   Code   RO          110    i.PORTA_IRQHandler  interrupts_hc32l13x.o
-    0x000051a0   0x00000008   Code   RO          111    i.PORTB_IRQHandler  interrupts_hc32l13x.o
-    0x000051a8   0x00000008   Code   RO          112    i.PORTC_IRQHandler  interrupts_hc32l13x.o
-    0x000051b0   0x00000008   Code   RO          113    i.PORTD_IRQHandler  interrupts_hc32l13x.o
-    0x000051b8   0x0000002c   Code   RO         2332    i.Pack_Classification  app_gprscmd.o
-    0x000051e4   0x00000018   Code   RO          596    i.PortA_IRQHandler  bsp_touch.o
-    0x000051fc   0x00000012   Code   RO          662    i.QueueEmpty        queue.o
-    0x0000520e   0x0000001c   Code   RO          663    i.QueueFull         queue.o
-    0x0000522a   0x00000008   Code   RO          114    i.RTC_IRQHandler    interrupts_hc32l13x.o
-    0x00005232   0x00000002   PAD
-    0x00005234   0x0000008c   Code   RO          597    i.Rev_Touch_XY      bsp_touch.o
-    0x000052c0   0x00000008   Code   RO          115    i.SPI0_IRQHandler   interrupts_hc32l13x.o
-    0x000052c8   0x00000008   Code   RO          116    i.SPI1_IRQHandler   interrupts_hc32l13x.o
-    0x000052d0   0x00000090   Code   RO         2260    i.ScanInteractiveState  app_gpsuart0.o
-    0x00005360   0x00000040   Code   RO          343    i.Screen_init       bsp_gpio.o
-    0x000053a0   0x00000048   Code   RO         1972    i.SelectRow         app_key.o
-    0x000053e8   0x00000068   Code   RO         2261    i.SendData_escape   app_gpsuart0.o
-    0x00005450   0x00000050   Code   RO         2044    i.SendInformation   app_version.o
-    0x000054a0   0x00000068   Code   RO         1973    i.SendKeyInfo       app_key.o
-    0x00005508   0x000000c4   Code   RO         2151    i.Send_Data_Uart    app_uart0.o
-    0x000055cc   0x0000005c   Code   RO         2152    i.Send_Flash_rD     app_uart0.o
-    0x00005628   0x00000020   Code   RO         2262    i.Send_LPUart0      app_gpsuart0.o
-    0x00005648   0x0000001e   Code   RO         2153    i.Send_Uart0        app_uart0.o
-    0x00005666   0x00000002   PAD
-    0x00005668   0x00000064   Code   RO         2154    i.Send_XY           app_uart0.o
-    0x000056cc   0x00000038   Code   RO         2199    i.Sendby            app.lpuart.o
-    0x00005704   0x000000c4   Code   RO         2200    i.SendpackHead      app.lpuart.o
-    0x000057c8   0x0000001e   Code   RO          877    i.SetBit            ddl.o
-    0x000057e6   0x00000008   Code   RO          117    i.SysTick_Handler   interrupts_hc32l13x.o
-    0x000057ee   0x0000006a   Code   RO          719    i.Sysctrl_ClkInit   sysctrl.o
-    0x00005858   0x0000016c   Code   RO          720    i.Sysctrl_ClkSourceEnable  sysctrl.o
-    0x000059c4   0x00000174   Code   RO          721    i.Sysctrl_GetHClkFreq  sysctrl.o
-    0x00005b38   0x00000020   Code   RO          722    i.Sysctrl_GetPClkFreq  sysctrl.o
-    0x00005b58   0x00000028   Code   RO          725    i.Sysctrl_SetHCLKDiv  sysctrl.o
-    0x00005b80   0x00000028   Code   RO          726    i.Sysctrl_SetPCLKDiv  sysctrl.o
-    0x00005ba8   0x00000114   Code   RO          727    i.Sysctrl_SetPLLFreq  sysctrl.o
-    0x00005cbc   0x00000024   Code   RO          728    i.Sysctrl_SetPLLStableTime  sysctrl.o
-    0x00005ce0   0x00000018   Code   RO          729    i.Sysctrl_SetPeripheralGate  sysctrl.o
-    0x00005cf8   0x00000024   Code   RO          731    i.Sysctrl_SetRCLStableTime  sysctrl.o
-    0x00005d1c   0x00000020   Code   RO          734    i.Sysctrl_SetXTHFreq  sysctrl.o
-    0x00005d3c   0x00000020   Code   RO          735    i.Sysctrl_SetXTHStableTime  sysctrl.o
-    0x00005d5c   0x00000020   Code   RO          736    i.Sysctrl_SetXTLStableTime  sysctrl.o
-    0x00005d7c   0x0000002c   Code   RO          737    i.Sysctrl_SysClkSwitch  sysctrl.o
-    0x00005da8   0x0000001c   Code   RO          738    i.Sysctrl_XTHDriverCfg  sysctrl.o
-    0x00005dc4   0x00000034   Code   RO          739    i.Sysctrl_XTLDriverCfg  sysctrl.o
-    0x00005df8   0x00000010   Code   RO            4    i.SystemCoreClockUpdate  system_hc32l13x.o
-    0x00005e08   0x00000040   Code   RO            5    i.SystemInit        system_hc32l13x.o
-    0x00005e48   0x00000088   Code   RO          394    i.Systimeclk        bsp_clk.o
-    0x00005ed0   0x00000034   Code   RO          423    i.Systme_led        bsp_time.o
-    0x00005f04   0x00000008   Code   RO          118    i.TIM0_IRQHandler   interrupts_hc32l13x.o
-    0x00005f0c   0x00000008   Code   RO          119    i.TIM1_IRQHandler   interrupts_hc32l13x.o
-    0x00005f14   0x00000008   Code   RO          120    i.TIM2_IRQHandler   interrupts_hc32l13x.o
-    0x00005f1c   0x00000008   Code   RO          121    i.TIM3_IRQHandler   interrupts_hc32l13x.o
-    0x00005f24   0x00000008   Code   RO          122    i.TIM4_IRQHandler   interrupts_hc32l13x.o
-    0x00005f2c   0x00000008   Code   RO          123    i.TIM5_IRQHandler   interrupts_hc32l13x.o
-    0x00005f34   0x00000008   Code   RO          124    i.TIM6_IRQHandler   interrupts_hc32l13x.o
-    0x00005f3c   0x0000008c   Code   RO          599    i.TSC2046_Init      bsp_touch.o
-    0x00005fc8   0x00000030   Code   RO          600    i.TSC2046_ReadAdc   bsp_touch.o
-    0x00005ff8   0x0000001c   Code   RO          601    i.TSC2046_ReadAdc_XY  bsp_touch.o
-    0x00006014   0x00000090   Code   RO          602    i.TSC2046_ReadCMD   bsp_touch.o
-    0x000060a4   0x00000066   Code   RO          603    i.TSC2046_WriteCMD  bsp_touch.o
-    0x0000610a   0x00000002   PAD
-    0x0000610c   0x000000c8   Code   RO          424    i.Tim0_IRQHandler   bsp_time.o
-    0x000061d4   0x00000078   Code   RO          425    i.Time_init         bsp_time.o
-    0x0000624c   0x00000064   Code   RO         2333    i.ToggleConfirmationHandshake  app_gprscmd.o
-    0x000062b0   0x00000066   Code   RO          508    i.UART0_H           bsp_uart.o
-    0x00006316   0x00000008   Code   RO          125    i.UART0_IRQHandler  interrupts_hc32l13x.o
-    0x0000631e   0x00000008   Code   RO          126    i.UART1_IRQHandler  interrupts_hc32l13x.o
-    0x00006326   0x00000002   PAD
-    0x00006328   0x00000078   Code   RO          509    i.Uart0_IRQHandler  bsp_uart.o
-    0x000063a0   0x000000d0   Code   RO          510    i.Uart0_init        bsp_uart.o
-    0x00006470   0x00000016   Code   RO         1575    i.Uart_ClrStatus    uart.o
-    0x00006486   0x00000014   Code   RO         1578    i.Uart_EnableFunc   uart.o
-    0x0000649a   0x00000014   Code   RO         1579    i.Uart_EnableIrq    uart.o
-    0x000064ae   0x00000018   Code   RO         1582    i.Uart_GetStatus    uart.o
-    0x000064c6   0x00000002   PAD
-    0x000064c8   0x00000094   Code   RO         1583    i.Uart_Init         uart.o
-    0x0000655c   0x00000008   Code   RO         1584    i.Uart_ReceiveData  uart.o
-    0x00006564   0x0000003a   Code   RO         1586    i.Uart_SendDataPoll  uart.o
-    0x0000659e   0x00000008   Code   RO          127    i.VC0_IRQHandler    interrupts_hc32l13x.o
-    0x000065a6   0x00000008   Code   RO          128    i.VC1_IRQHandler    interrupts_hc32l13x.o
-    0x000065ae   0x00000008   Code   RO          129    i.WDT_IRQHandler    interrupts_hc32l13x.o
-    0x000065b6   0x00000002   PAD
-    0x000065b8   0x00000010   Code   RO         1902    i.Wdt_Feed          wdt.o
-    0x000065c8   0x0000002c   Code   RO         1904    i.Wdt_Init          wdt.o
-    0x000065f4   0x00000010   Code   RO         1908    i.Wdt_Start         wdt.o
-    0x00006604   0x00000018   Code   RO         1909    i.Wdt_WriteWdtLoad  wdt.o
-    0x0000661c   0x00000080   Code   RO            6    i._HidePinInit      system_hc32l13x.o
-    0x0000669c   0x00000018   Code   RO          740    i._SysctrlUnlock    sysctrl.o
-    0x000066b4   0x0000001c   Code   RO          865    i.__ARM_common_switch8  sysctrl.o
-    0x000066d0   0x00000078   Code   RO          130    i.__NVIC_SetPriority  interrupts_hc32l13x.o
-    0x00006748   0x00000004   Code   RO          879    i._sys_exit         ddl.o
-    0x0000674c   0x00000002   Code   RO          880    i._ttywrch          ddl.o
-    0x0000674e   0x00000020   Code   RO          881    i.ddl_memclr        ddl.o
-    0x0000676e   0x00000002   PAD
-    0x00006770   0x0000005c   Code   RO          883    i.delay10us         ddl.o
-    0x000067cc   0x00000058   Code   RO          884    i.delay1ms          ddl.o
-    0x00006824   0x0000003a   Code   RO         1974    i.key_is_change     app_key.o
-    0x0000685e   0x00000018   Code   RO         1975    i.key_is_down       app_key.o
-    0x00006876   0x00000062   Code   RO         1976    i.key_scan_row      app_key.o
-    0x000068d8   0x00000074   Code   RO         2406    i.main              main.o
-    0x0000694c   0x0000008c   Code   RO         2511    x$fpl$fadd          fz_ps.l(faddsub.o)
-    0x000069d8   0x000000d0   Code   RO         2513    x$fpl$fsub          fz_ps.l(faddsub.o)
-    0x00006aa8   0x00000000   Code   RO         2605    x$fpl$usenofp       fz_ps.l(usenofp.o)
-    0x00006aa8   0x00000018   Data   RO          741    .constdata          sysctrl.o
-    0x00006ac0   0x00000020   Data   RO         1161    .constdata          flash.o
-    0x00006ae0   0x00000008   Data   RO         1590    .constdata          uart.o
-    0x00006ae8   0x0000000c   Data   RO         1702    .constdata          lpuart.o
-    0x00006af4   0x0000003c   Data   RO         1977    .constdata          app_key.o
-    0x00006b30   0x00000040   Data   RO         2518    .constdata          fz_ps.l(fdiv.o)
-    0x00006b70   0x00000020   Data   RO         2730    Region$$Table       anon$$obj.o
+    0x00003f30   0x00000026   Code   RO          568    i.Flash_writeBy     bsp_flash.o
+    0x00003f56   0x000000bc   Code   RO          340    i.GPIO_Key_init     bsp_gpio.o
+    0x00004012   0x00000002   PAD
+    0x00004014   0x000000f4   Code   RO         2196    i.GPRSRev_data      app.lpuart.o
+    0x00004108   0x00000080   Code   RO         1967    i.GPSendKeyInfo     app_key.o
+    0x00004188   0x00000034   Code   RO         2324    i.GPclearData       app_gprscmd.o
+    0x000041bc   0x000000a4   Code   RO         2325    i.GPdataTranslate   app_gprscmd.o
+    0x00004260   0x0000000c   Code   RO          875    i.GetBit            ddl.o
+    0x0000426c   0x0000004c   Code   RO         2081    i.GetBuffCmd        app_cmd.o
+    0x000042b8   0x0000008c   Code   RO         2326    i.GetGpsPack        app_gprscmd.o
+    0x00004344   0x0000002c   Code   RO         1968    i.GetKeyScanCode    app_key.o
+    0x00004370   0x0000005a   Code   RO          341    i.GetLcdType        bsp_gpio.o
+    0x000043ca   0x00000002   PAD
+    0x000043cc   0x00000038   Code   RO         1969    i.GetSelectCol      app_key.o
+    0x00004404   0x000000a0   Code   RO         2197    i.Get_Data_HTL      app.lpuart.o
+    0x000044a4   0x0000007c   Code   RO         2198    i.Getpackheadlen    app.lpuart.o
+    0x00004520   0x0000009c   Code   RO         2327    i.GpCmd_char        app_gprscmd.o
+    0x000045bc   0x00000068   Code   RO         2328    i.GpFlashW          app_gprscmd.o
+    0x00004624   0x00000048   Code   RO         2329    i.GpFlash_r         app_gprscmd.o
+    0x0000466c   0x0000008c   Code   RO         2330    i.GpRsacketProcessing  app_gprscmd.o
+    0x000046f8   0x0000006c   Code   RO         2043    i.GpSendInformation  app_version.o
+    0x00004764   0x0000009c   Code   RO         2256    i.GpSend_Flash_rD   app_gpsuart0.o
+    0x00004800   0x0000001e   Code   RO         2257    i.GpSend_Uart0      app_gpsuart0.o
+    0x0000481e   0x00000002   PAD
+    0x00004820   0x00000094   Code   RO         2258    i.GpSend_XY         app_gpsuart0.o
+    0x000048b4   0x0000001c   Code   RO          977    i.Gpio_ClearIrq     gpio.o
+    0x000048d0   0x0000001c   Code   RO          978    i.Gpio_ClrIO        gpio.o
+    0x000048ec   0x00000018   Code   RO          983    i.Gpio_GetInputIO   gpio.o
+    0x00004904   0x00000018   Code   RO          984    i.Gpio_GetIrqStatus  gpio.o
+    0x0000491c   0x00000090   Code   RO          985    i.Gpio_Init         gpio.o
+    0x000049ac   0x00000014   Code   RO          987    i.Gpio_SetAfMode    gpio.o
+    0x000049c0   0x0000001c   Code   RO          990    i.Gpio_SetIO        gpio.o
+    0x000049dc   0x000000dc   Code   RO         2331    i.GprsCmd_Task      app_gprscmd.o
+    0x00004ab8   0x0000018c   Code   RO         2259    i.GpsSend_Data_Uart  app_gpsuart0.o
+    0x00004c44   0x00000010   Code   RO          100    i.HardFault_Handler  interrupts_hc32l13x.o
+    0x00004c54   0x00000008   Code   RO          101    i.I2C0_IRQHandler   interrupts_hc32l13x.o
+    0x00004c5c   0x00000008   Code   RO          102    i.I2C1_IRQHandler   interrupts_hc32l13x.o
+    0x00004c64   0x0000000c   Code   RO          661    i.InitQueue         queue.o
+    0x00004c70   0x00000024   Code   RO         1970    i.KeyInit           app_key.o
+    0x00004c94   0x0000023c   Code   RO         1971    i.KeyScanTask       app_key.o
+    0x00004ed0   0x00000008   Code   RO          103    i.LCD_IRQHandler    interrupts_hc32l13x.o
+    0x00004ed8   0x00000008   Code   RO          104    i.LPTIM_IRQHandler  interrupts_hc32l13x.o
+    0x00004ee0   0x00000008   Code   RO          105    i.LPUART0_IRQHandler  interrupts_hc32l13x.o
+    0x00004ee8   0x00000008   Code   RO          106    i.LPUART1_IRQHandler  interrupts_hc32l13x.o
+    0x00004ef0   0x00000016   Code   RO         1686    i.LPUart_ClrStatus  lpuart.o
+    0x00004f06   0x00000014   Code   RO         1688    i.LPUart_DisableIrq  lpuart.o
+    0x00004f1a   0x00000014   Code   RO         1689    i.LPUart_EnableFunc  lpuart.o
+    0x00004f2e   0x00000014   Code   RO         1690    i.LPUart_EnableIrq  lpuart.o
+    0x00004f42   0x00000018   Code   RO         1693    i.LPUart_GetStatus  lpuart.o
+    0x00004f5a   0x00000002   PAD
+    0x00004f5c   0x00000098   Code   RO         1694    i.LPUart_Init       lpuart.o
+    0x00004ff4   0x00000008   Code   RO         1695    i.LPUart_ReceiveData  lpuart.o
+    0x00004ffc   0x0000003a   Code   RO         1697    i.LPUart_SendData   lpuart.o
+    0x00005036   0x00000008   Code   RO          107    i.LVD_IRQHandler    interrupts_hc32l13x.o
+    0x0000503e   0x0000002e   Code   RO          342    i.Led_init          bsp_gpio.o
+    0x0000506c   0x00000060   Code   RO          506    i.LpUart0_IRQHandler  bsp_uart.o
+    0x000050cc   0x000000c4   Code   RO          507    i.Lpuart_init       bsp_uart.o
+    0x00005190   0x00000008   Code   RO          108    i.PCA_IRQHandler    interrupts_hc32l13x.o
+    0x00005198   0x00000008   Code   RO          109    i.PCNT_IRQHandler   interrupts_hc32l13x.o
+    0x000051a0   0x00000008   Code   RO          110    i.PORTA_IRQHandler  interrupts_hc32l13x.o
+    0x000051a8   0x00000008   Code   RO          111    i.PORTB_IRQHandler  interrupts_hc32l13x.o
+    0x000051b0   0x00000008   Code   RO          112    i.PORTC_IRQHandler  interrupts_hc32l13x.o
+    0x000051b8   0x00000008   Code   RO          113    i.PORTD_IRQHandler  interrupts_hc32l13x.o
+    0x000051c0   0x0000002c   Code   RO         2332    i.Pack_Classification  app_gprscmd.o
+    0x000051ec   0x00000018   Code   RO          596    i.PortA_IRQHandler  bsp_touch.o
+    0x00005204   0x00000012   Code   RO          662    i.QueueEmpty        queue.o
+    0x00005216   0x0000001c   Code   RO          663    i.QueueFull         queue.o
+    0x00005232   0x00000008   Code   RO          114    i.RTC_IRQHandler    interrupts_hc32l13x.o
+    0x0000523a   0x00000002   PAD
+    0x0000523c   0x0000008c   Code   RO          597    i.Rev_Touch_XY      bsp_touch.o
+    0x000052c8   0x00000008   Code   RO          115    i.SPI0_IRQHandler   interrupts_hc32l13x.o
+    0x000052d0   0x00000008   Code   RO          116    i.SPI1_IRQHandler   interrupts_hc32l13x.o
+    0x000052d8   0x00000090   Code   RO         2260    i.ScanInteractiveState  app_gpsuart0.o
+    0x00005368   0x00000040   Code   RO          343    i.Screen_init       bsp_gpio.o
+    0x000053a8   0x00000048   Code   RO         1972    i.SelectRow         app_key.o
+    0x000053f0   0x00000068   Code   RO         2261    i.SendData_escape   app_gpsuart0.o
+    0x00005458   0x00000050   Code   RO         2044    i.SendInformation   app_version.o
+    0x000054a8   0x00000068   Code   RO         1973    i.SendKeyInfo       app_key.o
+    0x00005510   0x000000c4   Code   RO         2151    i.Send_Data_Uart    app_uart0.o
+    0x000055d4   0x0000005c   Code   RO         2152    i.Send_Flash_rD     app_uart0.o
+    0x00005630   0x00000020   Code   RO         2262    i.Send_LPUart0      app_gpsuart0.o
+    0x00005650   0x0000001e   Code   RO         2153    i.Send_Uart0        app_uart0.o
+    0x0000566e   0x00000002   PAD
+    0x00005670   0x00000064   Code   RO         2154    i.Send_XY           app_uart0.o
+    0x000056d4   0x00000038   Code   RO         2199    i.Sendby            app.lpuart.o
+    0x0000570c   0x000000c4   Code   RO         2200    i.SendpackHead      app.lpuart.o
+    0x000057d0   0x0000001e   Code   RO          877    i.SetBit            ddl.o
+    0x000057ee   0x00000008   Code   RO          117    i.SysTick_Handler   interrupts_hc32l13x.o
+    0x000057f6   0x0000006a   Code   RO          719    i.Sysctrl_ClkInit   sysctrl.o
+    0x00005860   0x0000016c   Code   RO          720    i.Sysctrl_ClkSourceEnable  sysctrl.o
+    0x000059cc   0x00000174   Code   RO          721    i.Sysctrl_GetHClkFreq  sysctrl.o
+    0x00005b40   0x00000020   Code   RO          722    i.Sysctrl_GetPClkFreq  sysctrl.o
+    0x00005b60   0x00000028   Code   RO          725    i.Sysctrl_SetHCLKDiv  sysctrl.o
+    0x00005b88   0x00000028   Code   RO          726    i.Sysctrl_SetPCLKDiv  sysctrl.o
+    0x00005bb0   0x00000114   Code   RO          727    i.Sysctrl_SetPLLFreq  sysctrl.o
+    0x00005cc4   0x00000024   Code   RO          728    i.Sysctrl_SetPLLStableTime  sysctrl.o
+    0x00005ce8   0x00000018   Code   RO          729    i.Sysctrl_SetPeripheralGate  sysctrl.o
+    0x00005d00   0x00000024   Code   RO          731    i.Sysctrl_SetRCLStableTime  sysctrl.o
+    0x00005d24   0x00000020   Code   RO          734    i.Sysctrl_SetXTHFreq  sysctrl.o
+    0x00005d44   0x00000020   Code   RO          735    i.Sysctrl_SetXTHStableTime  sysctrl.o
+    0x00005d64   0x00000020   Code   RO          736    i.Sysctrl_SetXTLStableTime  sysctrl.o
+    0x00005d84   0x0000002c   Code   RO          737    i.Sysctrl_SysClkSwitch  sysctrl.o
+    0x00005db0   0x0000001c   Code   RO          738    i.Sysctrl_XTHDriverCfg  sysctrl.o
+    0x00005dcc   0x00000034   Code   RO          739    i.Sysctrl_XTLDriverCfg  sysctrl.o
+    0x00005e00   0x00000010   Code   RO            4    i.SystemCoreClockUpdate  system_hc32l13x.o
+    0x00005e10   0x00000040   Code   RO            5    i.SystemInit        system_hc32l13x.o
+    0x00005e50   0x00000088   Code   RO          394    i.Systimeclk        bsp_clk.o
+    0x00005ed8   0x00000034   Code   RO          423    i.Systme_led        bsp_time.o
+    0x00005f0c   0x00000008   Code   RO          118    i.TIM0_IRQHandler   interrupts_hc32l13x.o
+    0x00005f14   0x00000008   Code   RO          119    i.TIM1_IRQHandler   interrupts_hc32l13x.o
+    0x00005f1c   0x00000008   Code   RO          120    i.TIM2_IRQHandler   interrupts_hc32l13x.o
+    0x00005f24   0x00000008   Code   RO          121    i.TIM3_IRQHandler   interrupts_hc32l13x.o
+    0x00005f2c   0x00000008   Code   RO          122    i.TIM4_IRQHandler   interrupts_hc32l13x.o
+    0x00005f34   0x00000008   Code   RO          123    i.TIM5_IRQHandler   interrupts_hc32l13x.o
+    0x00005f3c   0x00000008   Code   RO          124    i.TIM6_IRQHandler   interrupts_hc32l13x.o
+    0x00005f44   0x0000008c   Code   RO          599    i.TSC2046_Init      bsp_touch.o
+    0x00005fd0   0x00000030   Code   RO          600    i.TSC2046_ReadAdc   bsp_touch.o
+    0x00006000   0x0000001c   Code   RO          601    i.TSC2046_ReadAdc_XY  bsp_touch.o
+    0x0000601c   0x00000090   Code   RO          602    i.TSC2046_ReadCMD   bsp_touch.o
+    0x000060ac   0x00000066   Code   RO          603    i.TSC2046_WriteCMD  bsp_touch.o
+    0x00006112   0x00000002   PAD
+    0x00006114   0x000000c8   Code   RO          424    i.Tim0_IRQHandler   bsp_time.o
+    0x000061dc   0x00000078   Code   RO          425    i.Time_init         bsp_time.o
+    0x00006254   0x00000064   Code   RO         2333    i.ToggleConfirmationHandshake  app_gprscmd.o
+    0x000062b8   0x00000066   Code   RO          508    i.UART0_H           bsp_uart.o
+    0x0000631e   0x00000008   Code   RO          125    i.UART0_IRQHandler  interrupts_hc32l13x.o
+    0x00006326   0x00000008   Code   RO          126    i.UART1_IRQHandler  interrupts_hc32l13x.o
+    0x0000632e   0x00000002   PAD
+    0x00006330   0x00000078   Code   RO          509    i.Uart0_IRQHandler  bsp_uart.o
+    0x000063a8   0x000000d0   Code   RO          510    i.Uart0_init        bsp_uart.o
+    0x00006478   0x00000016   Code   RO         1575    i.Uart_ClrStatus    uart.o
+    0x0000648e   0x00000014   Code   RO         1578    i.Uart_EnableFunc   uart.o
+    0x000064a2   0x00000014   Code   RO         1579    i.Uart_EnableIrq    uart.o
+    0x000064b6   0x00000018   Code   RO         1582    i.Uart_GetStatus    uart.o
+    0x000064ce   0x00000002   PAD
+    0x000064d0   0x00000094   Code   RO         1583    i.Uart_Init         uart.o
+    0x00006564   0x00000008   Code   RO         1584    i.Uart_ReceiveData  uart.o
+    0x0000656c   0x0000003a   Code   RO         1586    i.Uart_SendDataPoll  uart.o
+    0x000065a6   0x00000008   Code   RO          127    i.VC0_IRQHandler    interrupts_hc32l13x.o
+    0x000065ae   0x00000008   Code   RO          128    i.VC1_IRQHandler    interrupts_hc32l13x.o
+    0x000065b6   0x00000008   Code   RO          129    i.WDT_IRQHandler    interrupts_hc32l13x.o
+    0x000065be   0x00000002   PAD
+    0x000065c0   0x00000010   Code   RO         1902    i.Wdt_Feed          wdt.o
+    0x000065d0   0x0000002c   Code   RO         1904    i.Wdt_Init          wdt.o
+    0x000065fc   0x00000010   Code   RO         1908    i.Wdt_Start         wdt.o
+    0x0000660c   0x00000018   Code   RO         1909    i.Wdt_WriteWdtLoad  wdt.o
+    0x00006624   0x00000080   Code   RO            6    i._HidePinInit      system_hc32l13x.o
+    0x000066a4   0x00000018   Code   RO          740    i._SysctrlUnlock    sysctrl.o
+    0x000066bc   0x0000001c   Code   RO          865    i.__ARM_common_switch8  sysctrl.o
+    0x000066d8   0x00000078   Code   RO          130    i.__NVIC_SetPriority  interrupts_hc32l13x.o
+    0x00006750   0x00000004   Code   RO          879    i._sys_exit         ddl.o
+    0x00006754   0x00000002   Code   RO          880    i._ttywrch          ddl.o
+    0x00006756   0x00000020   Code   RO          881    i.ddl_memclr        ddl.o
+    0x00006776   0x00000002   PAD
+    0x00006778   0x0000005c   Code   RO          883    i.delay10us         ddl.o
+    0x000067d4   0x00000058   Code   RO          884    i.delay1ms          ddl.o
+    0x0000682c   0x0000003a   Code   RO         1974    i.key_is_change     app_key.o
+    0x00006866   0x00000018   Code   RO         1975    i.key_is_down       app_key.o
+    0x0000687e   0x00000062   Code   RO         1976    i.key_scan_row      app_key.o
+    0x000068e0   0x00000074   Code   RO         2406    i.main              main.o
+    0x00006954   0x0000008c   Code   RO         2511    x$fpl$fadd          fz_ps.l(faddsub.o)
+    0x000069e0   0x000000d0   Code   RO         2513    x$fpl$fsub          fz_ps.l(faddsub.o)
+    0x00006ab0   0x00000000   Code   RO         2605    x$fpl$usenofp       fz_ps.l(usenofp.o)
+    0x00006ab0   0x00000018   Data   RO          741    .constdata          sysctrl.o
+    0x00006ac8   0x00000020   Data   RO         1161    .constdata          flash.o
+    0x00006ae8   0x00000008   Data   RO         1590    .constdata          uart.o
+    0x00006af0   0x0000000c   Data   RO         1702    .constdata          lpuart.o
+    0x00006afc   0x0000003c   Data   RO         1977    .constdata          app_key.o
+    0x00006b38   0x00000040   Data   RO         2518    .constdata          fz_ps.l(fdiv.o)
+    0x00006b78   0x00000020   Data   RO         2730    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001108, Max: 0x00002000, ABSOLUTE)
@@ -2140,7 +2140,7 @@ Image component sizes
        418         76          0          7          0       2675   app_uart0.o
        188         12          0          0          0        902   app_version.o
        136          6          0          0          0        941   bsp_clk.o
-        36          0          0          0          0        995   bsp_flash.o
+        44          0          0          0          0       1003   bsp_flash.o
        476          0          0          0          0       5883   bsp_gpio.o
        488         76          0          2          0      10987   bsp_time.o
        626         32          0         10          0       4257   bsp_touch.o
@@ -2160,7 +2160,7 @@ Image component sizes
        100         16          0          0          0       2273   wdt.o
 
     ----------------------------------------------------------------------
-     13724       1392        360        236       4024     263826   Object Totals
+     13732       1392        360        236       4024     263834   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         30          0          0          3          0          0   (incl. Padding)
 
@@ -2229,15 +2229,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     15848       1484        424        236       4124     256894   Grand Totals
-     15848       1484        424        236       4124     256894   ELF Image Totals
-     15848       1484        424        236          0          0   ROM Totals
+     15856       1484        424        236       4124     256902   Grand Totals
+     15856       1484        424        236       4124     256902   ELF Image Totals
+     15856       1484        424        236          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                16272 (  15.89kB)
+    Total RO  Size (Code + RO Data)                16280 (  15.90kB)
     Total RW  Size (RW Data + ZI Data)              4360 (   4.26kB)
-    Total ROM Size (Code + RO Data + RW Data)      16508 (  16.12kB)
+    Total ROM Size (Code + RO Data + RW Data)      16516 (  16.13kB)
 
 ==============================================================================
 
