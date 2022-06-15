@@ -170,7 +170,6 @@ void GpsSend_Data_Uart(void)
 		else if(GpSystemRest==1)
 		{
 				GpSystemRest=0;
-				
 				while(Ok != Flash_SectorErase(SYSFLASHADRR)){;}
 				Flash_writeBy(SYSFLASHADRR,0xA0);
 				Flash_writeBy(SYSFLASHADRR+1,0x50);

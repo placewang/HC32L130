@@ -61,7 +61,7 @@ void LpUart0_IRQHandler(void)
     }
 }
 
-void Uart0_init(uint32_t br)
+uint8_t Uart0_init(uint32_t br)
 {
 	
 		 stc_gpio_cfg_t stcGpioCfg;
@@ -106,6 +106,7 @@ void Uart0_init(uint32_t br)
     Uart_ClrStatus(M0P_UART0,UartRC);                                //清接收请求
     Uart_EnableIrq(M0P_UART0,UartRxIrq);                             //使能串口接收中断
     EnableNvic(UART0_IRQn, IrqLevel0, TRUE);                         //系统中断使能
+		return 0;
 }
 
 

@@ -15,7 +15,7 @@ extern volatile  uint8_t u8TxCnt;
 extern volatile  uint8_t u8RxCnt;
 extern volatile uint8_t u8RxData;
 
-void Uart0_init(uint32_t br);
+uint8_t Uart0_init(uint32_t br);
 void Lpuart_init(uint32_t br);
 void UART0_H(void);
 
