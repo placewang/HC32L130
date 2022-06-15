@@ -281,8 +281,11 @@ uint8_t CmdTask1(void)
 									Boud_val|=(uint32_t)flashdtata[2]<<24;
 									Boud_val|=(uint32_t)flashdtata[3]<<16;
 									Boud_val|=(uint32_t)flashdtata[4]<<8;
-									Boud_val|=(uint32_t)flashdtata[5];
-									Uart0_init(Boud_val);
+									Boud_val|=(uint32_t)flashdtata[5];									
+									if(Boud_val>0)
+									{
+										Uart0_init(Boud_val);
+									}
 									Toggle=1;
 									ToggleAN=1;                                                               //°æ±¾×ª»»Ó¦´ð 
 									FlashBitStu=0;

@@ -16,7 +16,6 @@ int  Flash_writeBy(uint32_t u32Addr,uint8_t u8TestData)
 
 uint8_t  Flash_readBy(uint32_t u32Addr)	
 {	
-
       return(*((volatile uint8_t*)u32Addr));                   //´ÓFlash¶ÁÊı¾İ
 }
 
