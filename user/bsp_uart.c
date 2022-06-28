@@ -88,8 +88,8 @@ uint8_t Uart0_init(uint32_t br)
 
      Gpio_Init(GpioPortA, GpioPin9, &stcGpioCfg);
      Gpio_SetAfMode(GpioPortA, GpioPin9, GpioAf1);                   //配置PA9 端口为URART0_TX
-		 Uart_ClrStatus(M0P_UART0,UartTC);                                ///<清发送请求
-		 Uart_Init(M0P_UART0, &stcCfg);                                   //串口初始化	
+		 Uart_ClrStatus(M0P_UART0,UartTC);                               ///<清发送请求
+		 Uart_Init(M0P_UART0, &stcCfg);                                  //串口初始化	
 		 ///<RX
     stcGpioCfg.enDir = GpioDirIn;
     stcGpioCfg.enPu = GpioPuEnable;

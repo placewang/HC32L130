@@ -292,11 +292,14 @@ uint8_t CmdTask1(void)
 										FE_bit=0;
 										flashwritelen=0;
 									}
-									FlashBitStu=0;
-									FW_val=0;
-									FE_bit=0;
-									flashwritelen=0;
-						 }		
+									else
+									{
+										FlashBitStu=0;
+										FW_val=0;
+										FE_bit=0;
+										flashwritelen=0;
+								  }		
+					    }
 					}
 			}
 		}	

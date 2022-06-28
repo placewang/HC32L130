@@ -100,7 +100,7 @@ I (..\user\In\bsp_gpio.h)(0x62A195BC)
 I (..\user\In\app_key.h)(0x629D8AD6)
 I (..\driver\inc\uart.h)(0x5D12D7E8)
 I (..\user\In\app_gprsCmd.h)(0x62A0A393)
-F (..\user\bsp_uart.c)(0x62A98767)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\bsp_uart.o --omf_browse .\hex\bsp_uart.crf --depend .\hex\bsp_uart.d)
+F (..\user\bsp_uart.c)(0x62AA7F13)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\bsp_uart.o --omf_browse .\hex\bsp_uart.crf --depend .\hex\bsp_uart.d)
 I (..\user\In\bsp_uart.h)(0x62A98767)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)
@@ -142,7 +142,7 @@ I (..\mcu\common\system_hc32l13x.h)(0x628B123E)
 I (..\driver\inc\sysctrl.h)(0x5D130326)
 I (..\mcu\common\interrupts_hc32l13x.h)(0x5D131A92)
 I (..\user\In\ddl_device.h)(0x5F560CC6)
-F (..\user\bsp_touch.c)(0x62986F20)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\bsp_touch.o --omf_browse .\hex\bsp_touch.crf --depend .\hex\bsp_touch.d)
+F (..\user\bsp_touch.c)(0x62B57F1C)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\bsp_touch.o --omf_browse .\hex\bsp_touch.crf --depend .\hex\bsp_touch.d)
 I (..\user\In\bsp_touch.h)(0x629584EF)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)
@@ -369,7 +369,7 @@ I (..\driver\inc\uart.h)(0x5D12D7E8)
 I (..\user\In\app_Cmd.h)(0x62A091D1)
 I (..\user\In\queue.h)(0x6294201F)
 F (..\user\app_Version.c)(0x62A056E6)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app_version.o --omf_browse .\hex\app_version.crf --depend .\hex\app_version.d)
-I (..\user\In\app_Version.h)(0x629741A9)
+I (..\user\In\app_Version.h)(0x62B57CC0)
 I (..\user\In\app_key.h)(0x629D8AD6)
 I (..\user\In\bsp_gpio.h)(0x62A195BC)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
@@ -390,7 +390,7 @@ I (..\mcu\common\interrupts_hc32l13x.h)(0x5D131A92)
 I (..\user\In\ddl_device.h)(0x5F560CC6)
 I (..\driver\inc\gpio.h)(0x5D11EFDC)
 I (..\driver\inc\uart.h)(0x5D12D7E8)
-F (..\user\app_Cmd.c)(0x62A9A341)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app_cmd.o --omf_browse .\hex\app_cmd.crf --depend .\hex\app_cmd.d)
+F (..\user\app_Cmd.c)(0x62B57F5C)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app_cmd.o --omf_browse .\hex\app_cmd.crf --depend .\hex\app_cmd.d)
 I (..\user\In\app_Cmd.h)(0x62A091D1)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)
@@ -438,7 +438,7 @@ I (..\mcu\common\system_hc32l13x.h)(0x628B123E)
 I (..\driver\inc\sysctrl.h)(0x5D130326)
 I (..\mcu\common\interrupts_hc32l13x.h)(0x5D131A92)
 I (..\user\In\ddl_device.h)(0x5F560CC6)
-I (..\user\In\app_Version.h)(0x629741A9)
+I (..\user\In\app_Version.h)(0x62B57CC0)
 I (..\user\In\app_key.h)(0x629D8AD6)
 I (..\user\In\bsp_gpio.h)(0x62A195BC)
 I (..\driver\inc\gpio.h)(0x5D11EFDC)
@@ -502,14 +502,14 @@ I (..\driver\inc\spi.h)(0x5D12C540)
 I (..\user\In\app_gprsCmd.h)(0x62A0A393)
 I (..\driver\inc\uart.h)(0x5D12D7E8)
 I (..\user\In\queue.h)(0x6294201F)
-I (..\user\In\app_Version.h)(0x629741A9)
+I (..\user\In\app_Version.h)(0x62B57CC0)
 I (..\user\In\app_key.h)(0x629D8AD6)
 I (..\user\In\bsp_gpio.h)(0x62A195BC)
 I (..\user\In\app_Cmd.h)(0x62A091D1)
 I (..\user\In\bsp_flash.h)(0x628E037F)
 I (..\driver\inc\flash.h)(0x5D142E9E)
 I (..\driver\inc\lpuart.h)(0x5D1200FA)
-F (..\user\app_gprsCmd.c)(0x62A84B9E)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app_gprscmd.o --omf_browse .\hex\app_gprscmd.crf --depend .\hex\app_gprscmd.d)
+F (..\user\app_gprsCmd.c)(0x62BA5F2D)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\app_gprscmd.o --omf_browse .\hex\app_gprscmd.crf --depend .\hex\app_gprscmd.d)
 I (..\user\In\app_gpsuart0.h)(0x62985207)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)
@@ -540,7 +540,7 @@ I (..\user\In\bsp_uart.h)(0x62A98767)
 I (..\driver\inc\uart.h)(0x5D12D7E8)
 I (..\driver\inc\lpuart.h)(0x5D1200FA)
 I (..\driver\inc\lpm.h)(0x5D11FE44)
-F (..\main\main.c)(0x62A48294)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\main.o --omf_browse .\hex\main.crf --depend .\hex\main.d)
+F (..\main\main.c)(0x62B57CD7)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\main.o --omf_browse .\hex\main.crf --depend .\hex\main.d)
 I (..\user\In\bsp_gpio.h)(0x62A195BC)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)
@@ -571,7 +571,7 @@ I (..\driver\inc\lpuart.h)(0x5D1200FA)
 I (..\driver\inc\lpm.h)(0x5D11FE44)
 I (..\user\In\bsp_flash.h)(0x628E037F)
 I (..\user\In\app_key.h)(0x629D8AD6)
-I (..\user\In\app_Version.h)(0x629741A9)
+I (..\user\In\app_Version.h)(0x62B57CC0)
 I (..\user\In\app_Cmd.h)(0x62A091D1)
 I (..\user\In\queue.h)(0x6294201F)
 I (..\user\In\app_uart0.h)(0x6295C051)

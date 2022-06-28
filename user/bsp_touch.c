@@ -197,11 +197,11 @@ void TSC2046_ReadAdc_XY ( uint16_t* sX_Ad, uint16_t * sY_Ad )
 	* sX_Ad = sX_Ad_Temp; 
 	* sY_Ad = sY_Ad_Temp; 
 }
-
+//&&TouchCountD>=10
 
 void Rev_Touch_XY(void)
 {
-		if(!Touch_PENIRQ_Read()&&!TouchRbit&&TouchCountD>=16)
+		if(!Touch_PENIRQ_Read()&&!TouchRbit)
 		{
 			TouchRbit=1;
 			TSC2046_ReadAdc_XY(&X_Touch_val,&Y_Touch_val);
@@ -209,7 +209,7 @@ void Rev_Touch_XY(void)
 			Backlight_ON();
 			LPSendInterruptbit=1;
 		}
-		else if(Touch_PENIRQ_Read()&&TouchRbit&&TouchCountU>=16)
+		else if(Touch_PENIRQ_Read()&&TouchRbit)
 		{
 			TouchRbit=0;
 			TouchUbit=1;

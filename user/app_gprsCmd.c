@@ -52,7 +52,7 @@ void GpCmd_char(uint8_t * CmdData)
 					break;
 				case 0x51:
 					Toggle=2;
-					Lpuart_init(115200);
+					Lpuart_init(115200);																													
 //					ToggleAN=1;                                                               //°æ±¾×ª»»Ó¦´ð 				
 					break;
     		case 0x52:
@@ -175,7 +175,7 @@ uint8_t GpRsacketProcessing(void)
 						return 0;
 					}
 			}
-			else if(GPHeadbit==1&&GPRevoutTime>=300)
+			else if(GPHeadbit==1&&GPRevoutTime>=300*4)
 			{
 					GPclearData();
 			}
@@ -280,7 +280,7 @@ void ToggleConfirmationHandshake(void)
 				GprsCmd_Task();
 				GpsSend_Data_Uart();
 
-				if(CoutShake==60)
+				if(CoutShake==5)
 				{
 					Uart0_init(DEFAULTBOUD);
 					Toggle=0;
