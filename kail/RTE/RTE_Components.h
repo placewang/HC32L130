@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'E723' 
- * Target:  'Target 1' 
+ * Target:  'DEBUG' 
  */
 
 #ifndef RTE_COMPONENTS_H

@@ -33,8 +33,6 @@ static void Bsp_Init(void)
 
 int main()
 { 
-	UART0_H();
-//	Uart0_init(DEFAULTBOUD);
 	Systimeclk();
 	Bsp_Init();																									 //外设初始化	
 	while(Ok != Flash_Init(12, TRUE)){;}                         //确保初始化正确执行后方能进行FLASH编程操作，FLASH初始化（编程时间,休眠模式配置）

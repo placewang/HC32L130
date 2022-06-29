@@ -138,7 +138,16 @@ __Vectors
 __Vectors_End
 
 __Vectors_Size 	EQU     __Vectors_End - __Vectors
-
+                
+				WHILE . <0x500
+                DCD     0xFFFFFFFF
+                WEND
+                IF      :LNOT:(:DEF:NDEBUG)
+FLAGS           DCD     0xA05055AA  ; 0xFFFFFFFF  ; 0x55AA55AA
+                ELSE
+FLAGS           DCD     0xFFFFFFFF
+                ENDIF
+					
                 AREA    |.text|, CODE, READONLY
 
 

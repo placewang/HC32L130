@@ -208,224 +208,1132 @@ ARM Macro Assembler    Page 4
                        __Vectors_Size
                                EQU              __Vectors_End - __Vectors
   141 000000C0         
-  142 000000C0                 AREA             |.text|, CODE, READONLY
-  143 00000000         
-  144 00000000         
-  145 00000000         ; Reset Handler
-  146 00000000         
-  147 00000000         Reset_Handler
-                               PROC
-  148 00000000                 EXPORT           Reset_Handler             [WEAK
-]
-  149 00000000                 IMPORT           SystemInit
-  150 00000000                 IMPORT           __main
-  151 00000000         
-  152 00000000         ;reset NVIC if in rom debug
-  153 00000000 480C            LDR              R0, =0x20000000
-  154 00000002 4A0D            LDR              R2, =0x0
-  155 00000004 2100            MOVS             R1, #0      ; for warning, 
-  156 00000006 A100            ADD              R1, PC,#0   ; for A1609W, 
-  157 00000008 4281            CMP              R1, R0
-  158 0000000A D900            BLS              RAMCODE
-  159 0000000C         
-  160 0000000C         ; ram code base address. 
-  161 0000000C 4402            ADD              R2, R0,R2
-  162 0000000E         RAMCODE
-  163 0000000E         ; reset Vector table address.
-  164 0000000E 4A0B            LDR              R2, =new_vect_table
-  165 00000010         
-  166 00000010 480B            LDR              R0, =0xE000ED08
-  167 00000012 6002            STR              R2, [R0]
-  168 00000014         
-  169 00000014 480B            LDR              R0, =SystemInit
-  170 00000016 4780            BLX              R0
-  171 00000018 480B            LDR              R0, =__main
-  172 0000001A 4700            BX               R0
-  173 0000001C                 ENDP
-  174 0000001C         
-  175 0000001C         
-  176 0000001C         ; Dummy Exception Handlers (infinite loops which can be 
-                       modified)
-  177 0000001C         
-  178 0000001C         NMI_Handler
-                               PROC
-  179 0000001C                 EXPORT           NMI_Handler               [WEAK
-]
-  180 0000001C E7FE            B                .
-  181 0000001E                 ENDP
-  182 0000001E         
-  183 0000001E         
-  185 0000001E         HardFault_Handler
-                               PROC
-  186 0000001E                 EXPORT           HardFault_Handler         [WEAK
+  142 000000C0                 WHILE            . <0x500
+  143 000000C0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000C4                 WEND
+  142 000000C4                 WHILE            . <0x500
+  143 000000C4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000C8                 WEND
+  142 000000C8                 WHILE            . <0x500
+  143 000000C8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000CC                 WEND
+  142 000000CC                 WHILE            . <0x500
+  143 000000CC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000D0                 WEND
+  142 000000D0                 WHILE            . <0x500
+  143 000000D0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000D4                 WEND
+  142 000000D4                 WHILE            . <0x500
+  143 000000D4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000D8                 WEND
+  142 000000D8                 WHILE            . <0x500
+  143 000000D8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000DC                 WEND
+  142 000000DC                 WHILE            . <0x500
+  143 000000DC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000E0                 WEND
+  142 000000E0                 WHILE            . <0x500
+  143 000000E0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000E4                 WEND
+  142 000000E4                 WHILE            . <0x500
+  143 000000E4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000E8                 WEND
+  142 000000E8                 WHILE            . <0x500
+  143 000000E8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000EC                 WEND
+  142 000000EC                 WHILE            . <0x500
+  143 000000EC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000F0                 WEND
+  142 000000F0                 WHILE            . <0x500
+  143 000000F0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000F4                 WEND
+  142 000000F4                 WHILE            . <0x500
+  143 000000F4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000F8                 WEND
+  142 000000F8                 WHILE            . <0x500
+  143 000000F8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000000FC                 WEND
+  142 000000FC                 WHILE            . <0x500
+  143 000000FC FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000100                 WEND
+  142 00000100                 WHILE            . <0x500
+  143 00000100 FFFFFFFF        DCD              0xFFFFFFFF
 
 
 
 ARM Macro Assembler    Page 5 
 
 
-]
-  187 0000001E E7FE            B                .
-  188 00000020                 ENDP
-  189 00000020         SVC_Handler
-                               PROC
-  190 00000020                 EXPORT           SVC_Handler               [WEAK
-]
-  191 00000020 E7FE            B                .
-  192 00000022                 ENDP
-  193 00000022         PendSV_Handler
-                               PROC
-  194 00000022                 EXPORT           PendSV_Handler            [WEAK
-]
-  195 00000022 E7FE            B                .
-  196 00000024                 ENDP
-  197 00000024         SysTick_Handler
-                               PROC
-  198 00000024                 EXPORT           SysTick_Handler           [WEAK
-]
-  199 00000024 E7FE            B                .
-  200 00000026                 ENDP
-  201 00000026         
-  202 00000026         Default_Handler
-                               PROC
-  203 00000026                 EXPORT           PORTA_IRQHandler               
- [WEAK]
-  204 00000026                 EXPORT           PORTB_IRQHandler               
- [WEAK]
-  205 00000026                 EXPORT           PORTC_IRQHandler               
- [WEAK]
-  206 00000026                 EXPORT           PORTD_IRQHandler               
- [WEAK]
-  207 00000026                 EXPORT           DMAC_IRQHandler                
- [WEAK]
-  208 00000026                 EXPORT           TIM3_IRQHandler                
- [WEAK]
-  209 00000026                 EXPORT           UART0_IRQHandler               
- [WEAK]
-  210 00000026                 EXPORT           UART1_IRQHandler               
- [WEAK]
-  211 00000026                 EXPORT           LPUART0_IRQHandler             
- [WEAK]
-  212 00000026                 EXPORT           LPUART1_IRQHandler             
- [WEAK]
-  213 00000026                 EXPORT           SPI0_IRQHandler                
- [WEAK]
-  214 00000026                 EXPORT           SPI1_IRQHandler                
- [WEAK]
-  215 00000026                 EXPORT           I2C0_IRQHandler                
- [WEAK]
-  216 00000026                 EXPORT           I2C1_IRQHandler                
- [WEAK]
-  217 00000026                 EXPORT           TIM0_IRQHandler                
- [WEAK]
-  218 00000026                 EXPORT           TIM1_IRQHandler                
- [WEAK]
-  219 00000026                 EXPORT           TIM2_IRQHandler                
- [WEAK]
-  220 00000026                 EXPORT           LPTIM_IRQHandler               
+  144 00000104                 WEND
+  142 00000104                 WHILE            . <0x500
+  143 00000104 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000108                 WEND
+  142 00000108                 WHILE            . <0x500
+  143 00000108 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000010C                 WEND
+  142 0000010C                 WHILE            . <0x500
+  143 0000010C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000110                 WEND
+  142 00000110                 WHILE            . <0x500
+  143 00000110 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000114                 WEND
+  142 00000114                 WHILE            . <0x500
+  143 00000114 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000118                 WEND
+  142 00000118                 WHILE            . <0x500
+  143 00000118 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000011C                 WEND
+  142 0000011C                 WHILE            . <0x500
+  143 0000011C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000120                 WEND
+  142 00000120                 WHILE            . <0x500
+  143 00000120 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000124                 WEND
+  142 00000124                 WHILE            . <0x500
+  143 00000124 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000128                 WEND
+  142 00000128                 WHILE            . <0x500
+  143 00000128 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000012C                 WEND
+  142 0000012C                 WHILE            . <0x500
+  143 0000012C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000130                 WEND
+  142 00000130                 WHILE            . <0x500
+  143 00000130 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000134                 WEND
+  142 00000134                 WHILE            . <0x500
+  143 00000134 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000138                 WEND
+  142 00000138                 WHILE            . <0x500
+  143 00000138 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000013C                 WEND
+  142 0000013C                 WHILE            . <0x500
+  143 0000013C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000140                 WEND
+  142 00000140                 WHILE            . <0x500
+  143 00000140 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000144                 WEND
+  142 00000144                 WHILE            . <0x500
+  143 00000144 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000148                 WEND
+  142 00000148                 WHILE            . <0x500
+  143 00000148 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000014C                 WEND
+  142 0000014C                 WHILE            . <0x500
+  143 0000014C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000150                 WEND
+  142 00000150                 WHILE            . <0x500
 
 
 
 ARM Macro Assembler    Page 6 
 
 
- [WEAK]
-  221 00000026                 EXPORT           TIM4_IRQHandler                
- [WEAK]
-  222 00000026                 EXPORT           TIM5_IRQHandler                
- [WEAK]
-  223 00000026                 EXPORT           TIM6_IRQHandler                
- [WEAK]
-  224 00000026                 EXPORT           PCA_IRQHandler                 
- [WEAK]
-  225 00000026                 EXPORT           WDT_IRQHandler                 
- [WEAK]
-  226 00000026                 EXPORT           RTC_IRQHandler                 
- [WEAK]
-  227 00000026                 EXPORT           ADC_IRQHandler                 
- [WEAK]
-  228 00000026                 EXPORT           PCNT_IRQHandler                
- [WEAK]
-  229 00000026                 EXPORT           VC0_IRQHandler                 
- [WEAK]
-  230 00000026                 EXPORT           VC1_IRQHandler                 
- [WEAK]
-  231 00000026                 EXPORT           LVD_IRQHandler                 
- [WEAK]
-  232 00000026                 EXPORT           LCD_IRQHandler                 
- [WEAK]
-  233 00000026                 EXPORT           FLASH_RAM_IRQHandler           
- [WEAK]
-  234 00000026                 EXPORT           CLKTRIM_IRQHandler             
- [WEAK]
-  235 00000026         PORTA_IRQHandler
-  236 00000026         PORTB_IRQHandler
-  237 00000026         PORTC_IRQHandler
-  238 00000026         PORTD_IRQHandler
-  239 00000026         DMAC_IRQHandler
-  240 00000026         TIM3_IRQHandler
-  241 00000026         UART0_IRQHandler
-  242 00000026         UART1_IRQHandler
-  243 00000026         LPUART0_IRQHandler
-  244 00000026         LPUART1_IRQHandler
-  245 00000026         SPI0_IRQHandler
-  246 00000026         SPI1_IRQHandler
-  247 00000026         I2C0_IRQHandler
-  248 00000026         I2C1_IRQHandler
-  249 00000026         TIM0_IRQHandler
-  250 00000026         TIM1_IRQHandler
-  251 00000026         TIM2_IRQHandler
-  252 00000026         LPTIM_IRQHandler
-  253 00000026         TIM4_IRQHandler
-  254 00000026         TIM5_IRQHandler
-  255 00000026         TIM6_IRQHandler
-  256 00000026         PCA_IRQHandler
-  257 00000026         WDT_IRQHandler
-  258 00000026         RTC_IRQHandler
-  259 00000026         ADC_IRQHandler
-  260 00000026         PCNT_IRQHandler
-  261 00000026         VC0_IRQHandler
-  262 00000026         VC1_IRQHandler
-  263 00000026         LVD_IRQHandler
-  264 00000026         LCD_IRQHandler
+  143 00000150 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000154                 WEND
+  142 00000154                 WHILE            . <0x500
+  143 00000154 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000158                 WEND
+  142 00000158                 WHILE            . <0x500
+  143 00000158 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000015C                 WEND
+  142 0000015C                 WHILE            . <0x500
+  143 0000015C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000160                 WEND
+  142 00000160                 WHILE            . <0x500
+  143 00000160 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000164                 WEND
+  142 00000164                 WHILE            . <0x500
+  143 00000164 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000168                 WEND
+  142 00000168                 WHILE            . <0x500
+  143 00000168 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000016C                 WEND
+  142 0000016C                 WHILE            . <0x500
+  143 0000016C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000170                 WEND
+  142 00000170                 WHILE            . <0x500
+  143 00000170 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000174                 WEND
+  142 00000174                 WHILE            . <0x500
+  143 00000174 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000178                 WEND
+  142 00000178                 WHILE            . <0x500
+  143 00000178 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000017C                 WEND
+  142 0000017C                 WHILE            . <0x500
+  143 0000017C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000180                 WEND
+  142 00000180                 WHILE            . <0x500
+  143 00000180 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000184                 WEND
+  142 00000184                 WHILE            . <0x500
+  143 00000184 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000188                 WEND
+  142 00000188                 WHILE            . <0x500
+  143 00000188 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000018C                 WEND
+  142 0000018C                 WHILE            . <0x500
+  143 0000018C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000190                 WEND
+  142 00000190                 WHILE            . <0x500
+  143 00000190 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000194                 WEND
+  142 00000194                 WHILE            . <0x500
+  143 00000194 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000198                 WEND
+  142 00000198                 WHILE            . <0x500
+  143 00000198 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000019C                 WEND
+  142 0000019C                 WHILE            . <0x500
+  143 0000019C FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001A0                 WEND
 
 
 
 ARM Macro Assembler    Page 7 
 
 
-  265 00000026         FLASH_RAM_IRQHandler
-  266 00000026         CLKTRIM_IRQHandler
-  267 00000026         
-  268 00000026         
-  269 00000026 E7FE            B                .
-  270 00000028         
-  271 00000028                 ENDP
-  272 00000028         
-  273 00000028         
-  274 00000028                 ALIGN
-  275 00000028         
-  276 00000028         
-  277 00000028         ; User Initial Stack & Heap
-  278 00000028         
-  279 00000028                 IF               :DEF:__MICROLIB
-  286 00000028         
-  287 00000028                 IMPORT           __use_two_region_memory
-  288 00000028                 EXPORT           __user_initial_stackheap
-  289 00000028         __user_initial_stackheap
-  290 00000028         
-  291 00000028 4808            LDR              R0, =  Heap_Mem
-  292 0000002A 4909            LDR              R1, =(Stack_Mem + Stack_Size)
-  293 0000002C 4A09            LDR              R2, = (Heap_Mem +  Heap_Size)
-  294 0000002E 4B0A            LDR              R3, = Stack_Mem
-  295 00000030 4770            BX               LR
-  296 00000032         
-  297 00000032 00 00           ALIGN
-  298 00000034         
-  299 00000034                 ENDIF
-  300 00000034         
-  301 00000034         
-  302 00000034                 END
+  142 000001A0                 WHILE            . <0x500
+  143 000001A0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001A4                 WEND
+  142 000001A4                 WHILE            . <0x500
+  143 000001A4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001A8                 WEND
+  142 000001A8                 WHILE            . <0x500
+  143 000001A8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001AC                 WEND
+  142 000001AC                 WHILE            . <0x500
+  143 000001AC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001B0                 WEND
+  142 000001B0                 WHILE            . <0x500
+  143 000001B0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001B4                 WEND
+  142 000001B4                 WHILE            . <0x500
+  143 000001B4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001B8                 WEND
+  142 000001B8                 WHILE            . <0x500
+  143 000001B8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001BC                 WEND
+  142 000001BC                 WHILE            . <0x500
+  143 000001BC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001C0                 WEND
+  142 000001C0                 WHILE            . <0x500
+  143 000001C0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001C4                 WEND
+  142 000001C4                 WHILE            . <0x500
+  143 000001C4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001C8                 WEND
+  142 000001C8                 WHILE            . <0x500
+  143 000001C8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001CC                 WEND
+  142 000001CC                 WHILE            . <0x500
+  143 000001CC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001D0                 WEND
+  142 000001D0                 WHILE            . <0x500
+  143 000001D0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001D4                 WEND
+  142 000001D4                 WHILE            . <0x500
+  143 000001D4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001D8                 WEND
+  142 000001D8                 WHILE            . <0x500
+  143 000001D8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001DC                 WEND
+  142 000001DC                 WHILE            . <0x500
+  143 000001DC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001E0                 WEND
+  142 000001E0                 WHILE            . <0x500
+  143 000001E0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001E4                 WEND
+  142 000001E4                 WHILE            . <0x500
+  143 000001E4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001E8                 WEND
+  142 000001E8                 WHILE            . <0x500
+  143 000001E8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001EC                 WEND
+  142 000001EC                 WHILE            . <0x500
+  143 000001EC FFFFFFFF        DCD              0xFFFFFFFF
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+  144 000001F0                 WEND
+  142 000001F0                 WHILE            . <0x500
+  143 000001F0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001F4                 WEND
+  142 000001F4                 WHILE            . <0x500
+  143 000001F4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001F8                 WEND
+  142 000001F8                 WHILE            . <0x500
+  143 000001F8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000001FC                 WEND
+  142 000001FC                 WHILE            . <0x500
+  143 000001FC FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000200                 WEND
+  142 00000200                 WHILE            . <0x500
+  143 00000200 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000204                 WEND
+  142 00000204                 WHILE            . <0x500
+  143 00000204 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000208                 WEND
+  142 00000208                 WHILE            . <0x500
+  143 00000208 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000020C                 WEND
+  142 0000020C                 WHILE            . <0x500
+  143 0000020C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000210                 WEND
+  142 00000210                 WHILE            . <0x500
+  143 00000210 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000214                 WEND
+  142 00000214                 WHILE            . <0x500
+  143 00000214 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000218                 WEND
+  142 00000218                 WHILE            . <0x500
+  143 00000218 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000021C                 WEND
+  142 0000021C                 WHILE            . <0x500
+  143 0000021C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000220                 WEND
+  142 00000220                 WHILE            . <0x500
+  143 00000220 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000224                 WEND
+  142 00000224                 WHILE            . <0x500
+  143 00000224 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000228                 WEND
+  142 00000228                 WHILE            . <0x500
+  143 00000228 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000022C                 WEND
+  142 0000022C                 WHILE            . <0x500
+  143 0000022C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000230                 WEND
+  142 00000230                 WHILE            . <0x500
+  143 00000230 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000234                 WEND
+  142 00000234                 WHILE            . <0x500
+  143 00000234 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000238                 WEND
+  142 00000238                 WHILE            . <0x500
+  143 00000238 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000023C                 WEND
+  142 0000023C                 WHILE            . <0x500
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+  143 0000023C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000240                 WEND
+  142 00000240                 WHILE            . <0x500
+  143 00000240 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000244                 WEND
+  142 00000244                 WHILE            . <0x500
+  143 00000244 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000248                 WEND
+  142 00000248                 WHILE            . <0x500
+  143 00000248 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000024C                 WEND
+  142 0000024C                 WHILE            . <0x500
+  143 0000024C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000250                 WEND
+  142 00000250                 WHILE            . <0x500
+  143 00000250 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000254                 WEND
+  142 00000254                 WHILE            . <0x500
+  143 00000254 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000258                 WEND
+  142 00000258                 WHILE            . <0x500
+  143 00000258 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000025C                 WEND
+  142 0000025C                 WHILE            . <0x500
+  143 0000025C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000260                 WEND
+  142 00000260                 WHILE            . <0x500
+  143 00000260 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000264                 WEND
+  142 00000264                 WHILE            . <0x500
+  143 00000264 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000268                 WEND
+  142 00000268                 WHILE            . <0x500
+  143 00000268 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000026C                 WEND
+  142 0000026C                 WHILE            . <0x500
+  143 0000026C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000270                 WEND
+  142 00000270                 WHILE            . <0x500
+  143 00000270 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000274                 WEND
+  142 00000274                 WHILE            . <0x500
+  143 00000274 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000278                 WEND
+  142 00000278                 WHILE            . <0x500
+  143 00000278 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000027C                 WEND
+  142 0000027C                 WHILE            . <0x500
+  143 0000027C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000280                 WEND
+  142 00000280                 WHILE            . <0x500
+  143 00000280 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000284                 WEND
+  142 00000284                 WHILE            . <0x500
+  143 00000284 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000288                 WEND
+  142 00000288                 WHILE            . <0x500
+  143 00000288 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000028C                 WEND
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+  142 0000028C                 WHILE            . <0x500
+  143 0000028C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000290                 WEND
+  142 00000290                 WHILE            . <0x500
+  143 00000290 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000294                 WEND
+  142 00000294                 WHILE            . <0x500
+  143 00000294 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000298                 WEND
+  142 00000298                 WHILE            . <0x500
+  143 00000298 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000029C                 WEND
+  142 0000029C                 WHILE            . <0x500
+  143 0000029C FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002A0                 WEND
+  142 000002A0                 WHILE            . <0x500
+  143 000002A0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002A4                 WEND
+  142 000002A4                 WHILE            . <0x500
+  143 000002A4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002A8                 WEND
+  142 000002A8                 WHILE            . <0x500
+  143 000002A8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002AC                 WEND
+  142 000002AC                 WHILE            . <0x500
+  143 000002AC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002B0                 WEND
+  142 000002B0                 WHILE            . <0x500
+  143 000002B0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002B4                 WEND
+  142 000002B4                 WHILE            . <0x500
+  143 000002B4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002B8                 WEND
+  142 000002B8                 WHILE            . <0x500
+  143 000002B8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002BC                 WEND
+  142 000002BC                 WHILE            . <0x500
+  143 000002BC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002C0                 WEND
+  142 000002C0                 WHILE            . <0x500
+  143 000002C0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002C4                 WEND
+  142 000002C4                 WHILE            . <0x500
+  143 000002C4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002C8                 WEND
+  142 000002C8                 WHILE            . <0x500
+  143 000002C8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002CC                 WEND
+  142 000002CC                 WHILE            . <0x500
+  143 000002CC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002D0                 WEND
+  142 000002D0                 WHILE            . <0x500
+  143 000002D0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002D4                 WEND
+  142 000002D4                 WHILE            . <0x500
+  143 000002D4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002D8                 WEND
+  142 000002D8                 WHILE            . <0x500
+  143 000002D8 FFFFFFFF        DCD              0xFFFFFFFF
+
+
+
+ARM Macro Assembler    Page 11 
+
+
+  144 000002DC                 WEND
+  142 000002DC                 WHILE            . <0x500
+  143 000002DC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002E0                 WEND
+  142 000002E0                 WHILE            . <0x500
+  143 000002E0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002E4                 WEND
+  142 000002E4                 WHILE            . <0x500
+  143 000002E4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002E8                 WEND
+  142 000002E8                 WHILE            . <0x500
+  143 000002E8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002EC                 WEND
+  142 000002EC                 WHILE            . <0x500
+  143 000002EC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002F0                 WEND
+  142 000002F0                 WHILE            . <0x500
+  143 000002F0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002F4                 WEND
+  142 000002F4                 WHILE            . <0x500
+  143 000002F4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002F8                 WEND
+  142 000002F8                 WHILE            . <0x500
+  143 000002F8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000002FC                 WEND
+  142 000002FC                 WHILE            . <0x500
+  143 000002FC FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000300                 WEND
+  142 00000300                 WHILE            . <0x500
+  143 00000300 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000304                 WEND
+  142 00000304                 WHILE            . <0x500
+  143 00000304 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000308                 WEND
+  142 00000308                 WHILE            . <0x500
+  143 00000308 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000030C                 WEND
+  142 0000030C                 WHILE            . <0x500
+  143 0000030C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000310                 WEND
+  142 00000310                 WHILE            . <0x500
+  143 00000310 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000314                 WEND
+  142 00000314                 WHILE            . <0x500
+  143 00000314 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000318                 WEND
+  142 00000318                 WHILE            . <0x500
+  143 00000318 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000031C                 WEND
+  142 0000031C                 WHILE            . <0x500
+  143 0000031C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000320                 WEND
+  142 00000320                 WHILE            . <0x500
+  143 00000320 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000324                 WEND
+  142 00000324                 WHILE            . <0x500
+  143 00000324 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000328                 WEND
+  142 00000328                 WHILE            . <0x500
+
+
+
+ARM Macro Assembler    Page 12 
+
+
+  143 00000328 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000032C                 WEND
+  142 0000032C                 WHILE            . <0x500
+  143 0000032C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000330                 WEND
+  142 00000330                 WHILE            . <0x500
+  143 00000330 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000334                 WEND
+  142 00000334                 WHILE            . <0x500
+  143 00000334 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000338                 WEND
+  142 00000338                 WHILE            . <0x500
+  143 00000338 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000033C                 WEND
+  142 0000033C                 WHILE            . <0x500
+  143 0000033C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000340                 WEND
+  142 00000340                 WHILE            . <0x500
+  143 00000340 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000344                 WEND
+  142 00000344                 WHILE            . <0x500
+  143 00000344 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000348                 WEND
+  142 00000348                 WHILE            . <0x500
+  143 00000348 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000034C                 WEND
+  142 0000034C                 WHILE            . <0x500
+  143 0000034C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000350                 WEND
+  142 00000350                 WHILE            . <0x500
+  143 00000350 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000354                 WEND
+  142 00000354                 WHILE            . <0x500
+  143 00000354 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000358                 WEND
+  142 00000358                 WHILE            . <0x500
+  143 00000358 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000035C                 WEND
+  142 0000035C                 WHILE            . <0x500
+  143 0000035C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000360                 WEND
+  142 00000360                 WHILE            . <0x500
+  143 00000360 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000364                 WEND
+  142 00000364                 WHILE            . <0x500
+  143 00000364 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000368                 WEND
+  142 00000368                 WHILE            . <0x500
+  143 00000368 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000036C                 WEND
+  142 0000036C                 WHILE            . <0x500
+  143 0000036C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000370                 WEND
+  142 00000370                 WHILE            . <0x500
+  143 00000370 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000374                 WEND
+  142 00000374                 WHILE            . <0x500
+  143 00000374 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000378                 WEND
+
+
+
+ARM Macro Assembler    Page 13 
+
+
+  142 00000378                 WHILE            . <0x500
+  143 00000378 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000037C                 WEND
+  142 0000037C                 WHILE            . <0x500
+  143 0000037C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000380                 WEND
+  142 00000380                 WHILE            . <0x500
+  143 00000380 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000384                 WEND
+  142 00000384                 WHILE            . <0x500
+  143 00000384 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000388                 WEND
+  142 00000388                 WHILE            . <0x500
+  143 00000388 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000038C                 WEND
+  142 0000038C                 WHILE            . <0x500
+  143 0000038C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000390                 WEND
+  142 00000390                 WHILE            . <0x500
+  143 00000390 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000394                 WEND
+  142 00000394                 WHILE            . <0x500
+  143 00000394 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000398                 WEND
+  142 00000398                 WHILE            . <0x500
+  143 00000398 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000039C                 WEND
+  142 0000039C                 WHILE            . <0x500
+  143 0000039C FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003A0                 WEND
+  142 000003A0                 WHILE            . <0x500
+  143 000003A0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003A4                 WEND
+  142 000003A4                 WHILE            . <0x500
+  143 000003A4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003A8                 WEND
+  142 000003A8                 WHILE            . <0x500
+  143 000003A8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003AC                 WEND
+  142 000003AC                 WHILE            . <0x500
+  143 000003AC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003B0                 WEND
+  142 000003B0                 WHILE            . <0x500
+  143 000003B0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003B4                 WEND
+  142 000003B4                 WHILE            . <0x500
+  143 000003B4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003B8                 WEND
+  142 000003B8                 WHILE            . <0x500
+  143 000003B8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003BC                 WEND
+  142 000003BC                 WHILE            . <0x500
+  143 000003BC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003C0                 WEND
+  142 000003C0                 WHILE            . <0x500
+  143 000003C0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003C4                 WEND
+  142 000003C4                 WHILE            . <0x500
+  143 000003C4 FFFFFFFF        DCD              0xFFFFFFFF
+
+
+
+ARM Macro Assembler    Page 14 
+
+
+  144 000003C8                 WEND
+  142 000003C8                 WHILE            . <0x500
+  143 000003C8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003CC                 WEND
+  142 000003CC                 WHILE            . <0x500
+  143 000003CC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003D0                 WEND
+  142 000003D0                 WHILE            . <0x500
+  143 000003D0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003D4                 WEND
+  142 000003D4                 WHILE            . <0x500
+  143 000003D4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003D8                 WEND
+  142 000003D8                 WHILE            . <0x500
+  143 000003D8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003DC                 WEND
+  142 000003DC                 WHILE            . <0x500
+  143 000003DC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003E0                 WEND
+  142 000003E0                 WHILE            . <0x500
+  143 000003E0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003E4                 WEND
+  142 000003E4                 WHILE            . <0x500
+  143 000003E4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003E8                 WEND
+  142 000003E8                 WHILE            . <0x500
+  143 000003E8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003EC                 WEND
+  142 000003EC                 WHILE            . <0x500
+  143 000003EC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003F0                 WEND
+  142 000003F0                 WHILE            . <0x500
+  143 000003F0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003F4                 WEND
+  142 000003F4                 WHILE            . <0x500
+  143 000003F4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003F8                 WEND
+  142 000003F8                 WHILE            . <0x500
+  143 000003F8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000003FC                 WEND
+  142 000003FC                 WHILE            . <0x500
+  143 000003FC FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000400                 WEND
+  142 00000400                 WHILE            . <0x500
+  143 00000400 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000404                 WEND
+  142 00000404                 WHILE            . <0x500
+  143 00000404 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000408                 WEND
+  142 00000408                 WHILE            . <0x500
+  143 00000408 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000040C                 WEND
+  142 0000040C                 WHILE            . <0x500
+  143 0000040C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000410                 WEND
+  142 00000410                 WHILE            . <0x500
+  143 00000410 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000414                 WEND
+  142 00000414                 WHILE            . <0x500
+
+
+
+ARM Macro Assembler    Page 15 
+
+
+  143 00000414 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000418                 WEND
+  142 00000418                 WHILE            . <0x500
+  143 00000418 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000041C                 WEND
+  142 0000041C                 WHILE            . <0x500
+  143 0000041C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000420                 WEND
+  142 00000420                 WHILE            . <0x500
+  143 00000420 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000424                 WEND
+  142 00000424                 WHILE            . <0x500
+  143 00000424 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000428                 WEND
+  142 00000428                 WHILE            . <0x500
+  143 00000428 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000042C                 WEND
+  142 0000042C                 WHILE            . <0x500
+  143 0000042C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000430                 WEND
+  142 00000430                 WHILE            . <0x500
+  143 00000430 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000434                 WEND
+  142 00000434                 WHILE            . <0x500
+  143 00000434 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000438                 WEND
+  142 00000438                 WHILE            . <0x500
+  143 00000438 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000043C                 WEND
+  142 0000043C                 WHILE            . <0x500
+  143 0000043C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000440                 WEND
+  142 00000440                 WHILE            . <0x500
+  143 00000440 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000444                 WEND
+  142 00000444                 WHILE            . <0x500
+  143 00000444 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000448                 WEND
+  142 00000448                 WHILE            . <0x500
+  143 00000448 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000044C                 WEND
+  142 0000044C                 WHILE            . <0x500
+  143 0000044C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000450                 WEND
+  142 00000450                 WHILE            . <0x500
+  143 00000450 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000454                 WEND
+  142 00000454                 WHILE            . <0x500
+  143 00000454 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000458                 WEND
+  142 00000458                 WHILE            . <0x500
+  143 00000458 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000045C                 WEND
+  142 0000045C                 WHILE            . <0x500
+  143 0000045C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000460                 WEND
+  142 00000460                 WHILE            . <0x500
+  143 00000460 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000464                 WEND
+
+
+
+ARM Macro Assembler    Page 16 
+
+
+  142 00000464                 WHILE            . <0x500
+  143 00000464 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000468                 WEND
+  142 00000468                 WHILE            . <0x500
+  143 00000468 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000046C                 WEND
+  142 0000046C                 WHILE            . <0x500
+  143 0000046C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000470                 WEND
+  142 00000470                 WHILE            . <0x500
+  143 00000470 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000474                 WEND
+  142 00000474                 WHILE            . <0x500
+  143 00000474 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000478                 WEND
+  142 00000478                 WHILE            . <0x500
+  143 00000478 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000047C                 WEND
+  142 0000047C                 WHILE            . <0x500
+  143 0000047C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000480                 WEND
+  142 00000480                 WHILE            . <0x500
+  143 00000480 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000484                 WEND
+  142 00000484                 WHILE            . <0x500
+  143 00000484 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000488                 WEND
+  142 00000488                 WHILE            . <0x500
+  143 00000488 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000048C                 WEND
+  142 0000048C                 WHILE            . <0x500
+  143 0000048C FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000490                 WEND
+  142 00000490                 WHILE            . <0x500
+  143 00000490 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000494                 WEND
+  142 00000494                 WHILE            . <0x500
+  143 00000494 FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000498                 WEND
+  142 00000498                 WHILE            . <0x500
+  143 00000498 FFFFFFFF        DCD              0xFFFFFFFF
+  144 0000049C                 WEND
+  142 0000049C                 WHILE            . <0x500
+  143 0000049C FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004A0                 WEND
+  142 000004A0                 WHILE            . <0x500
+  143 000004A0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004A4                 WEND
+  142 000004A4                 WHILE            . <0x500
+  143 000004A4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004A8                 WEND
+  142 000004A8                 WHILE            . <0x500
+  143 000004A8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004AC                 WEND
+  142 000004AC                 WHILE            . <0x500
+  143 000004AC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004B0                 WEND
+  142 000004B0                 WHILE            . <0x500
+  143 000004B0 FFFFFFFF        DCD              0xFFFFFFFF
+
+
+
+ARM Macro Assembler    Page 17 
+
+
+  144 000004B4                 WEND
+  142 000004B4                 WHILE            . <0x500
+  143 000004B4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004B8                 WEND
+  142 000004B8                 WHILE            . <0x500
+  143 000004B8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004BC                 WEND
+  142 000004BC                 WHILE            . <0x500
+  143 000004BC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004C0                 WEND
+  142 000004C0                 WHILE            . <0x500
+  143 000004C0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004C4                 WEND
+  142 000004C4                 WHILE            . <0x500
+  143 000004C4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004C8                 WEND
+  142 000004C8                 WHILE            . <0x500
+  143 000004C8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004CC                 WEND
+  142 000004CC                 WHILE            . <0x500
+  143 000004CC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004D0                 WEND
+  142 000004D0                 WHILE            . <0x500
+  143 000004D0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004D4                 WEND
+  142 000004D4                 WHILE            . <0x500
+  143 000004D4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004D8                 WEND
+  142 000004D8                 WHILE            . <0x500
+  143 000004D8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004DC                 WEND
+  142 000004DC                 WHILE            . <0x500
+  143 000004DC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004E0                 WEND
+  142 000004E0                 WHILE            . <0x500
+  143 000004E0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004E4                 WEND
+  142 000004E4                 WHILE            . <0x500
+  143 000004E4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004E8                 WEND
+  142 000004E8                 WHILE            . <0x500
+  143 000004E8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004EC                 WEND
+  142 000004EC                 WHILE            . <0x500
+  143 000004EC FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004F0                 WEND
+  142 000004F0                 WHILE            . <0x500
+  143 000004F0 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004F4                 WEND
+  142 000004F4                 WHILE            . <0x500
+  143 000004F4 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004F8                 WEND
+  142 000004F8                 WHILE            . <0x500
+  143 000004F8 FFFFFFFF        DCD              0xFFFFFFFF
+  144 000004FC                 WEND
+  142 000004FC                 WHILE            . <0x500
+  143 000004FC FFFFFFFF        DCD              0xFFFFFFFF
+  144 00000500                 WEND
+  142 00000500                 WHILE            . <0x500
+
+
+
+ARM Macro Assembler    Page 18 
+
+
+  145 00000500                 IF               :LNOT:(:DEF:NDEBUG)
+  146 00000500 A05055AA 
+                       FLAGS   DCD              0xA05055AA  ; 0xFFFFFFFF  ; 0x5
+                                                            5AA55AA
+  147 00000504                 ELSE
+  149                          ENDIF
+  150 00000504         
+  151 00000504                 AREA             |.text|, CODE, READONLY
+  152 00000000         
+  153 00000000         
+  154 00000000         ; Reset Handler
+  155 00000000         
+  156 00000000         Reset_Handler
+                               PROC
+  157 00000000                 EXPORT           Reset_Handler             [WEAK
+]
+  158 00000000                 IMPORT           SystemInit
+  159 00000000                 IMPORT           __main
+  160 00000000         
+  161 00000000         ;reset NVIC if in rom debug
+  162 00000000 480C            LDR              R0, =0x20000000
+  163 00000002 4A0D            LDR              R2, =0x0
+  164 00000004 2100            MOVS             R1, #0      ; for warning, 
+  165 00000006 A100            ADD              R1, PC,#0   ; for A1609W, 
+  166 00000008 4281            CMP              R1, R0
+  167 0000000A D900            BLS              RAMCODE
+  168 0000000C         
+  169 0000000C         ; ram code base address. 
+  170 0000000C 4402            ADD              R2, R0,R2
+  171 0000000E         RAMCODE
+  172 0000000E         ; reset Vector table address.
+  173 0000000E 4A0B            LDR              R2, =new_vect_table
+  174 00000010         
+  175 00000010 480B            LDR              R0, =0xE000ED08
+  176 00000012 6002            STR              R2, [R0]
+  177 00000014         
+  178 00000014 480B            LDR              R0, =SystemInit
+  179 00000016 4780            BLX              R0
+  180 00000018 480B            LDR              R0, =__main
+  181 0000001A 4700            BX               R0
+  182 0000001C                 ENDP
+  183 0000001C         
+  184 0000001C         
+  185 0000001C         ; Dummy Exception Handlers (infinite loops which can be 
+                       modified)
+  186 0000001C         
+  187 0000001C         NMI_Handler
+                               PROC
+  188 0000001C                 EXPORT           NMI_Handler               [WEAK
+]
+  189 0000001C E7FE            B                .
+  190 0000001E                 ENDP
+  191 0000001E         
+  192 0000001E         
+  194 0000001E         HardFault_Handler
+                               PROC
+  195 0000001E                 EXPORT           HardFault_Handler         [WEAK
+]
+  196 0000001E E7FE            B                .
+
+
+
+ARM Macro Assembler    Page 19 
+
+
+  197 00000020                 ENDP
+  198 00000020         SVC_Handler
+                               PROC
+  199 00000020                 EXPORT           SVC_Handler               [WEAK
+]
+  200 00000020 E7FE            B                .
+  201 00000022                 ENDP
+  202 00000022         PendSV_Handler
+                               PROC
+  203 00000022                 EXPORT           PendSV_Handler            [WEAK
+]
+  204 00000022 E7FE            B                .
+  205 00000024                 ENDP
+  206 00000024         SysTick_Handler
+                               PROC
+  207 00000024                 EXPORT           SysTick_Handler           [WEAK
+]
+  208 00000024 E7FE            B                .
+  209 00000026                 ENDP
+  210 00000026         
+  211 00000026         Default_Handler
+                               PROC
+  212 00000026                 EXPORT           PORTA_IRQHandler               
+ [WEAK]
+  213 00000026                 EXPORT           PORTB_IRQHandler               
+ [WEAK]
+  214 00000026                 EXPORT           PORTC_IRQHandler               
+ [WEAK]
+  215 00000026                 EXPORT           PORTD_IRQHandler               
+ [WEAK]
+  216 00000026                 EXPORT           DMAC_IRQHandler                
+ [WEAK]
+  217 00000026                 EXPORT           TIM3_IRQHandler                
+ [WEAK]
+  218 00000026                 EXPORT           UART0_IRQHandler               
+ [WEAK]
+  219 00000026                 EXPORT           UART1_IRQHandler               
+ [WEAK]
+  220 00000026                 EXPORT           LPUART0_IRQHandler             
+ [WEAK]
+  221 00000026                 EXPORT           LPUART1_IRQHandler             
+ [WEAK]
+  222 00000026                 EXPORT           SPI0_IRQHandler                
+ [WEAK]
+  223 00000026                 EXPORT           SPI1_IRQHandler                
+ [WEAK]
+  224 00000026                 EXPORT           I2C0_IRQHandler                
+ [WEAK]
+  225 00000026                 EXPORT           I2C1_IRQHandler                
+ [WEAK]
+  226 00000026                 EXPORT           TIM0_IRQHandler                
+ [WEAK]
+  227 00000026                 EXPORT           TIM1_IRQHandler                
+ [WEAK]
+  228 00000026                 EXPORT           TIM2_IRQHandler                
+ [WEAK]
+  229 00000026                 EXPORT           LPTIM_IRQHandler               
+ [WEAK]
+  230 00000026                 EXPORT           TIM4_IRQHandler                
+
+
+
+ARM Macro Assembler    Page 20 
+
+
+ [WEAK]
+  231 00000026                 EXPORT           TIM5_IRQHandler                
+ [WEAK]
+  232 00000026                 EXPORT           TIM6_IRQHandler                
+ [WEAK]
+  233 00000026                 EXPORT           PCA_IRQHandler                 
+ [WEAK]
+  234 00000026                 EXPORT           WDT_IRQHandler                 
+ [WEAK]
+  235 00000026                 EXPORT           RTC_IRQHandler                 
+ [WEAK]
+  236 00000026                 EXPORT           ADC_IRQHandler                 
+ [WEAK]
+  237 00000026                 EXPORT           PCNT_IRQHandler                
+ [WEAK]
+  238 00000026                 EXPORT           VC0_IRQHandler                 
+ [WEAK]
+  239 00000026                 EXPORT           VC1_IRQHandler                 
+ [WEAK]
+  240 00000026                 EXPORT           LVD_IRQHandler                 
+ [WEAK]
+  241 00000026                 EXPORT           LCD_IRQHandler                 
+ [WEAK]
+  242 00000026                 EXPORT           FLASH_RAM_IRQHandler           
+ [WEAK]
+  243 00000026                 EXPORT           CLKTRIM_IRQHandler             
+ [WEAK]
+  244 00000026         PORTA_IRQHandler
+  245 00000026         PORTB_IRQHandler
+  246 00000026         PORTC_IRQHandler
+  247 00000026         PORTD_IRQHandler
+  248 00000026         DMAC_IRQHandler
+  249 00000026         TIM3_IRQHandler
+  250 00000026         UART0_IRQHandler
+  251 00000026         UART1_IRQHandler
+  252 00000026         LPUART0_IRQHandler
+  253 00000026         LPUART1_IRQHandler
+  254 00000026         SPI0_IRQHandler
+  255 00000026         SPI1_IRQHandler
+  256 00000026         I2C0_IRQHandler
+  257 00000026         I2C1_IRQHandler
+  258 00000026         TIM0_IRQHandler
+  259 00000026         TIM1_IRQHandler
+  260 00000026         TIM2_IRQHandler
+  261 00000026         LPTIM_IRQHandler
+  262 00000026         TIM4_IRQHandler
+  263 00000026         TIM5_IRQHandler
+  264 00000026         TIM6_IRQHandler
+  265 00000026         PCA_IRQHandler
+  266 00000026         WDT_IRQHandler
+  267 00000026         RTC_IRQHandler
+  268 00000026         ADC_IRQHandler
+  269 00000026         PCNT_IRQHandler
+  270 00000026         VC0_IRQHandler
+  271 00000026         VC1_IRQHandler
+  272 00000026         LVD_IRQHandler
+  273 00000026         LCD_IRQHandler
+  274 00000026         FLASH_RAM_IRQHandler
+  275 00000026         CLKTRIM_IRQHandler
+
+
+
+ARM Macro Assembler    Page 21 
+
+
+  276 00000026         
+  277 00000026         
+  278 00000026 E7FE            B                .
+  279 00000028         
+  280 00000028                 ENDP
+  281 00000028         
+  282 00000028         
+  283 00000028                 ALIGN
+  284 00000028         
+  285 00000028         
+  286 00000028         ; User Initial Stack & Heap
+  287 00000028         
+  288 00000028                 IF               :DEF:__MICROLIB
+  295 00000028         
+  296 00000028                 IMPORT           __use_two_region_memory
+  297 00000028                 EXPORT           __user_initial_stackheap
+  298 00000028         __user_initial_stackheap
+  299 00000028         
+  300 00000028 4808            LDR              R0, =  Heap_Mem
+  301 0000002A 4909            LDR              R1, =(Stack_Mem + Stack_Size)
+  302 0000002C 4A09            LDR              R2, = (Heap_Mem +  Heap_Size)
+  303 0000002E 4B0A            LDR              R3, = Stack_Mem
+  304 00000030 4770            BX               LR
+  305 00000032         
+  306 00000032 00 00           ALIGN
+  307 00000034         
+  308 00000034                 ENDIF
+  309 00000034         
+  310 00000034         
+  311 00000034                 END
               20000000 
               00000000 
               00002C00 
@@ -462,8 +1370,8 @@ Symbol: Stack_Mem
    Definitions
       At line 58 in file startup_hc32l13x.s
    Uses
-      At line 292 in file startup_hc32l13x.s
-      At line 294 in file startup_hc32l13x.s
+      At line 301 in file startup_hc32l13x.s
+      At line 303 in file startup_hc32l13x.s
 
 __initial_sp 00000200
 
@@ -494,8 +1402,8 @@ Symbol: Heap_Mem
    Definitions
       At line 69 in file startup_hc32l13x.s
    Uses
-      At line 291 in file startup_hc32l13x.s
-      At line 293 in file startup_hc32l13x.s
+      At line 300 in file startup_hc32l13x.s
+      At line 302 in file startup_hc32l13x.s
 
 __heap_base 00000000
 
@@ -520,6 +1428,14 @@ Comment: __heap_limit unused
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
+FLAGS 00000500
+
+Symbol: FLAGS
+   Definitions
+      At line 146 in file startup_hc32l13x.s
+   Uses
+      None
+Comment: FLAGS unused
 RESET 00000000
 
 Symbol: RESET
@@ -546,7 +1462,7 @@ Symbol: __Vectors_End
       At line 81 in file startup_hc32l13x.s
       At line 140 in file startup_hc32l13x.s
 
-3 symbols
+4 symbols
 
 
 
@@ -557,7 +1473,7 @@ Relocatable symbols
 
 Symbol: .text
    Definitions
-      At line 142 in file startup_hc32l13x.s
+      At line 151 in file startup_hc32l13x.s
    Uses
       None
 Comment: .text unused
@@ -565,34 +1481,34 @@ ADC_IRQHandler 00000026
 
 Symbol: ADC_IRQHandler
    Definitions
-      At line 259 in file startup_hc32l13x.s
+      At line 268 in file startup_hc32l13x.s
    Uses
       At line 127 in file startup_hc32l13x.s
-      At line 227 in file startup_hc32l13x.s
+      At line 236 in file startup_hc32l13x.s
 
 CLKTRIM_IRQHandler 00000026
 
 Symbol: CLKTRIM_IRQHandler
    Definitions
-      At line 266 in file startup_hc32l13x.s
+      At line 275 in file startup_hc32l13x.s
    Uses
       At line 134 in file startup_hc32l13x.s
-      At line 234 in file startup_hc32l13x.s
+      At line 243 in file startup_hc32l13x.s
 
 DMAC_IRQHandler 00000026
 
 Symbol: DMAC_IRQHandler
    Definitions
-      At line 239 in file startup_hc32l13x.s
+      At line 248 in file startup_hc32l13x.s
    Uses
       At line 106 in file startup_hc32l13x.s
-      At line 207 in file startup_hc32l13x.s
+      At line 216 in file startup_hc32l13x.s
 
 Default_Handler 00000026
 
 Symbol: Default_Handler
    Definitions
-      At line 202 in file startup_hc32l13x.s
+      At line 211 in file startup_hc32l13x.s
    Uses
       None
 Comment: Default_Handler unused
@@ -600,16 +1516,16 @@ FLASH_RAM_IRQHandler 00000026
 
 Symbol: FLASH_RAM_IRQHandler
    Definitions
-      At line 265 in file startup_hc32l13x.s
+      At line 274 in file startup_hc32l13x.s
    Uses
       At line 133 in file startup_hc32l13x.s
-      At line 233 in file startup_hc32l13x.s
+      At line 242 in file startup_hc32l13x.s
 
 HardFault_Handler 0000001E
 
 Symbol: HardFault_Handler
    Definitions
-      At line 185 in file startup_hc32l13x.s
+      At line 194 in file startup_hc32l13x.s
    Uses
       At line 88 in file startup_hc32l13x.s
 
@@ -618,61 +1534,61 @@ Symbol: HardFault_Handler
 ARM Macro Assembler    Page 2 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 186 in file startup_hc32l13x.s
+      At line 195 in file startup_hc32l13x.s
 
 I2C0_IRQHandler 00000026
 
 Symbol: I2C0_IRQHandler
    Definitions
-      At line 247 in file startup_hc32l13x.s
+      At line 256 in file startup_hc32l13x.s
    Uses
       At line 115 in file startup_hc32l13x.s
-      At line 215 in file startup_hc32l13x.s
+      At line 224 in file startup_hc32l13x.s
 
 I2C1_IRQHandler 00000026
 
 Symbol: I2C1_IRQHandler
    Definitions
-      At line 248 in file startup_hc32l13x.s
+      At line 257 in file startup_hc32l13x.s
    Uses
       At line 116 in file startup_hc32l13x.s
-      At line 216 in file startup_hc32l13x.s
+      At line 225 in file startup_hc32l13x.s
 
 LCD_IRQHandler 00000026
 
 Symbol: LCD_IRQHandler
    Definitions
-      At line 264 in file startup_hc32l13x.s
+      At line 273 in file startup_hc32l13x.s
    Uses
       At line 132 in file startup_hc32l13x.s
-      At line 232 in file startup_hc32l13x.s
+      At line 241 in file startup_hc32l13x.s
 
 LPTIM_IRQHandler 00000026
 
 Symbol: LPTIM_IRQHandler
    Definitions
-      At line 252 in file startup_hc32l13x.s
+      At line 261 in file startup_hc32l13x.s
    Uses
       At line 120 in file startup_hc32l13x.s
-      At line 220 in file startup_hc32l13x.s
+      At line 229 in file startup_hc32l13x.s
 
 LPUART0_IRQHandler 00000026
 
 Symbol: LPUART0_IRQHandler
    Definitions
-      At line 243 in file startup_hc32l13x.s
+      At line 252 in file startup_hc32l13x.s
    Uses
       At line 111 in file startup_hc32l13x.s
-      At line 211 in file startup_hc32l13x.s
+      At line 220 in file startup_hc32l13x.s
 
 LPUART1_IRQHandler 00000026
 
 Symbol: LPUART1_IRQHandler
    Definitions
-      At line 244 in file startup_hc32l13x.s
+      At line 253 in file startup_hc32l13x.s
    Uses
       At line 112 in file startup_hc32l13x.s
-      At line 212 in file startup_hc32l13x.s
+      At line 221 in file startup_hc32l13x.s
 
 LVD_IRQHandler 00000026
 
@@ -684,64 +1600,64 @@ ARM Macro Assembler    Page 3 Alphabetic symbol ordering
 Relocatable symbols
 
    Definitions
-      At line 263 in file startup_hc32l13x.s
+      At line 272 in file startup_hc32l13x.s
    Uses
       At line 131 in file startup_hc32l13x.s
-      At line 231 in file startup_hc32l13x.s
+      At line 240 in file startup_hc32l13x.s
 
 NMI_Handler 0000001C
 
 Symbol: NMI_Handler
    Definitions
-      At line 178 in file startup_hc32l13x.s
+      At line 187 in file startup_hc32l13x.s
    Uses
       At line 87 in file startup_hc32l13x.s
-      At line 179 in file startup_hc32l13x.s
+      At line 188 in file startup_hc32l13x.s
 
 PCA_IRQHandler 00000026
 
 Symbol: PCA_IRQHandler
    Definitions
-      At line 256 in file startup_hc32l13x.s
+      At line 265 in file startup_hc32l13x.s
    Uses
       At line 124 in file startup_hc32l13x.s
-      At line 224 in file startup_hc32l13x.s
+      At line 233 in file startup_hc32l13x.s
 
 PCNT_IRQHandler 00000026
 
 Symbol: PCNT_IRQHandler
    Definitions
-      At line 260 in file startup_hc32l13x.s
+      At line 269 in file startup_hc32l13x.s
    Uses
       At line 128 in file startup_hc32l13x.s
-      At line 228 in file startup_hc32l13x.s
+      At line 237 in file startup_hc32l13x.s
 
 PORTA_IRQHandler 00000026
 
 Symbol: PORTA_IRQHandler
    Definitions
-      At line 235 in file startup_hc32l13x.s
+      At line 244 in file startup_hc32l13x.s
    Uses
       At line 102 in file startup_hc32l13x.s
-      At line 203 in file startup_hc32l13x.s
+      At line 212 in file startup_hc32l13x.s
 
 PORTB_IRQHandler 00000026
 
 Symbol: PORTB_IRQHandler
    Definitions
-      At line 236 in file startup_hc32l13x.s
+      At line 245 in file startup_hc32l13x.s
    Uses
       At line 103 in file startup_hc32l13x.s
-      At line 204 in file startup_hc32l13x.s
+      At line 213 in file startup_hc32l13x.s
 
 PORTC_IRQHandler 00000026
 
 Symbol: PORTC_IRQHandler
    Definitions
-      At line 237 in file startup_hc32l13x.s
+      At line 246 in file startup_hc32l13x.s
    Uses
       At line 104 in file startup_hc32l13x.s
-      At line 205 in file startup_hc32l13x.s
+      At line 214 in file startup_hc32l13x.s
 
 
 
@@ -753,60 +1669,60 @@ PORTD_IRQHandler 00000026
 
 Symbol: PORTD_IRQHandler
    Definitions
-      At line 238 in file startup_hc32l13x.s
+      At line 247 in file startup_hc32l13x.s
    Uses
       At line 105 in file startup_hc32l13x.s
-      At line 206 in file startup_hc32l13x.s
+      At line 215 in file startup_hc32l13x.s
 
 PendSV_Handler 00000022
 
 Symbol: PendSV_Handler
    Definitions
-      At line 193 in file startup_hc32l13x.s
+      At line 202 in file startup_hc32l13x.s
    Uses
       At line 99 in file startup_hc32l13x.s
-      At line 194 in file startup_hc32l13x.s
+      At line 203 in file startup_hc32l13x.s
 
 RAMCODE 0000000E
 
 Symbol: RAMCODE
    Definitions
-      At line 162 in file startup_hc32l13x.s
+      At line 171 in file startup_hc32l13x.s
    Uses
-      At line 158 in file startup_hc32l13x.s
+      At line 167 in file startup_hc32l13x.s
 Comment: RAMCODE used once
 RTC_IRQHandler 00000026
 
 Symbol: RTC_IRQHandler
    Definitions
-      At line 258 in file startup_hc32l13x.s
+      At line 267 in file startup_hc32l13x.s
    Uses
       At line 126 in file startup_hc32l13x.s
-      At line 226 in file startup_hc32l13x.s
+      At line 235 in file startup_hc32l13x.s
 
 Reset_Handler 00000000
 
 Symbol: Reset_Handler
    Definitions
-      At line 147 in file startup_hc32l13x.s
+      At line 156 in file startup_hc32l13x.s
    Uses
       At line 86 in file startup_hc32l13x.s
-      At line 148 in file startup_hc32l13x.s
+      At line 157 in file startup_hc32l13x.s
 
 SPI0_IRQHandler 00000026
 
 Symbol: SPI0_IRQHandler
    Definitions
-      At line 245 in file startup_hc32l13x.s
+      At line 254 in file startup_hc32l13x.s
    Uses
       At line 113 in file startup_hc32l13x.s
-      At line 213 in file startup_hc32l13x.s
+      At line 222 in file startup_hc32l13x.s
 
 SPI1_IRQHandler 00000026
 
 Symbol: SPI1_IRQHandler
    Definitions
-      At line 246 in file startup_hc32l13x.s
+      At line 255 in file startup_hc32l13x.s
 
 
 
@@ -815,61 +1731,61 @@ Relocatable symbols
 
    Uses
       At line 114 in file startup_hc32l13x.s
-      At line 214 in file startup_hc32l13x.s
+      At line 223 in file startup_hc32l13x.s
 
 SVC_Handler 00000020
 
 Symbol: SVC_Handler
    Definitions
-      At line 189 in file startup_hc32l13x.s
+      At line 198 in file startup_hc32l13x.s
    Uses
       At line 96 in file startup_hc32l13x.s
-      At line 190 in file startup_hc32l13x.s
+      At line 199 in file startup_hc32l13x.s
 
 SysTick_Handler 00000024
 
 Symbol: SysTick_Handler
    Definitions
-      At line 197 in file startup_hc32l13x.s
+      At line 206 in file startup_hc32l13x.s
    Uses
       At line 100 in file startup_hc32l13x.s
-      At line 198 in file startup_hc32l13x.s
+      At line 207 in file startup_hc32l13x.s
 
 TIM0_IRQHandler 00000026
 
 Symbol: TIM0_IRQHandler
    Definitions
-      At line 249 in file startup_hc32l13x.s
+      At line 258 in file startup_hc32l13x.s
    Uses
       At line 117 in file startup_hc32l13x.s
-      At line 217 in file startup_hc32l13x.s
+      At line 226 in file startup_hc32l13x.s
 
 TIM1_IRQHandler 00000026
 
 Symbol: TIM1_IRQHandler
    Definitions
-      At line 250 in file startup_hc32l13x.s
+      At line 259 in file startup_hc32l13x.s
    Uses
       At line 118 in file startup_hc32l13x.s
-      At line 218 in file startup_hc32l13x.s
+      At line 227 in file startup_hc32l13x.s
 
 TIM2_IRQHandler 00000026
 
 Symbol: TIM2_IRQHandler
    Definitions
-      At line 251 in file startup_hc32l13x.s
+      At line 260 in file startup_hc32l13x.s
    Uses
       At line 119 in file startup_hc32l13x.s
-      At line 219 in file startup_hc32l13x.s
+      At line 228 in file startup_hc32l13x.s
 
 TIM3_IRQHandler 00000026
 
 Symbol: TIM3_IRQHandler
    Definitions
-      At line 240 in file startup_hc32l13x.s
+      At line 249 in file startup_hc32l13x.s
    Uses
       At line 107 in file startup_hc32l13x.s
-      At line 208 in file startup_hc32l13x.s
+      At line 217 in file startup_hc32l13x.s
 
 TIM4_IRQHandler 00000026
 
@@ -881,61 +1797,61 @@ Relocatable symbols
 
 Symbol: TIM4_IRQHandler
    Definitions
-      At line 253 in file startup_hc32l13x.s
+      At line 262 in file startup_hc32l13x.s
    Uses
       At line 121 in file startup_hc32l13x.s
-      At line 221 in file startup_hc32l13x.s
+      At line 230 in file startup_hc32l13x.s
 
 TIM5_IRQHandler 00000026
 
 Symbol: TIM5_IRQHandler
    Definitions
-      At line 254 in file startup_hc32l13x.s
+      At line 263 in file startup_hc32l13x.s
    Uses
       At line 122 in file startup_hc32l13x.s
-      At line 222 in file startup_hc32l13x.s
+      At line 231 in file startup_hc32l13x.s
 
 TIM6_IRQHandler 00000026
 
 Symbol: TIM6_IRQHandler
    Definitions
-      At line 255 in file startup_hc32l13x.s
+      At line 264 in file startup_hc32l13x.s
    Uses
       At line 123 in file startup_hc32l13x.s
-      At line 223 in file startup_hc32l13x.s
+      At line 232 in file startup_hc32l13x.s
 
 UART0_IRQHandler 00000026
 
 Symbol: UART0_IRQHandler
    Definitions
-      At line 241 in file startup_hc32l13x.s
+      At line 250 in file startup_hc32l13x.s
    Uses
       At line 108 in file startup_hc32l13x.s
-      At line 209 in file startup_hc32l13x.s
+      At line 218 in file startup_hc32l13x.s
 
 UART1_IRQHandler 00000026
 
 Symbol: UART1_IRQHandler
    Definitions
-      At line 242 in file startup_hc32l13x.s
+      At line 251 in file startup_hc32l13x.s
    Uses
       At line 110 in file startup_hc32l13x.s
-      At line 210 in file startup_hc32l13x.s
+      At line 219 in file startup_hc32l13x.s
 
 VC0_IRQHandler 00000026
 
 Symbol: VC0_IRQHandler
    Definitions
-      At line 261 in file startup_hc32l13x.s
+      At line 270 in file startup_hc32l13x.s
    Uses
       At line 129 in file startup_hc32l13x.s
-      At line 229 in file startup_hc32l13x.s
+      At line 238 in file startup_hc32l13x.s
 
 VC1_IRQHandler 00000026
 
 Symbol: VC1_IRQHandler
    Definitions
-      At line 262 in file startup_hc32l13x.s
+      At line 271 in file startup_hc32l13x.s
    Uses
 
 
@@ -944,24 +1860,24 @@ ARM Macro Assembler    Page 7 Alphabetic symbol ordering
 Relocatable symbols
 
       At line 130 in file startup_hc32l13x.s
-      At line 230 in file startup_hc32l13x.s
+      At line 239 in file startup_hc32l13x.s
 
 WDT_IRQHandler 00000026
 
 Symbol: WDT_IRQHandler
    Definitions
-      At line 257 in file startup_hc32l13x.s
+      At line 266 in file startup_hc32l13x.s
    Uses
       At line 125 in file startup_hc32l13x.s
-      At line 225 in file startup_hc32l13x.s
+      At line 234 in file startup_hc32l13x.s
 
 __user_initial_stackheap 00000028
 
 Symbol: __user_initial_stackheap
    Definitions
-      At line 289 in file startup_hc32l13x.s
+      At line 298 in file startup_hc32l13x.s
    Uses
-      At line 288 in file startup_hc32l13x.s
+      At line 297 in file startup_hc32l13x.s
 Comment: __user_initial_stackheap used once
 42 symbols
 
@@ -977,7 +1893,7 @@ Symbol: Heap_Size
       At line 65 in file startup_hc32l13x.s
    Uses
       At line 69 in file startup_hc32l13x.s
-      At line 293 in file startup_hc32l13x.s
+      At line 302 in file startup_hc32l13x.s
 
 Stack_Size 00000200
 
@@ -986,7 +1902,7 @@ Symbol: Stack_Size
       At line 54 in file startup_hc32l13x.s
    Uses
       At line 58 in file startup_hc32l13x.s
-      At line 292 in file startup_hc32l13x.s
+      At line 301 in file startup_hc32l13x.s
 
 __Vectors_Size 000000C0
 
@@ -1002,7 +1918,7 @@ Symbol: new_vect_table
    Definitions
       At line 55 in file startup_hc32l13x.s
    Uses
-      At line 164 in file startup_hc32l13x.s
+      At line 173 in file startup_hc32l13x.s
 Comment: new_vect_table used once
 4 symbols
 
@@ -1015,25 +1931,25 @@ SystemInit 00000000
 
 Symbol: SystemInit
    Definitions
-      At line 149 in file startup_hc32l13x.s
+      At line 158 in file startup_hc32l13x.s
    Uses
-      At line 169 in file startup_hc32l13x.s
+      At line 178 in file startup_hc32l13x.s
 Comment: SystemInit used once
 __main 00000000
 
 Symbol: __main
    Definitions
-      At line 150 in file startup_hc32l13x.s
+      At line 159 in file startup_hc32l13x.s
    Uses
-      At line 171 in file startup_hc32l13x.s
+      At line 180 in file startup_hc32l13x.s
 Comment: __main used once
 __use_two_region_memory 00000000
 
 Symbol: __use_two_region_memory
    Definitions
-      At line 287 in file startup_hc32l13x.s
+      At line 296 in file startup_hc32l13x.s
    Uses
       None
 Comment: __use_two_region_memory unused
 3 symbols
-395 symbols in table
+398 symbols in table
