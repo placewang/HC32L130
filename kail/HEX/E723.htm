@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\HEX\E723.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\HEX\E723.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Wed Jun 29 15:20:12 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Fri Jul 01 11:21:43 2022
 <BR><P>
 <H3>Maximum Stack Usage =        612 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -708,7 +708,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_UnlockAll
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_LockAll
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SaveErase
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GpsSend_Data_Uart
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SaveErase
 </UL>
 
 <P><STRONG><a name="[90]"></a>Flash_UnlockAll</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, flash.o(i.Flash_UnlockAll))
@@ -871,7 +872,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GprsCmd_Task
 </UL>
 
-<P><STRONG><a name="[a9]"></a>GpSendInformation</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, app_version.o(i.GpSendInformation))
+<P><STRONG><a name="[a9]"></a>GpSendInformation</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, app_version.o(i.GpSendInformation))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GpSendInformation &rArr; Uart_SendDataPoll &rArr; Uart_ClrStatus &rArr; SetBit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetLcdType
@@ -1000,10 +1001,11 @@ Global Symbols
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ToggleConfirmationHandshake
 </UL>
 
-<P><STRONG><a name="[b4]"></a>GpsSend_Data_Uart</STRONG> (Thumb, 310 bytes, Stack size 8 bytes, app_gpsuart0.o(i.GpsSend_Data_Uart))
+<P><STRONG><a name="[b4]"></a>GpsSend_Data_Uart</STRONG> (Thumb, 280 bytes, Stack size 8 bytes, app_gpsuart0.o(i.GpsSend_Data_Uart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GpsSend_Data_Uart &rArr; GpSend_XY &rArr; GpSend_Uart0 &rArr; Uart_SendDataPoll &rArr; Uart_ClrStatus &rArr; SetBit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_writeBy
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SectorErase
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPclearData
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Send_LPUart0
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GpSend_XY
@@ -1328,7 +1330,7 @@ Global Symbols
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GpSend_Flash_rD
 </UL>
 
-<P><STRONG><a name="[da]"></a>SendInformation</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, app_version.o(i.SendInformation))
+<P><STRONG><a name="[da]"></a>SendInformation</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, app_version.o(i.SendInformation))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SendInformation &rArr; Uart_SendDataPoll &rArr; Uart_ClrStatus &rArr; SetBit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetLcdType

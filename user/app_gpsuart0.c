@@ -9,7 +9,7 @@
 #include "app_Cmd.h"
 #include "bsp_flash.h"
 #include "lpuart.h"
-#define SYSFLASHADRR   0x3100                                 //写升级标志FLAsh地址
+#define SYSFLASHADRR   0xFE00                                 //写升级标志FLAsh地址
 uint8_t  GpFlashWSAsk[]={0x5A,0x02,0xFE,0xFE,0xA5};
 uint8_t  GpToggleAsk[]={0x5A,0x01,0xFE,0x51,0xA5};
 uint8_t  GpSysRest[]={0x5A,0x01,0x52,0xA5};
@@ -170,13 +170,14 @@ void GpsSend_Data_Uart(void)
 		else if(GpSystemRest==1)
 		{
 				GpSystemRest=0;
-				//while(Ok != Flash_SectorErase(SYSFLASHADRR)){;}
+				while(Ok != Flash_SectorErase(SYSFLASHADRR)){;}
 				Flash_writeBy(SYSFLASHADRR,0xA0);
 				Flash_writeBy(SYSFLASHADRR+1,0x50);
 				Flash_writeBy(SYSFLASHADRR+2,0xAA);
 				Flash_writeBy(SYSFLASHADRR+3,0x00);
-				GpSend_Uart0(GpSysRest,sizeof(GpSysRest));		
-				NVIC_SystemReset();
+				GpSend_Uart0(GpSysRest,sizeof(GpSysRest));
+//				NVIC_SystemReset();	
+				while(1){;}
 		}
 			
 }

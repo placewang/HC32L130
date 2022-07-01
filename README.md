@@ -14,7 +14,4 @@ FLAGS           DCD     0xA05055AA  ; 0xFFFFFFFF  ; 0x55AA55AA
 FLAGS           DCD     0xFFFFFFFF
                 ENDIF
 ```
-
-
-
-
+**22.7-1 修改了软件重启方式（饿死看门狗）NVIC_SysRest()函数重启无法关闭看门狗**  
