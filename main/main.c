@@ -14,7 +14,6 @@
 #include "wdt.h"
 
 uint8_t  g_iLcdType;                                            //LCD∆¡÷÷¿‡10.1/10.4 /7¥Á
-
 static void Bsp_Init(void)
 {
 	Uart0_init(DEFAULTBOUD);

@@ -171,12 +171,11 @@ void GpsSend_Data_Uart(void)
 		{
 				GpSystemRest=0;
 				while(Ok != Flash_SectorErase(SYSFLASHADRR)){;}
-				Flash_writeBy(SYSFLASHADRR,0xA0);
-				Flash_writeBy(SYSFLASHADRR+1,0x50);
-				Flash_writeBy(SYSFLASHADRR+2,0xAA);
-				Flash_writeBy(SYSFLASHADRR+3,0x00);
+				Flash_writeBy(SYSFLASHADRR+3,0xA0);
+				Flash_writeBy(SYSFLASHADRR+2,0x50);
+				Flash_writeBy(SYSFLASHADRR+1,0xAA);
+				Flash_writeBy(SYSFLASHADRR,0x00);
 				GpSend_Uart0(GpSysRest,sizeof(GpSysRest));
-//				NVIC_SystemReset();	
 				while(1){;}
 		}
 			
