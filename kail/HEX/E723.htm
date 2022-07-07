@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\HEX\E723.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\HEX\E723.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Fri Jul 01 20:00:10 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Thu Jul 07 21:15:55 2022
 <BR><P>
 <H3>Maximum Stack Usage =        612 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -810,7 +810,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GpRsacketProcessing
 </UL>
 
-<P><STRONG><a name="[9e]"></a>GetLcdType</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, bsp_gpio.o(i.GetLcdType))
+<P><STRONG><a name="[9e]"></a>GetLcdType</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, bsp_gpio.o(i.GetLcdType))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GetLcdType &rArr; Gpio_GetInputIO
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_GetInputIO
@@ -872,8 +872,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GprsCmd_Task
 </UL>
 
-<P><STRONG><a name="[a9]"></a>GpSendInformation</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, app_version.o(i.GpSendInformation))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GpSendInformation &rArr; Uart_SendDataPoll &rArr; Uart_ClrStatus &rArr; SetBit
+<P><STRONG><a name="[a9]"></a>GpSendInformation</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, app_version.o(i.GpSendInformation))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = GpSendInformation &rArr; Uart_SendDataPoll &rArr; Uart_ClrStatus &rArr; SetBit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetLcdType
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SendDataPoll
@@ -980,7 +980,6 @@ Global Symbols
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TSC2046_ReadCMD
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TSC2046_ReadAdc
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Systme_led
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen_init
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_init
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cmd_char
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SelectRow
@@ -1313,11 +1312,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
 </UL>
 
-<P><STRONG><a name="[6f]"></a>Screen_init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, bsp_gpio.o(i.Screen_init))
+<P><STRONG><a name="[6f]"></a>Screen_init</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, bsp_gpio.o(i.Screen_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Screen_init &rArr; Sysctrl_SetPeripheralGate &rArr; SetBit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetIO
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bsp_Init
@@ -1330,8 +1328,8 @@ Global Symbols
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GpSend_Flash_rD
 </UL>
 
-<P><STRONG><a name="[da]"></a>SendInformation</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, app_version.o(i.SendInformation))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SendInformation &rArr; Uart_SendDataPoll &rArr; Uart_ClrStatus &rArr; SetBit
+<P><STRONG><a name="[da]"></a>SendInformation</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, app_version.o(i.SendInformation))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = SendInformation &rArr; Uart_SendDataPoll &rArr; Uart_ClrStatus &rArr; SetBit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetLcdType
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SendDataPoll

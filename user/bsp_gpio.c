@@ -80,43 +80,55 @@ void GPIO_Key_init(void)
 		Gpio_Init(Key_Row6_PORT ,Key_Row6_PIN,&stcGpioCfg);
 	
 }	
-/************液晶识别***********/
+/************液晶与GPRS识别***********/
 
 void Screen_init(void)
 {
-		stc_gpio_cfg_t stcGpioCfg;
+	stc_gpio_cfg_t stcGpioCfg;
 		
     Sysctrl_SetPeripheralGate(SysctrlPeripheralGpio, TRUE); 	///< 打开GPIO外设时钟门控
     
-    stcGpioCfg.enDir = GpioDirOut;														///< 端口方向配置->输出(其它参数与以上（输入）配置参数一致)
+    stcGpioCfg.enDir = GpioDirIn ;										 ///< 端口方向配置->输出(其它参数与以上（输入）配置参数一致)
 		
-		stcGpioCfg.enOD = GpioOdDisable;                					//< 端口开漏输出配置->开漏输出关闭
+	stcGpioCfg.enOD = GpioOdDisable;                					//< 端口开漏输出配置->开漏输出关闭
     stcGpioCfg.enPu = GpioPuEnable;                 					//< 端口上下拉配置->上拉
     stcGpioCfg.enPd = GpioPdDisable;
 	  
-		Gpio_Init(Screen0_PORT ,Screen0_PIN,&stcGpioCfg);
-	  Gpio_Init(Screen1_PORT ,Screen1_PIN,&stcGpioCfg);
-		
-		Gpio_SetIO(Screen0_PORT ,Screen0_PIN);
-		Gpio_SetIO(Screen1_PORT ,Screen1_PIN);
+	Gpio_Init(Screen0_PORT ,Screen0_PIN,&stcGpioCfg);
+	Gpio_Init(Screen1_PORT ,Screen1_PIN,&stcGpioCfg);
+	Gpio_Init(GPRS_PORT,GPRS_PIN,&stcGpioCfg);
+
 }
-/*****获取液晶屏尺寸******/
+/*****获取液晶屏尺寸/GPRS模块******/
 uint8_t GetLcdType(void)
 {
-		if(Screen0_IN	&&Screen1_IN)
-		{
-			return 1;
-		}
-		else if(!Screen0_IN&&Screen1_IN)
-		{
-			return 0;
-		}
-		else if(Screen0_IN&&!Screen1_IN	)
-		{
-		
-			return 3;
-		}
+	unsigned char vk=0;
+	vk|=(Screen0_IN?1:0)<<2;
+	vk|=(GPRS_IN?1:0)<<1;
+	vk|=(Screen1_IN?1:0);
+	if(vk==0x01)
+	{
 		return 0;
+	}
+	else if(vk==0x07)
+	{
+		return 0x81;
+	}
+	else if(vk==0x03)
+	{
+		return 1;
+	}
+	else if(vk==0x06)
+	{
+		return 0x83;
+	}
+	else if(vk==0x02)
+	{
+		return 3;
+	}
+
+	
+   return 0;
 }
 
 

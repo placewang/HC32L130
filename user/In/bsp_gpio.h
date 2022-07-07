@@ -16,9 +16,9 @@
 #define  BUZZ_IN_BO0L()      Gpio_GetInputIO(BUZZ_PORT ,BUZZ_PIN )
 //触屏背光开关
 #define Backlight_PORT       (GpioPortA)
-#define Backlight_PIN				 (GpioPin8)
-#define Backlight_ON()			 Gpio_SetIO(Backlight_PORT,Backlight_PIN)
-#define Backlight_OFF()			 Gpio_ClrIO(Backlight_PORT,Backlight_PIN)
+#define Backlight_PIN		 (GpioPin8)
+#define Backlight_ON()		 Gpio_SetIO(Backlight_PORT,Backlight_PIN)
+#define Backlight_OFF()		 Gpio_ClrIO(Backlight_PORT,Backlight_PIN)
 //矩阵按键
 #define  Key_Col0_PORT      (GpioPortB)
 #define  Key_Col0_PIN		    (GpioPin9)
@@ -63,23 +63,27 @@
 #define  Key_Row5_PIN		    (GpioPin11)
 
 #define  Key_Row6_PORT      (GpioPortA)
-#define  Key_Row6_PIN		    (GpioPin12)
+#define  Key_Row6_PIN		(GpioPin12)
 
 //液晶识别
 #define  Screen0_PORT         (GpioPortA)
-#define  Screen0_PIN	  	    (GpioPin2)
+#define  Screen0_PIN	  	  (GpioPin2)
 
 #define  Screen1_PORT         (GpioPortB)
-#define  Screen1_PIN		      (GpioPin2)
+#define  Screen1_PIN		  (GpioPin2)
 
 #define  Screen0_IN		         Gpio_GetInputIO(Screen0_PORT ,Screen0_PIN)
 #define  Screen1_IN		         Gpio_GetInputIO(Screen1_PORT ,Screen1_PIN)
 
+#define  GPRS_PORT         (GpioPortB)
+#define  GPRS_PIN		   (GpioPin5)
+#define  GPRS_IN		   Gpio_GetInputIO(GPRS_PORT,GPRS_PIN)
 void Led_init(void);
 void Buzz_init(void);
 void Backlight_init(void);
 void GPIO_Key_init(void);
 uint8_t GetLcdType(void);
 void Screen_init(void);
+
 #endif
 
