@@ -1,12 +1,12 @@
 
 #include "app_Cmd.h"
-
+#include "queue.h"
 #include "bsp_gpio.h"
 #include "bsp_flash.h"	
 #include "bsp_uart.h"
 #include "crc16_flash.h"
 #include "bsp_touch.h"
-
+#include "wdt.h"
 #define POLY16 0x1021
 
 unsigned short CRC16(unsigned char *buf,unsigned long dlen, int poly, unsigned short CRCinit)
@@ -305,10 +305,108 @@ uint8_t CmdTask1(void)
 		}	
 	return 0;
 }
+/***********************************************************
+logica版本握手
+************************************************************/
+signed char LogicaVersionSwitch(void)
+{
+	static    char  VerSwitch=0;
+	unsigned  short VerSwitchOutTime=0;
+	unsigned  char  dat[3]={0};
+	while(VerSwitch!=10)
+	{
+		Wdt_Feed();
+		switch(VerSwitch)
+		{
+			  case 0:
+						if(DataoutTime>=50*1*2)
+						{
+							Uart_SendDataPoll(M0P_UART0,'x');
+							Uart_SendDataPoll(M0P_UART0,0xFE);
+							Uart_SendDataPoll(M0P_UART0,0x04);
+							DataoutTime=0;
+							VerSwitchOutTime++;
+						}
+			 		  if(VerSwitchOutTime>=5*10)                                    //超时退出默认是恒机
+					 {
+						 VerSwitch=10;
+						 return 0;
+					 }
+					 while(QueueLength(&Uart_revQueuebuff)>=2)
+					 {
+							DeQueue(&Uart_revQueuebuff,&dat[0]);
+							if(dat[0]!=0xFE){continue; }
+						  DeQueue(&Uart_revQueuebuff,&dat[1]);
+							if(dat[0]==0xFE&&dat[1]==0x04)
+							{
+									VerSwitch=1;
+									VerSwitchOutTime=0;
+									Backlight_ON();
+									 break ;
+							}	
+					 }
+					break;
+			case 1:
+							Uart_SendDataPoll(M0P_UART0,'x');
+							Uart_SendDataPoll(M0P_UART0,0xFE);
+							Uart_SendDataPoll(M0P_UART0,0x0A);
+							Uart0_init(115200);
+							delay1ms(100);
+							VerSwitch=2;
+							
+							break;
+			case 2:
+						if(DataoutTime>=50*1)
+						{
+							Uart_SendDataPoll(M0P_UART0,'x');
+							Uart_SendDataPoll(M0P_UART0,0xFE);
+							Uart_SendDataPoll(M0P_UART0,0x05);
+							DataoutTime=0;
+							VerSwitchOutTime++;
+						}					
+			 		  if(VerSwitchOutTime>=50*10)                                    //超时 波特率回到12500
+					 {
+						 VerSwitch=10;
+						 Uart0_init(DEFAULTBOUD);
+						 return 0;
+					 }						
+					while(QueueLength(&Uart_revQueuebuff)>=2)
+					{
+						DeQueue(&Uart_revQueuebuff,&dat[0]);
+						if(dat[0]!=0xFE){continue; }
+						DeQueue(&Uart_revQueuebuff,&dat[1]);
+						if(dat[0]==0xFE&&dat[1]==0x05)
+						{					
+									VerSwitch=3;
+						 			Uart_SendDataPoll(M0P_UART0,'x');
+							    Uart_SendDataPoll(M0P_UART0,0xFE);
+							    Uart_SendDataPoll(M0P_UART0,0x0B);	
+									break ;
+						}	
+					}	
+					break ;
+			case 3:	                                                             //握手完成
+						Flash_r();
+					  R_Flash_s=1;
+						VerSwitch=4;
+						return 0;
+			case 4:	
+				if(R_Flash_s==0)
+				{
+					VerSwitch=10;
+					Toggle=3;
+					return 0;
+				}
+				break ;
+		}
+	}
+	return 0;
 
+}	
 
 uint8_t Cmd_Task(void)
 {
+	LogicaVersionSwitch();
 	CmdTask1();
 	return 0;
 }	

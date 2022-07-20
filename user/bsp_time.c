@@ -23,7 +23,7 @@ void Clerlkey_TimeCount(void)
 /*************´¥¿ØÂË²¨¼ÆÊýÇåÁã******************/
 void ClerlTouch_TimeCount(void)
 {
-	if(TouchCountD>30 || TouchCountU>30)
+	if(TouchCountD>=60 || TouchCountU>=60)
 	{
 		TouchCountD=0;
 		TouchCountU=0;

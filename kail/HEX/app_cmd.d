@@ -29,3 +29,4 @@
 .\hex\app_cmd.o: ..\user\In\crc16_flash.h
 .\hex\app_cmd.o: ..\user\In\bsp_touch.h
 .\hex\app_cmd.o: ..\driver\inc\spi.h
+.\hex\app_cmd.o: ..\driver\inc\wdt.h

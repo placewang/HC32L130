@@ -12,7 +12,7 @@ extern uint8_t Version_Inquire;                                      //°æ±¾²éÑ¯±
 extern uint8_t Toggle;                                               //Ö÷¿ØÓëGRSĞÂÀÏĞ­ÒéÇĞ»»±êÖ¾Î»
 extern uint8_t ToggleAN;                                            //°æ±¾×ª»»Ó¦´ğ 
 extern uint16_t  FlashLen;                                          //´æÈëflashÊı¾İ³¤¶È
-
+extern uint8_t Toggle;                                              //GRS,ÀÏĞ­Òé,logica,ÇĞ»»±êÖ¾Î»
 
 uint8_t Cmd_Task(void);
 void Cmd_char(uint8_t * );

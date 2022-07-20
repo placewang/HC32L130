@@ -55,7 +55,8 @@ extern uint8_t TouchRbit;                              //触控读数据标志位
 extern uint8_t LPSendInterruptbit;                     //触控触发 打断GPSRS与主控的当前透传标志位 
 
 void TSC2046_Init ( void );
-void Rev_Touch_XY(void);
+uint8_t Rev_Touch_XY(void);
+uint8_t LogicaRev_Touch_XY(void);
 void Spi_init(void);
 #endif 
 

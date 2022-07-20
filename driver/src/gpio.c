@@ -248,7 +248,7 @@ en_result_t Gpio_ClrIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
  ** \param [in]  u32ValMsk    高16bits表示该Port的16个PIN置位掩码值,
  **                           低16bits表示该Port的16个PIN清零掩码值,
  **                           将需要设置的PIN对应的bit写1,同一个PIN的掩码同时为1,则该PIN清零。
- **
+ *012*
  ** \retval en_result_t       Ok      设置成功
  **                           其他值  设置失败
  ******************************************************************************/

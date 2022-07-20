@@ -20,3 +20,5 @@
 .\hex\bsp_touch.o: ..\driver\inc\gpio.h
 .\hex\bsp_touch.o: ..\driver\inc\spi.h
 .\hex\bsp_touch.o: ..\user\In\bsp_gpio.h
+.\hex\bsp_touch.o: ..\user\In\app_Cmd.h
+.\hex\bsp_touch.o: ..\user\In\queue.h

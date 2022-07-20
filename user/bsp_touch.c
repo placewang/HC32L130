@@ -1,5 +1,6 @@
 #include "bsp_touch.h"
 #include "bsp_gpio.h"
+#include "app_Cmd.h"
 /*模拟SPI*/
 
 uint8_t TouchRbit=0;                             //触控读数据标志位
@@ -10,7 +11,9 @@ uint8_t TouchUbit=0;														 //触控抬起标志位
 uint8_t TouchCountD=0;													 //触控按下滤波
 uint8_t TouchCountU=0;                           //触控抬起滤波
 
-uint16_t X_Touch_val,Y_Touch_val;								 //屏幕X/Y坐标存储
+uint16_t X_Touch_val,Y_Touch_val;								 //屏幕当前X/Y坐标存储
+uint16_t last_press_x = 0;                       //上次触摸X/Y坐标存储  
+uint16_t last_press_y = 0;
 
 void TSC2046_Init ( void )
 {
@@ -199,14 +202,24 @@ void TSC2046_ReadAdc_XY ( uint16_t* sX_Ad, uint16_t * sY_Ad )
 }
 //&&TouchCountD>=10
 
-void Rev_Touch_XY(void)
+uint8_t Rev_Touch_XY(void)
 {
 		if(!Touch_PENIRQ_Read()&&!TouchRbit)
 		{
-			TouchRbit=1;
-			TSC2046_ReadAdc_XY(&X_Touch_val,&Y_Touch_val);
-			TouchSbit=1;
+			
 			Backlight_ON();
+			TouchCountD=0;
+			TSC2046_ReadAdc_XY(&X_Touch_val,&Y_Touch_val);
+			
+			//过滤丢点
+			if(((last_press_x-X_Touch_val)*(last_press_x-X_Touch_val)+(last_press_y-Y_Touch_val)*(last_press_y-Y_Touch_val)) <= 120)
+			{
+				return 0;
+			}
+			last_press_x =X_Touch_val ;                      
+			last_press_y =Y_Touch_val;
+			TouchSbit=1;
+			TouchRbit=1;
 			LPSendInterruptbit=1;
 		}
 		else if(Touch_PENIRQ_Read()&&TouchRbit)
@@ -215,7 +228,32 @@ void Rev_Touch_XY(void)
 			TouchUbit=1;
 		}
 }
-
+uint8_t LogicaRev_Touch_XY(void)
+{
+		if(!Touch_PENIRQ_Read()&&(TouchCountD>=25||!TouchRbit))
+		{
+			Toggle=4;
+			Backlight_ON();
+			TouchCountD=0;
+			TSC2046_ReadAdc_XY(&X_Touch_val,&Y_Touch_val);
+			//过滤丢点
+			if(((last_press_x-X_Touch_val)*(last_press_x-X_Touch_val)+(last_press_y-Y_Touch_val)*(last_press_y-Y_Touch_val)) <= 120)
+			{
+				return 0;
+			}
+			last_press_x =X_Touch_val ;                      
+			last_press_y =Y_Touch_val;
+			TouchSbit=1;
+			TouchRbit=1;
+			LPSendInterruptbit=1;
+		}
+		else if(Touch_PENIRQ_Read()&&TouchRbit)
+		{
+			TouchRbit=0;
+			TouchUbit=1;
+		}
+		return 0;
+}
 
 ///< PortA中断服务函数
 void PortA_IRQHandler(void)

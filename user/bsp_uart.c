@@ -6,8 +6,7 @@ volatile ElemType u8RxData;
 volatile ElemType u8LPRxData;
 //volatile uint8_t u8TxCnt=0;
 //volatile uint8_t u8RxCnt=0;
-#define MSLEN     320                                  //与主控交互缓存长度
-#define GPSLEN    2048                                 //与GPS交互缓存长度
+
 
 Queue        Uart_revQueuebuff;                        //接收缓存队列
 QUEUE_DATA_T Uart_MS[MSLEN];													 //缓存区	
