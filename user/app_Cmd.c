@@ -45,7 +45,12 @@ uint8_t Version_Inquire=0;                                      //版本查询标志位
 uint8_t Toggle=0;                                               //主控与GRS新老协议切换标志位
 uint8_t ToggleAN=0;                                             //版本转换应答 
 
-uint16_t DataoutTime=0;                                          //与主控通讯超时  
+
+
+
+uint16_t DataoutTime=0;                                          //与主控通讯超时 
+uint16_t LogicaoutTime=0;                                        //与logica通讯超时 
+uint16_t LogicaVerSwitch=0;
 volatile static uint8_t FE_bit=0;                                //协议头筛选标志位
 volatile static uint8_t rev_flashcount=0;                        //接收计数
 volatile static uint16_t flashwritelen=0;												 //长度	
@@ -73,6 +78,16 @@ static int8_t GetBuffCmd(uint8_t * cmd)
 				else if(*cmd==0x51)
 				{
 					return 3;
+				}
+				else if(*cmd==0x04)
+				{
+					LogicaVerSwitch=1;
+					return 5;
+				}
+				else if(*cmd==0x05)
+				{
+					LogicaVerSwitch=3;
+					return 5;
 				}
 				else
 				{
@@ -237,6 +252,7 @@ uint8_t CmdTask1(void)
 					else if(FW_val==2)
 					{
 						FlashBitStu=1;
+						DataoutTime=0;
 					}
 					else if(FW_val==1)
 					{
@@ -249,7 +265,16 @@ uint8_t CmdTask1(void)
 							FlashBitStu=1;
 							DataoutTime=0;
 							return 0;
-					}		
+					}
+					else if(FW_val==5)
+					{
+							FW_val=0;
+							FE_bit=0;
+							FlashBitStu=1;
+							DataoutTime=0;
+							return 0;
+					}					
+					
 			}
 			
 			if(FlashBitStu==1)
@@ -291,6 +316,7 @@ uint8_t CmdTask1(void)
 										FW_val=0;
 										FE_bit=0;
 										flashwritelen=0;
+										LogicaVerSwitch=10;                                                      //****主控切换版本后将logica版本的支持关闭
 									}
 									else
 									{
@@ -310,104 +336,77 @@ logica版本握手
 ************************************************************/
 signed char LogicaVersionSwitch(void)
 {
-	static    char  VerSwitch=0;
-	unsigned  short VerSwitchOutTime=0;
-	unsigned  char  dat[3]={0};
-	while(VerSwitch!=10)
+	
+	static unsigned  short VerSwitchOutTime=0;
+	switch(LogicaVerSwitch)
 	{
-		Wdt_Feed();
-		switch(VerSwitch)
-		{
 			  case 0:
-						if(DataoutTime>=50*1*2)
+						if(LogicaoutTime>=50*1*2)
 						{
 							Uart_SendDataPoll(M0P_UART0,'x');
 							Uart_SendDataPoll(M0P_UART0,0xFE);
 							Uart_SendDataPoll(M0P_UART0,0x04);
-							DataoutTime=0;
+							LogicaoutTime=0;
 							VerSwitchOutTime++;
 						}
 			 		  if(VerSwitchOutTime>=5*10)                                    //超时退出默认是恒机
 					 {
-						 VerSwitch=10;
+						 LogicaVerSwitch=10;
 						 return 0;
 					 }
-					 while(QueueLength(&Uart_revQueuebuff)>=2)
-					 {
-							DeQueue(&Uart_revQueuebuff,&dat[0]);
-							if(dat[0]!=0xFE){continue; }
-						  DeQueue(&Uart_revQueuebuff,&dat[1]);
-							if(dat[0]==0xFE&&dat[1]==0x04)
-							{
-									VerSwitch=1;
-									VerSwitchOutTime=0;
-									Backlight_ON();
-									 break ;
-							}	
-					 }
 					break;
-			case 1:
+			case 1:                                                             //收到fe 04  
 							Uart_SendDataPoll(M0P_UART0,'x');
 							Uart_SendDataPoll(M0P_UART0,0xFE);
 							Uart_SendDataPoll(M0P_UART0,0x0A);
 							Uart0_init(115200);
 							delay1ms(100);
-							VerSwitch=2;
+							LogicaVerSwitch=2;
 							
 							break;
 			case 2:
-						if(DataoutTime>=50*1)
+						if(LogicaoutTime>=50*1)
 						{
 							Uart_SendDataPoll(M0P_UART0,'x');
 							Uart_SendDataPoll(M0P_UART0,0xFE);
 							Uart_SendDataPoll(M0P_UART0,0x05);
-							DataoutTime=0;
+							LogicaoutTime=0;
 							VerSwitchOutTime++;
 						}					
 			 		  if(VerSwitchOutTime>=50*10)                                    //超时 波特率回到12500
 					 {
-						 VerSwitch=10;
+						 LogicaVerSwitch=10;
 						 Uart0_init(DEFAULTBOUD);
 						 return 0;
-					 }						
-					while(QueueLength(&Uart_revQueuebuff)>=2)
-					{
-						DeQueue(&Uart_revQueuebuff,&dat[0]);
-						if(dat[0]!=0xFE){continue; }
-						DeQueue(&Uart_revQueuebuff,&dat[1]);
-						if(dat[0]==0xFE&&dat[1]==0x05)
-						{					
-									VerSwitch=3;
-						 			Uart_SendDataPoll(M0P_UART0,'x');
-							    Uart_SendDataPoll(M0P_UART0,0xFE);
-							    Uart_SendDataPoll(M0P_UART0,0x0B);	
-									break ;
-						}	
-					}	
+					 }							
 					break ;
-			case 3:	                                                             //握手完成
+			case 3:				                                                       //收到Fe 05
+						Uart_SendDataPoll(M0P_UART0,'x');
+					  Uart_SendDataPoll(M0P_UART0,0xFE);
+					  Uart_SendDataPoll(M0P_UART0,0x0B);
+					  LogicaVerSwitch=4;
+			case 4:	                                                             //握手完成将触摸校准数据发给logica
 						Flash_r();
 					  R_Flash_s=1;
-						VerSwitch=4;
+						LogicaVerSwitch=5;
 						return 0;
-			case 4:	
+			case 5:	
 				if(R_Flash_s==0)
 				{
-					VerSwitch=10;
+					LogicaVerSwitch=0;
 					Toggle=3;
 					return 0;
 				}
 				break ;
 		}
-	}
 	return 0;
 
 }	
 
 uint8_t Cmd_Task(void)
 {
-	LogicaVersionSwitch();
 	CmdTask1();
+	LogicaVersionSwitch();
 	return 0;
 }	
 

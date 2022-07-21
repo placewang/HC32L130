@@ -13,7 +13,7 @@ extern uint8_t Toggle;                                               //主控与GRS
 extern uint8_t ToggleAN;                                            //版本转换应答 
 extern uint16_t  FlashLen;                                          //存入flash数据长度
 extern uint8_t Toggle;                                              //GRS,老协议,logica,切换标志位
-
+extern uint16_t LogicaoutTime;                                      //与logica通讯超时
 uint8_t Cmd_Task(void);
 void Cmd_char(uint8_t * );
 unsigned short CRC16(unsigned char *buf,unsigned long dlen, int poly, unsigned short CRCinit);

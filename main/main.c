@@ -13,7 +13,7 @@
 #include "app_gprsCmd.h"
 #include "wdt.h"
 
-uint8_t  g_iLcdType;                                            //LCD屏种类10.1/10.4 /7寸
+uint8_t  g_iLcdType;                                            //LCD屏种类
 static void Bsp_Init(void)
 {
 	Uart0_init(DEFAULTBOUD);
@@ -47,7 +47,6 @@ int main()
 			Cmd_Task();
 			KeyScanTask();
 			Send_Data_Uart();
-			
 		}
 		else if(Toggle==2)//GPRS
 		{
@@ -61,7 +60,6 @@ int main()
 		else if(Toggle==3||Toggle==4)//logica
 		{
 			if(Toggle==3){Backlight_ON();}
-
 			LogicaRev_Touch_XY();	
 			Cmd_Task();
 			KeyScanTask();

@@ -23,7 +23,7 @@ void Clerlkey_TimeCount(void)
 /*************´¥¿ØÂË²¨¼ÆÊýÇåÁã******************/
 void ClerlTouch_TimeCount(void)
 {
-	if(TouchCountD>=60 || TouchCountU>=60)
+	if(TouchCountD>=200 || TouchCountU>=200)
 	{
 		TouchCountD=0;
 		TouchCountU=0;
@@ -61,6 +61,7 @@ void Tim0_IRQHandler(void)
         count_key2++;
 				DataoutTime++;
 				LPrevouttiem++;
+				LogicaoutTime++;
 				if(Toggle==1)
 				{
 					GpTogshakeTime++;

@@ -228,16 +228,17 @@ uint8_t Rev_Touch_XY(void)
 			TouchUbit=1;
 		}
 }
+/****************************************logic版本触控获取******************************************************************/
 uint8_t LogicaRev_Touch_XY(void)
 {
-		if(!Touch_PENIRQ_Read()&&(TouchCountD>=25||!TouchRbit))
+		if(!Touch_PENIRQ_Read()&&(TouchCountD>=10||!TouchRbit))
 		{
 			Toggle=4;
 			Backlight_ON();
 			TouchCountD=0;
 			TSC2046_ReadAdc_XY(&X_Touch_val,&Y_Touch_val);
 			//过滤丢点
-			if(((last_press_x-X_Touch_val)*(last_press_x-X_Touch_val)+(last_press_y-Y_Touch_val)*(last_press_y-Y_Touch_val)) <= 120)
+			if(((last_press_x-X_Touch_val)*(last_press_x-X_Touch_val)+(last_press_y-Y_Touch_val)*(last_press_y-Y_Touch_val)) <= 280)
 			{
 				return 0;
 			}
