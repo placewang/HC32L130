@@ -165,6 +165,7 @@ void GpsSend_Data_Uart(void)
 				Penetratebit=0;
 				Send_LPUart0(Gps_TranslatePackDtata,Gps_RevCount-NumberEscapes-3);
 				memset(Gps_TranslatePackDtata,0,sizeof(Gps_TranslatePackDtata));
+				NumberEscapes=0;
 				GPclearData();
 		}
 		else if(GpSystemRest==1)

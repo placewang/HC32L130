@@ -154,8 +154,6 @@ void Sendby(	ElemType  *Pdata)
 	{
 		Uart_SendDataPoll(M0P_UART0,*Pdata);
 	}
-
-
 }
 
 /**********协议透传中转,仅关注协议头及长度忽略正确性************************/
