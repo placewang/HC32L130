@@ -26,7 +26,7 @@ static void Bsp_Init(void)
 	Time_init(400);
   TSC2046_Init();
   Sysctrl_SetPeripheralGate(SysctrlPeripheralWdt,TRUE);       //开启WDT外设时钟
-  Wdt_Init(WdtResetEn, WdtT6s55);															//WDT 初始化	
+  Wdt_Init(WdtResetEn,WdtT1s64);															//WDT 初始化	
 	Wdt_Start();
 }
 

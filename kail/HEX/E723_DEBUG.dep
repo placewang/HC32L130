@@ -543,7 +543,7 @@ I (..\user\In\bsp_uart.h)(0x62D7A7A1)
 I (..\driver\inc\uart.h)(0x5D12D7E8)
 I (..\driver\inc\lpuart.h)(0x5D1200FA)
 I (..\driver\inc\lpm.h)(0x5D11FE44)
-F (..\main\main.c)(0x62D8F4EA)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\main.o --omf_browse .\hex\main.crf --depend .\hex\main.d)
+F (..\main\main.c)(0x62F31593)(--c99 -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver\inc -I ..\mcu\common -I ..\user\In-IC:\Users\admin\Desktop\E723\kail\RTE-IE:\kail\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IE:\kail\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="521" -D_RTE_-o .\hex\main.o --omf_browse .\hex\main.crf --depend .\hex\main.d)
 I (..\user\In\bsp_gpio.h)(0x62D8FB23)
 I (..\driver\inc\ddl.h)(0x5D131F3A)
 I (..\mcu\common\base_types.h)(0x5D11C242)
